@@ -2,173 +2,672 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - PartyPlot Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Gallery - Jay Ambe Decorators | Decoration Work in Ahmedabad</title>
+    <meta name="description" content="View our beautiful decoration work gallery - Wedding, Birthday, Corporate, Engagement & Theme Party decorations by Jay Ambe Decorators, Ahmedabad.">
+    <meta name="keywords" content="decoration gallery Ahmedabad, wedding decoration photos, birthday decoration photos, Jay Ambe Decorators gallery">
+    <meta name="author" content="Jay Ambe Decorators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gallery - Jay Ambe Decorators Ahmedabad">
+    <meta property="og:description" content="View our beautiful decoration work - 1000+ events completed in Ahmedabad">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0F5132">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <div class="loader-icon">🎉</div>
-    <div class="loader-text">LOADING...</div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+<!-- ========== LOADER ========== -->
+<div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-logo">
+        <div class="loader-icon"></div>
+        <div class="loader-brand">JAY AMBE DECORATORS</div>
+        <div class="loader-city">AHMEDABAD · SINCE 2003</div>
+    </div>
 </div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cookie-banner" id="cookieBanner">
-    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- NAV OVERLAY -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookieBanner" role="alert">
+    <p>🍪 We use cookies to improve your experience.</p>
     <div class="cookie-btns">
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
-        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
 </div>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-contacts">
-        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
-        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
+        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
+        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
+        <span>⏰ Open 24/7</span>
     </div>
-    <span class="top-offer">🎊 20% OFF This Month!</span>
+    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
-<nav id="navbar">
-    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo-wrap" aria-label="Jay Ambe Decorators Home">
+        <span class="logo-main">🎊 Jay Ambe Decorators</span>
+        <span class="logo-sub">Ahmedabad &middot; Since 2003</span>
+    </a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+        <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
+        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navLinks">☰</button>
 </nav>
 
-<div class="page-hero">
-    <h1>Our Gallery 📸</h1>
-    <p>A Glimpse of Our Beautiful Work</p>
-    <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span>›</span>
-        <span>Gallery</span>
+<!-- PAGE HERO -->
+<div class="page-hero" role="banner">
+    <div class="page-hero-inner">
+        <div class="page-hero-badge">📸 Our Gallery</div>
+        <h1>Our Beautiful<br>Decoration Work</h1>
+        <p>1000+ events decorated with passion &amp; perfection in Ahmedabad &amp; Gujarat</p>
+        <div class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Gallery</span>
+        </div>
     </div>
 </div>
 
-<!-- GALLERY -->
-<section class="gallery-section">
-    <div class="gallery-filter">
-        <button class="filter-btn active" onclick="filterGallery('all', this)">🌟 All</button>
-        <button class="filter-btn" onclick="filterGallery('wedding', this)">💍 Wedding</button>
-        <button class="filter-btn" onclick="filterGallery('birthday', this)">🎂 Birthday</button>
-        <button class="filter-btn" onclick="filterGallery('corporate', this)">🏢 Corporate</button>
-        <button class="filter-btn" onclick="filterGallery('engagement', this)">🌸 Engagement</button>
-        <button class="filter-btn" onclick="filterGallery('theme', this)">🎭 Theme</button>
+<!-- ========== GALLERY STATS ========== -->
+<div class="gallery-stats">
+    <div class="container">
+        <div class="gs-inner">
+            <div class="gs-item">
+                <strong>1000+</strong>
+                <span>Events Done</span>
+            </div>
+            <div class="gs-divider"></div>
+            <div class="gs-item">
+                <strong>6+</strong>
+                <span>Event Types</span>
+            </div>
+            <div class="gs-divider"></div>
+            <div class="gs-item">
+                <strong>21+</strong>
+                <span>Years Experience</span>
+            </div>
+            <div class="gs-divider"></div>
+            <div class="gs-item">
+                <strong>100%</strong>
+                <span>Satisfaction</span>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item large" data-cat="wedding" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800" alt="Wedding">
-            <div class="gallery-overlay"><h4>Royal Wedding Setup</h4><span>💍 Wedding • Mumbai</span></div>
+<!-- ========== GALLERY SECTION ========== -->
+<section class="gallery-section" id="gallery">
+    <div class="container">
+
+        <!-- Filter Bar -->
+        <div class="gallery-filter" role="tablist" aria-label="Filter gallery by category">
+            <button class="filter-btn active"
+                    data-filter="all"
+                    onclick="filterGallery('all', this)"
+                    role="tab"
+                    aria-selected="true">
+                🌟 All
+            </button>
+            <button class="filter-btn"
+                    data-filter="wedding"
+                    onclick="filterGallery('wedding', this)"
+                    role="tab"
+                    aria-selected="false">
+                💍 Wedding
+            </button>
+            <button class="filter-btn"
+                    data-filter="birthday"
+                    onclick="filterGallery('birthday', this)"
+                    role="tab"
+                    aria-selected="false">
+                🎂 Birthday
+            </button>
+            <button class="filter-btn"
+                    data-filter="corporate"
+                    onclick="filterGallery('corporate', this)"
+                    role="tab"
+                    aria-selected="false">
+                🏢 Corporate
+            </button>
+            <button class="filter-btn"
+                    data-filter="engagement"
+                    onclick="filterGallery('engagement', this)"
+                    role="tab"
+                    aria-selected="false">
+                🌸 Engagement
+            </button>
+            <button class="filter-btn"
+                    data-filter="theme"
+                    onclick="filterGallery('theme', this)"
+                    role="tab"
+                    aria-selected="false">
+                🎭 Theme
+            </button>
+            <button class="filter-btn"
+                    data-filter="anniversary"
+                    onclick="filterGallery('anniversary', this)"
+                    role="tab"
+                    aria-selected="false">
+                💑 Anniversary
+            </button>
         </div>
-        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday">
-            <div class="gallery-overlay"><h4>Princess Birthday</h4><span>🎂 Birthday • Pune</span></div>
+
+        <!-- Gallery Count -->
+        <div class="gallery-count">
+            <span id="galleryCount">Showing <strong>12</strong> photos</span>
         </div>
-        <div class="gallery-item" data-cat="corporate" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500" alt="Corporate">
-            <div class="gallery-overlay"><h4>Corporate Gala Night</h4><span>🏢 Corporate • Mumbai</span></div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid" role="list">
+
+            <!-- Wedding 1 - Large -->
+            <div class="gallery-item gi-large" data-cat="wedding"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Royal Wedding Setup">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <!-- Replace: <img src="images/gallery/wedding1.jpg" alt="Royal Wedding Setup"> -->
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Wedding Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Royal Wedding Setup</h4>
+                        <span>💍 Wedding &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday 1 -->
+            <div class="gallery-item" data-cat="birthday"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Princess Birthday">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Birthday Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Princess Birthday</h4>
+                        <span>🎂 Birthday &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate 1 -->
+            <div class="gallery-item" data-cat="corporate"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Corporate Gala Night">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Corporate Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Corporate Gala Night</h4>
+                        <span>🏢 Corporate &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engagement 1 -->
+            <div class="gallery-item" data-cat="engagement"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Floral Engagement">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Engagement Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Floral Engagement</h4>
+                        <span>🌸 Engagement &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme 1 -->
+            <div class="gallery-item" data-cat="theme"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Bollywood Night">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Theme Party Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Bollywood Night</h4>
+                        <span>🎭 Theme &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday 2 -->
+            <div class="gallery-item" data-cat="birthday"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Balloon Wonderland">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Birthday Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Balloon Wonderland</h4>
+                        <span>🎈 Birthday &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedding 2 -->
+            <div class="gallery-item" data-cat="wedding"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Garden Wedding">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Wedding Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Garden Wedding</h4>
+                        <span>💍 Wedding &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate 2 - Large -->
+            <div class="gallery-item gi-large" data-cat="corporate"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Product Launch Event">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Corporate Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Product Launch Event</h4>
+                        <span>🏢 Corporate &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme 2 -->
+            <div class="gallery-item" data-cat="theme"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Royal Theme Party">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Theme Party Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Royal Theme Party</h4>
+                        <span>🎭 Theme &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engagement 2 -->
+            <div class="gallery-item" data-cat="engagement"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Romantic Engagement">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Engagement Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Romantic Engagement</h4>
+                        <span>🌸 Engagement &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday 3 -->
+            <div class="gallery-item" data-cat="birthday"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Superhero Birthday">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Birthday Photo 3</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Superhero Birthday</h4>
+                        <span>🎂 Birthday &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anniversary 1 -->
+            <div class="gallery-item" data-cat="anniversary"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Romantic Anniversary">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Anniversary Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Romantic Anniversary</h4>
+                        <span>💑 Anniversary &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedding 3 -->
+            <div class="gallery-item" data-cat="wedding"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Indoor Wedding">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Wedding Photo 3</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Indoor Wedding</h4>
+                        <span>💍 Wedding &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme 3 - Large -->
+            <div class="gallery-item gi-large" data-cat="theme"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Beach Theme Party">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Theme Party Photo 3</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Beach Theme Party</h4>
+                        <span>🎭 Theme &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anniversary 2 -->
+            <div class="gallery-item" data-cat="anniversary"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Golden Anniversary">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Anniversary Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Golden Anniversary</h4>
+                        <span>💑 Anniversary &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate 3 -->
+            <div class="gallery-item" data-cat="corporate"
+                 onclick="openLightbox(this)"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Award Night">
+                <div class="gi-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Corporate Photo 3</span>
+                    </div>
+                </div>
+                <div class="gallery-overlay">
+                    <div class="go-content">
+                        <span class="go-icon">🔍</span>
+                        <h4>Award Night</h4>
+                        <span>🏢 Corporate &middot; Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="gallery-item" data-cat="engagement" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement">
-            <div class="gallery-overlay"><h4>Floral Engagement</h4><span>🌸 Engagement • Nashik</span></div>
+
+        <!-- No Results -->
+        <div class="no-gallery-results" id="noGalleryResults" style="display:none;">
+            <span>🔍</span>
+            <p>No photos found in this category.</p>
+            <button onclick="filterGallery('all', document.querySelector('[data-filter=all]'))"
+                    class="btn btn-primary">Show All Photos</button>
         </div>
-        <div class="gallery-item" data-cat="theme" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme">
-            <div class="gallery-overlay"><h4>Bollywood Night</h4><span>🎭 Theme • Mumbai</span></div>
+
+        <!-- Load More Button -->
+        <div class="gallery-load-more" id="loadMoreWrap">
+            <p class="lm-text">Want to see more of our work?</p>
+            <a href="https://wa.me/916358111321?text=Hi, I want to see more decoration photos"
+               class="btn btn-primary"
+               target="_blank" rel="noopener">
+                💬 Request More Photos
+            </a>
         </div>
-        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=500" alt="Party">
-            <div class="gallery-overlay"><h4>Balloon Wonderland</h4><span>🎈 Birthday • Mumbai</span></div>
+
+    </div>
+</section>
+
+<!-- ========== LIGHTBOX ========== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-inner">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close photo viewer">✕</button>
+        <button class="lb-nav lb-prev" onclick="lightboxNav(-1)" aria-label="Previous photo">❮</button>
+        <div class="lb-img-wrap">
+            <div class="lb-placeholder placeholder-img" id="lbPlaceholder"
+                 style="height:100%;border-radius:0;border:none;">
+                <span class="ph-icon">📸</span>
+                <span class="ph-text">Loading...</span>
+            </div>
+            <img src="" id="lightboxImg" alt="Gallery photo" style="display:none;">
+            <div class="lb-loader" id="lbLoader">
+                <div class="lb-spinner"></div>
+            </div>
         </div>
-        <div class="gallery-item" data-cat="wedding" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding2">
-            <div class="gallery-overlay"><h4>Garden Wedding</h4><span>💍 Wedding • Pune</span></div>
+        <button class="lb-nav lb-next" onclick="lightboxNav(1)" aria-label="Next photo">❯</button>
+        <div class="lb-footer">
+            <div class="lb-caption" id="lbCaption"></div>
+            <div class="lb-counter" id="lbCounter"></div>
         </div>
-        <div class="gallery-item large" data-cat="corporate" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Corporate2">
-            <div class="gallery-overlay"><h4>Product Launch Event</h4><span>🏢 Corporate • Delhi</span></div>
-        </div>
-        <div class="gallery-item" data-cat="theme" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme2">
-            <div class="gallery-overlay"><h4>Royal Theme Party</h4><span>🎭 Theme • Mumbai</span></div>
-        </div>
-        <div class="gallery-item" data-cat="engagement" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement2">
-            <div class="gallery-overlay"><h4>Romantic Engagement</h4><span>🌸 Engagement • Mumbai</span></div>
-        </div>
-        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday2">
-            <div class="gallery-overlay"><h4>Superhero Birthday</h4><span>🎂 Birthday • Mumbai</span></div>
-        </div>
-        <div class="gallery-item" data-cat="wedding" onclick="openLightbox(this)">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding3">
-            <div class="gallery-overlay"><h4>Indoor Wedding</h4><span>💍 Wedding • Mumbai</span></div>
+    </div>
+</div>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="gallery-cta">
+    <div class="container">
+        <div class="gallery-cta-inner">
+            <div class="gcta-left">
+                <h2>Like What You See? 🎊</h2>
+                <p>Let us create something beautiful for your next event in Ahmedabad!</p>
+            </div>
+            <div class="gcta-right">
+                <a href="contact.html" class="btn btn-gold">📋 Book Now</a>
+                <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+                <a href="https://wa.me/916358111321"
+                   class="btn btn-wa"
+                   target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <button class="lb-prev" onclick="lightboxNav(-1)">❮</button>
-    <img src="" id="lightboxImg" alt="Gallery Image">
-    <button class="lb-next" onclick="lightboxNav(1)">❯</button>
-    <div class="lb-caption" id="lbCaption"></div>
-</div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <span class="footer-logo">🎉 PartyPlot Pro</span>
-            <p>Making celebrations special since 2014.</p>
-            <div class="social-links">
-                <a class="social-link" href="#">📘</a>
-                <a class="social-link" href="#">📸</a>
-                <a class="social-link" href="#">🐦</a>
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <span class="footer-logo">🎊 Jay Ambe Decorators</span>
+                    <span class="footer-logo-sub">Ahmedabad &middot; Since 2003</span>
+                </div>
+                <p>Ahmedabad's most trusted decoration company. 21+ years of making celebrations magical.</p>
+                <div class="social-links">
+                    <a class="social-link" href="#" aria-label="Facebook">📘</a>
+                    <a class="social-link" href="#" aria-label="Instagram">📸</a>
+                    <a class="social-link" href="https://wa.me/916358111321" aria-label="WhatsApp">💬</a>
+                    <a class="social-link" href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">ℹ️ About Us</a></li>
+                    <li><a href="services.html">🎭 Services</a></li>
+                    <li><a href="gallery.html">📸 Gallery</a></li>
+                    <li><a href="packages.html">💼 Packages</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">💍 Wedding Decoration</a></li>
+                    <li><a href="services.html">🎂 Birthday Parties</a></li>
+                    <li><a href="services.html">🌸 Engagement</a></li>
+                    <li><a href="services.html">🏢 Corporate Events</a></li>
+                    <li><a href="services.html">🎭 Theme Parties</a></li>
+                    <li><a href="services.html">🏡 Party Plot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
+                    <li><a href="https://wa.me/916358111321">💬 WhatsApp</a></li>
+                    <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
+                    <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
+                    <li><span>⏰ Open 24/7</span></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">→ Home</a></li>
-                <li><a href="about.html">→ About</a></li>
-                <li><a href="services.html">→ Services</a></li>
-                <li><a href="gallery.html">→ Gallery</a></li>
-                <li><a href="packages.html">→ Packages</a></li>
-                <li><a href="contact.html">→ Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
-                <li><a href="#">📱 +91 98765 43210</a></li>
-                <li><a href="#">📧 info@partyplotpro.com</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+        <div class="footer-bottom">
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+<!-- FLOATING -->
+<div class="whatsapp-float">
+    <span class="wa-label">Chat Now</span>
+    <a href="https://wa.me/916358111321" class="wa-btn"
+       target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</div>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+<!-- MOBILE CALL BAR -->
+<div class="mobile-call-bar">
+    <a href="tel:6358111321" class="mcb-call">📞 Call Now</a>
+    <a href="https://wa.me/916358111321" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
 
 <script src="js/common.js"></script>
 <script src="js/gallery.js"></script>

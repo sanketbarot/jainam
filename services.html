@@ -2,339 +2,661 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - PartyPlot Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Our Services - Jay Ambe Decorators | Ahmedabad</title>
+    <meta name="description" content="Jay Ambe Decorators offers Wedding, Birthday, Corporate, Engagement, Theme Party & all decoration services in Ahmedabad. Call: +91 63581 11321">
+    <meta name="keywords" content="decoration services Ahmedabad, wedding decoration, birthday decoration, corporate events, theme party, party plot Ahmedabad">
+    <meta name="author" content="Jay Ambe Decorators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="services.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Decoration Services - Jay Ambe Decorators Ahmedabad">
+    <meta property="og:description" content="Complete decoration solutions for all events in Ahmedabad since 2003">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0F5132">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <div class="loader-icon">🎉</div>
-    <div class="loader-text">LOADING...</div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+<!-- ========== LOADER ========== -->
+<div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-logo">
+        <div class="loader-icon"></div>
+        <div class="loader-brand">JAY AMBE DECORATORS</div>
+        <div class="loader-city">AHMEDABAD · SINCE 2003</div>
+    </div>
 </div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cookie-banner" id="cookieBanner">
-    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- NAV OVERLAY -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookieBanner" role="alert">
+    <p>🍪 We use cookies to improve your experience.</p>
     <div class="cookie-btns">
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
-        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
 </div>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-contacts">
-        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
-        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
+        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
+        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
+        <span>⏰ Open 24/7</span>
     </div>
-    <span class="top-offer">🎊 20% OFF This Month!</span>
+    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
-<nav id="navbar">
-    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo-wrap" aria-label="Jay Ambe Decorators Home">
+        <span class="logo-main">🎊 Jay Ambe Decorators</span>
+        <span class="logo-sub">Ahmedabad &middot; Since 2003</span>
+    </a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+        <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
+        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navLinks">☰</button>
 </nav>
 
-<div class="page-hero">
-    <h1>Our Services 🎭</h1>
-    <p>Complete Decoration Solutions for Every Occasion</p>
-    <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span>›</span>
-        <span>Services</span>
+<!-- PAGE HERO -->
+<div class="page-hero" role="banner">
+    <div class="page-hero-inner">
+        <div class="page-hero-badge">🎭 Our Services</div>
+        <h1>Complete Decoration<br>Solutions for All Events</h1>
+        <p>From intimate home celebrations to grand weddings — we decorate it all!</p>
+        <div class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Services</span>
+        </div>
     </div>
 </div>
 
-<!-- ALL SERVICES -->
-<section class="all-services">
-    <div class="section-header">
-        <div class="section-tag">WHAT WE OFFER</div>
-        <h2 class="section-title">All Our Services</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">From intimate celebrations to grand events, we provide complete decoration solutions</p>
+<!-- ========== SERVICES FILTER ========== -->
+<div class="services-filter-bar">
+    <div class="container">
+        <div class="filter-inner">
+            <button class="filter-btn active" data-filter="all" onclick="filterServices('all', this)">
+                🌟 All Services
+            </button>
+            <button class="filter-btn" data-filter="wedding" onclick="filterServices('wedding', this)">
+                💍 Wedding
+            </button>
+            <button class="filter-btn" data-filter="birthday" onclick="filterServices('birthday', this)">
+                🎂 Birthday
+            </button>
+            <button class="filter-btn" data-filter="corporate" onclick="filterServices('corporate', this)">
+                🏢 Corporate
+            </button>
+            <button class="filter-btn" data-filter="social" onclick="filterServices('social', this)">
+                🌸 Social
+            </button>
+            <button class="filter-btn" data-filter="special" onclick="filterServices('special', this)">
+                ✨ Special
+            </button>
+        </div>
     </div>
-    <div class="services-detailed-grid">
+</div>
 
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding">
-                <div class="service-badge">💍 Wedding</div>
-            </div>
-            <div class="service-body">
-                <h3>Wedding Decoration</h3>
-                <p>Transform your wedding into a fairy tale with our exquisite floral arrangements, mandap decoration, and reception setups. We handle every detail from entrance gate to honeymoon suite.</p>
-                <ul class="service-features">
-                    <li>✅ Floral Mandap & Stage</li>
-                    <li>✅ Reception Decoration</li>
-                    <li>✅ Entrance Gate Setup</li>
-                    <li>✅ Table Centerpieces</li>
-                    <li>✅ Bridal Room Decoration</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹50,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
+<!-- ========== ALL SERVICES ========== -->
+<section class="all-services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">What We Offer</div>
+            <h2 class="section-title">All Decoration Services</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">
+                Complete decoration solutions for every occasion in Ahmedabad &amp; Gujarat
+            </p>
         </div>
 
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday">
-                <div class="service-badge">🎂 Birthday</div>
+        <div class="services-detailed-grid" id="servicesGrid">
+
+            <!-- Wedding -->
+            <div class="service-detailed-card reveal" data-cat="wedding">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <!-- Replace: <img src="images/wedding.jpg" alt="Wedding Decoration"> -->
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Wedding Photo</span>
+                    </div>
+                    <div class="service-badge">💍 Wedding</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Wedding Decoration</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Transform your wedding into a fairy tale with exquisite floral arrangements, mandap decoration, and reception setups. We handle every detail with perfection.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Floral Mandap &amp; Stage</li>
+                        <li><span class="sf-check">✓</span> Reception Decoration</li>
+                        <li><span class="sf-check">✓</span> Entrance Gate Setup</li>
+                        <li><span class="sf-check">✓</span> Table Centerpieces</li>
+                        <li><span class="sf-check">✓</span> Bridal Room Decoration</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Wedding Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
             </div>
-            <div class="service-body">
-                <h3>Birthday Parties</h3>
-                <p>Make birthdays unforgettable with custom themes, balloon art, cake table decoration, and fun photo booth setups. We specialize in both kids and adult birthday parties.</p>
-                <ul class="service-features">
-                    <li>✅ Custom Theme Setup</li>
-                    <li>✅ Balloon Decoration</li>
-                    <li>✅ Cake Table Design</li>
-                    <li>✅ Photo Booth Setup</li>
-                    <li>✅ Welcome Banner</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹8,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
+
+            <!-- Birthday -->
+            <div class="service-detailed-card reveal" data-cat="birthday">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Birthday Photo</span>
+                    </div>
+                    <div class="service-badge">🎂 Birthday</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Birthday Decoration</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Make birthdays unforgettable with custom themes, balloon art, cake table decoration, and photo booth setups for kids &amp; adults.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Custom Theme Setup</li>
+                        <li><span class="sf-check">✓</span> Balloon Decoration</li>
+                        <li><span class="sf-check">✓</span> Cake Table Design</li>
+                        <li><span class="sf-check">✓</span> Photo Booth Setup</li>
+                        <li><span class="sf-check">✓</span> Welcome Banner</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Birthday Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Corporate -->
+            <div class="service-detailed-card reveal" data-cat="corporate">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Corporate Event Photo</span>
+                    </div>
+                    <div class="service-badge">🏢 Corporate</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Corporate Events</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Professional and elegant event setups for conferences, product launches, award nights, and office parties in Ahmedabad.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Stage &amp; Podium Setup</li>
+                        <li><span class="sf-check">✓</span> Brand Themed Decoration</li>
+                        <li><span class="sf-check">✓</span> Award Night Setup</li>
+                        <li><span class="sf-check">✓</span> Conference Decoration</li>
+                        <li><span class="sf-check">✓</span> Photo Wall Setup</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Corporate Event Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engagement -->
+            <div class="service-detailed-card reveal" data-cat="social wedding">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Engagement Photo</span>
+                    </div>
+                    <div class="service-badge">🌸 Engagement</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Engagement Ceremony</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Romantic floral walls, ring ceremony setups, and elegant backdrops that make your engagement truly special and memorable.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Floral Wall Backdrop</li>
+                        <li><span class="sf-check">✓</span> Ring Ceremony Setup</li>
+                        <li><span class="sf-check">✓</span> Couple Seating Decor</li>
+                        <li><span class="sf-check">✓</span> Fairy Light Setup</li>
+                        <li><span class="sf-check">✓</span> Photo Arch</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Engagement Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Parties -->
+            <div class="service-detailed-card reveal" data-cat="special birthday">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Theme Party Photo</span>
+                    </div>
+                    <div class="service-badge">🎭 Theme</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Theme Parties</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Custom theme decorations from 50+ themes — Bollywood, Royal, Beach, Retro, Jungle, Superhero, Fairy Tale &amp; many more!</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> 50+ Theme Options</li>
+                        <li><span class="sf-check">✓</span> Custom Props &amp; Setup</li>
+                        <li><span class="sf-check">✓</span> Themed Table Setting</li>
+                        <li><span class="sf-check">✓</span> Character Cutouts</li>
+                        <li><span class="sf-check">✓</span> Themed Photo Booth</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Theme Party Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Party Plot -->
+            <div class="service-detailed-card reveal" data-cat="special">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Party Plot Photo</span>
+                    </div>
+                    <div class="service-badge">🏡 Party Plot</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Party Plot Rental</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Spacious party plots in Ahmedabad available for 100–2000 guests with parking, catering support, and complete amenities.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Capacity: 100–2000 Guests</li>
+                        <li><span class="sf-check">✓</span> Ample Parking</li>
+                        <li><span class="sf-check">✓</span> Catering Support</li>
+                        <li><span class="sf-check">✓</span> Power Backup</li>
+                        <li><span class="sf-check">✓</span> AC &amp; Non-AC Options</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Party Plot"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anniversary -->
+            <div class="service-detailed-card reveal" data-cat="social special">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Anniversary Photo</span>
+                    </div>
+                    <div class="service-badge">💑 Anniversary</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Anniversary Decoration</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Romantic candlelight setups, flower arrangements, and surprise decoration for your anniversary at home or any venue.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Candlelight Setup</li>
+                        <li><span class="sf-check">✓</span> Rose Petal Arrangement</li>
+                        <li><span class="sf-check">✓</span> Balloon Decoration</li>
+                        <li><span class="sf-check">✓</span> Custom Banner</li>
+                        <li><span class="sf-check">✓</span> Home Decoration</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Anniversary Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baby Shower -->
+            <div class="service-detailed-card reveal" data-cat="social">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Baby Shower Photo</span>
+                    </div>
+                    <div class="service-badge">🍼 Baby Shower</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Baby Shower</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Adorable baby shower decorations with gender reveal setups, balloon garlands, floral arrangements, and sweet table displays.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Gender Reveal Setup</li>
+                        <li><span class="sf-check">✓</span> Balloon Garland</li>
+                        <li><span class="sf-check">✓</span> Sweet Table Display</li>
+                        <li><span class="sf-check">✓</span> Custom Backdrop</li>
+                        <li><span class="sf-check">✓</span> Welcome Sign</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Baby Shower Decoration"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Booth -->
+            <div class="service-detailed-card reveal" data-cat="special birthday">
+                <div class="service-img">
+                    <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Photo Booth Photo</span>
+                    </div>
+                    <div class="service-badge">📸 Photo Booth</div>
+                    <div class="service-img-overlay"></div>
+                </div>
+                <div class="service-body">
+                    <div class="sb-header">
+                        <h3>Photo Booth Setup</h3>
+                        <div class="service-price-tag">
+                            <small>Starting from</small>
+                            <strong>Call for Price</strong>
+                        </div>
+                    </div>
+                    <p>Instagram-worthy photo booth setups with props, neon signs, balloon walls, flower walls, and custom backdrops for any event.</p>
+                    <ul class="service-features">
+                        <li><span class="sf-check">✓</span> Flower Wall</li>
+                        <li><span class="sf-check">✓</span> Balloon Wall</li>
+                        <li><span class="sf-check">✓</span> Neon Sign Setup</li>
+                        <li><span class="sf-check">✓</span> Props &amp; Accessories</li>
+                        <li><span class="sf-check">✓</span> Custom Backdrop</li>
+                    </ul>
+                    <div class="service-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        <a href="https://wa.me/916358111321?text=Hi, I need Photo Booth Setup"
+                           class="btn btn-wa btn-sm"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500" alt="Corporate">
-                <div class="service-badge">🏢 Corporate</div>
-            </div>
-            <div class="service-body">
-                <h3>Corporate Events</h3>
-                <p>Professional and elegant event setups for conferences, product launches, award nights, and office parties. We understand corporate aesthetics and brand requirements.</p>
-                <ul class="service-features">
-                    <li>✅ Stage & Podium Setup</li>
-                    <li>✅ Brand Themed Decoration</li>
-                    <li>✅ Award Night Setup</li>
-                    <li>✅ Conference Decoration</li>
-                    <li>✅ Photo Wall Setup</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹25,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement">
-                <div class="service-badge">🌸 Engagement</div>
-            </div>
-            <div class="service-body">
-                <h3>Engagement Ceremony</h3>
-                <p>Romantic floral walls, ring ceremony setups, and elegant backdrops that make your engagement truly special and Instagram-worthy.</p>
-                <ul class="service-features">
-                    <li>✅ Floral Wall Backdrop</li>
-                    <li>✅ Ring Ceremony Setup</li>
-                    <li>✅ Couple Seating Decor</li>
-                    <li>✅ Fairy Light Setup</li>
-                    <li>✅ Photo Arch</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹20,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme">
-                <div class="service-badge">🎭 Theme</div>
-            </div>
-            <div class="service-body">
-                <h3>Theme Parties</h3>
-                <p>Custom theme decorations from 50+ themes - Bollywood, Royal, Beach, Retro, Jungle, Superhero, Fairy Tale, Hollywood, and many more!</p>
-                <ul class="service-features">
-                    <li>✅ 50+ Theme Options</li>
-                    <li>✅ Custom Props & Setup</li>
-                    <li>✅ Themed Table Setting</li>
-                    <li>✅ Character Cutouts</li>
-                    <li>✅ Themed Photo Booth</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹15,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=500" alt="Party Plot">
-                <div class="service-badge">🏡 Plot</div>
-            </div>
-            <div class="service-body">
-                <h3>Party Plot Rental</h3>
-                <p>Spacious and well-maintained party plots available for 100-2000 guests with parking, catering support, and complete amenities.</p>
-                <ul class="service-features">
-                    <li>✅ Capacity: 100-2000 Guests</li>
-                    <li>✅ Ample Parking</li>
-                    <li>✅ Catering Support</li>
-                    <li>✅ Power Backup</li>
-                    <li>✅ AC & Non-AC Options</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹10,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Anniversary">
-                <div class="service-badge">💑 Anniversary</div>
-            </div>
-            <div class="service-body">
-                <h3>Anniversary Decoration</h3>
-                <p>Romantic candlelight setups, flower arrangements, and surprise decoration for your anniversary celebrations at home or venue.</p>
-                <ul class="service-features">
-                    <li>✅ Candlelight Setup</li>
-                    <li>✅ Rose Petal Arrangement</li>
-                    <li>✅ Balloon Decoration</li>
-                    <li>✅ Custom Banner</li>
-                    <li>✅ Home Decoration</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹5,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Baby Shower">
-                <div class="service-badge">🍼 Baby Shower</div>
-            </div>
-            <div class="service-body">
-                <h3>Baby Shower</h3>
-                <p>Adorable baby shower decorations with gender reveal setups, balloon garlands, floral arrangements, and sweet table displays.</p>
-                <ul class="service-features">
-                    <li>✅ Gender Reveal Setup</li>
-                    <li>✅ Balloon Garland</li>
-                    <li>✅ Sweet Table Display</li>
-                    <li>✅ Custom Backdrop</li>
-                    <li>✅ Welcome Sign</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹8,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-
-        <div class="service-detailed-card reveal">
-            <div class="service-img">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Photo Booth">
-                <div class="service-badge">📸 Photo Booth</div>
-            </div>
-            <div class="service-body">
-                <h3>Photo Booth Setup</h3>
-                <p>Instagram-worthy photo booth setups with props, neon signs, balloon walls, flower walls, and custom backdrops for any event.</p>
-                <ul class="service-features">
-                    <li>✅ Flower Wall</li>
-                    <li>✅ Balloon Wall</li>
-                    <li>✅ Neon Sign Setup</li>
-                    <li>✅ Props & Accessories</li>
-                    <li>✅ Custom Backdrop</li>
-                </ul>
-                <div class="service-price">Starting from <strong>₹6,000</strong></div>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
+        <!-- No results message -->
+        <div class="no-results" id="noResults" style="display:none;">
+            <span>🔍</span>
+            <p>No services found in this category.</p>
+            <button onclick="filterServices('all', document.querySelector('[data-filter=all]'))"
+                    class="btn btn-primary">Show All Services</button>
         </div>
 
     </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process-section">
-    <div class="section-header">
-        <div class="section-tag">HOW IT WORKS</div>
-        <h2 class="section-title">Our Simple Process</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="process-steps">
-        <div class="process-step reveal">
-            <div class="step-num">1</div>
-            <div class="step-icon">📞</div>
-            <h3>Contact</h3>
-            <p>Call or fill our form with event details</p>
+<!-- ========== PROCESS SECTION ========== -->
+<section class="process-section" id="process">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">How It Works</div>
+            <h2 class="section-title">Our Simple 5-Step Process</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From your first call to your celebration — we handle everything!</p>
         </div>
-        <div class="step-arrow">→</div>
-        <div class="process-step reveal">
-            <div class="step-num">2</div>
-            <div class="step-icon">💬</div>
-            <h3>Consult</h3>
-            <p>Free consultation to understand your vision</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="process-step reveal">
-            <div class="step-num">3</div>
-            <div class="step-icon">📋</div>
-            <h3>Plan</h3>
-            <p>Detailed design plan for your approval</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="process-step reveal">
-            <div class="step-num">4</div>
-            <div class="step-icon">🎨</div>
-            <h3>Decorate</h3>
-            <p>Expert team sets up everything perfectly</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="process-step reveal">
-            <div class="step-num">5</div>
-            <div class="step-icon">🎉</div>
-            <h3>Celebrate!</h3>
-            <p>Enjoy while we handle cleanup too!</p>
+        <div class="process-steps">
+            <div class="process-step reveal">
+                <div class="step-circle">
+                    <div class="step-num">1</div>
+                    <div class="step-icon">📞</div>
+                </div>
+                <h3>Contact Us</h3>
+                <p>Call, WhatsApp or fill our form with your event details</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <div class="process-step reveal">
+                <div class="step-circle">
+                    <div class="step-num">2</div>
+                    <div class="step-icon">💬</div>
+                </div>
+                <h3>Free Consult</h3>
+                <p>Free consultation to understand your vision and budget</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <div class="process-step reveal">
+                <div class="step-circle">
+                    <div class="step-num">3</div>
+                    <div class="step-icon">📋</div>
+                </div>
+                <h3>Plan &amp; Design</h3>
+                <p>Detailed design plan and quote for your approval</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <div class="process-step reveal">
+                <div class="step-circle">
+                    <div class="step-num">4</div>
+                    <div class="step-icon">🎨</div>
+                </div>
+                <h3>We Decorate</h3>
+                <p>Our expert team sets up everything perfectly</p>
+            </div>
+            <div class="step-arrow" aria-hidden="true">→</div>
+
+            <div class="process-step reveal">
+                <div class="step-circle">
+                    <div class="step-num">5</div>
+                    <div class="step-icon">🎉</div>
+                </div>
+                <h3>You Celebrate!</h3>
+                <p>Enjoy your event while we handle cleanup too</p>
+            </div>
         </div>
     </div>
 </section>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <span class="footer-logo">🎉 PartyPlot Pro</span>
-            <p>Making celebrations special since 2014.</p>
-            <div class="social-links">
-                <a class="social-link" href="#">📘</a>
-                <a class="social-link" href="#">📸</a>
-                <a class="social-link" href="#">🐦</a>
+<!-- ========== WHY US STRIP ========== -->
+<section class="why-strip">
+    <div class="container">
+        <div class="why-strip-grid">
+            <div class="ws-item">
+                <span class="ws-icon">🏆</span>
+                <div>
+                    <strong>21+ Years Experience</strong>
+                    <span>Trusted since 2003</span>
+                </div>
+            </div>
+            <div class="ws-item">
+                <span class="ws-icon">⏰</span>
+                <div>
+                    <strong>24/7 Available</strong>
+                    <span>Always here for you</span>
+                </div>
+            </div>
+            <div class="ws-item">
+                <span class="ws-icon">💰</span>
+                <div>
+                    <strong>Best Prices</strong>
+                    <span>No hidden charges</span>
+                </div>
+            </div>
+            <div class="ws-item">
+                <span class="ws-icon">✅</span>
+                <div>
+                    <strong>100% Satisfaction</strong>
+                    <span>Guaranteed quality</span>
+                </div>
             </div>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">→ Home</a></li>
-                <li><a href="about.html">→ About</a></li>
-                <li><a href="services.html">→ Services</a></li>
-                <li><a href="gallery.html">→ Gallery</a></li>
-                <li><a href="packages.html">→ Packages</a></li>
-                <li><a href="contact.html">→ Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
-                <li><a href="#">📱 +91 98765 43210</a></li>
-                <li><a href="#">📧 info@partyplotpro.com</a></li>
-            </ul>
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="services-cta">
+    <div class="container">
+        <div class="services-cta-inner">
+            <div class="scta-left">
+                <h2>Need a Custom Decoration?</h2>
+                <p>Tell us your requirements and we'll create the perfect setup for your event!</p>
+            </div>
+            <div class="scta-right">
+                <a href="contact.html" class="btn btn-gold">📋 Get Free Quote</a>
+                <a href="tel:6358111321" class="btn btn-outline-white">📞 Call Now</a>
+                <a href="https://wa.me/916358111321"
+                   class="btn btn-wa"
+                   target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <span class="footer-logo">🎊 Jay Ambe Decorators</span>
+                    <span class="footer-logo-sub">Ahmedabad &middot; Since 2003</span>
+                </div>
+                <p>Ahmedabad's most trusted decoration company. 21+ years of making celebrations magical.</p>
+                <div class="social-links">
+                    <a class="social-link" href="#" aria-label="Facebook">📘</a>
+                    <a class="social-link" href="#" aria-label="Instagram">📸</a>
+                    <a class="social-link" href="https://wa.me/916358111321" aria-label="WhatsApp">💬</a>
+                    <a class="social-link" href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">ℹ️ About Us</a></li>
+                    <li><a href="services.html">🎭 Services</a></li>
+                    <li><a href="gallery.html">📸 Gallery</a></li>
+                    <li><a href="packages.html">💼 Packages</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">💍 Wedding Decoration</a></li>
+                    <li><a href="#services">🎂 Birthday Parties</a></li>
+                    <li><a href="#services">🌸 Engagement</a></li>
+                    <li><a href="#services">🏢 Corporate Events</a></li>
+                    <li><a href="#services">🎭 Theme Parties</a></li>
+                    <li><a href="#services">🏡 Party Plot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
+                    <li><a href="https://wa.me/916358111321">💬 WhatsApp</a></li>
+                    <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
+                    <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
+                    <li><span>⏰ Open 24/7</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+<!-- FLOATING -->
+<div class="whatsapp-float">
+    <span class="wa-label">Chat Now</span>
+    <a href="https://wa.me/916358111321" class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</div>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+<!-- MOBILE CALL BAR -->
+<div class="mobile-call-bar">
+    <a href="tel:6358111321" class="mcb-call">📞 Call Now</a>
+    <a href="https://wa.me/916358111321" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
 
 <script src="js/common.js"></script>
 <script src="js/services.js"></script>

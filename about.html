@@ -2,255 +2,618 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PartyPlot Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>About Us - Jay Ambe Decorators | Ahmedabad Since 2003</title>
+    <meta name="description" content="Know about Jay Ambe Decorators - Ahmedabad's most trusted decoration company since 2003. 21+ years experience, 50+ expert team, 1000+ events completed.">
+    <meta name="keywords" content="about Jay Ambe Decorators, decoration company Ahmedabad, event management Gujarat, wedding decorators Ahmedabad">
+    <meta name="author" content="Jay Ambe Decorators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Jay Ambe Decorators - Ahmedabad">
+    <meta property="og:description" content="21+ years of excellence in decoration. 1000+ events, 50+ expert team.">
+    <meta property="og:type" content="website">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0F5132">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <div class="loader-icon">🎉</div>
-    <div class="loader-text">LOADING...</div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+<!-- ========== LOADER ========== -->
+<div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-logo">
+        <div class="loader-icon"></div>
+        <div class="loader-brand">JAY AMBE DECORATORS</div>
+        <div class="loader-city">AHMEDABAD · SINCE 2003</div>
+    </div>
 </div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cookie-banner" id="cookieBanner">
-    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+
+<!-- ========== CURSOR ========== -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ========== NAV OVERLAY ========== -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+
+<!-- ========== COOKIE BANNER ========== -->
+<div class="cookie-banner" id="cookieBanner" role="alert">
+    <p>🍪 We use cookies to improve your experience on our website.</p>
     <div class="cookie-btns">
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
-        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
 </div>
 
+<!-- ========== TOP BAR ========== -->
 <div class="top-bar">
     <div class="top-contacts">
-        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
-        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
+        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
+        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
+        <span>⏰ Open 24/7</span>
     </div>
-    <span class="top-offer">🎊 20% OFF This Month!</span>
+    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
-<nav id="navbar">
-    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+<!-- ========== NAVBAR ========== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo-wrap" aria-label="Jay Ambe Decorators Home">
+        <span class="logo-main">🎊 Jay Ambe Decorators</span>
+        <span class="logo-sub">Ahmedabad &middot; Since 2003</span>
+    </a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+        <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
+        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navLinks">☰</button>
 </nav>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-    <h1>About Us 🏆</h1>
-    <p>Mumbai's Premier Decoration & Event Management Company</p>
-    <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span>›</span>
-        <span>About Us</span>
+<!-- ========== PAGE HERO ========== -->
+<div class="page-hero" role="banner">
+    <div class="page-hero-inner">
+        <div class="page-hero-badge">🏆 About Us</div>
+        <h1>Ahmedabad's Most Trusted<br>Decoration Company</h1>
+        <p>21+ years of making celebrations magical with passion, creativity & excellence</p>
+        <div class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">About Us</span>
+        </div>
     </div>
 </div>
 
-<!-- STORY SECTION -->
-<section class="story-section">
-    <div class="story-container">
-        <div class="story-img reveal">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600" alt="Our Story">
-        </div>
-        <div class="story-content reveal">
-            <div class="section-tag">OUR STORY</div>
-            <h2>From a Small Dream to Mumbai's Best</h2>
-            <p>PartyPlot Pro was founded in 2014 by passionate event decorator Ramesh Shah with a simple dream - to make every celebration unforgettable. Starting with a small team of 3 people and basic equipment, we began decorating small birthday parties in Mumbai.</p>
-            <p>Over the years, our dedication to quality, creativity, and customer satisfaction helped us grow. Today, we are a team of 50+ expert designers and decorators who have successfully executed over 1,500 events across Maharashtra.</p>
-            <p>From intimate anniversaries to grand weddings of 2000+ guests, from simple birthday parties to elaborate corporate galas - we handle every event with the same passion and precision.</p>
-        </div>
-    </div>
-</section>
+<!-- ========== STORY SECTION ========== -->
+<section class="story-section" id="story">
+    <div class="container">
+        <div class="story-grid">
 
-<!-- MISSION VISION -->
-<section class="mission-section">
-    <div class="section-header">
-        <div class="section-tag">OUR VALUES</div>
-        <h2 class="section-title">Mission & Vision</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="mv-grid">
-        <div class="mv-card reveal">
-            <div class="mv-icon">🎯</div>
-            <h3>Our Mission</h3>
-            <p>To transform every event into an extraordinary experience that creates lasting memories through creative decoration, professional service, and attention to detail.</p>
-        </div>
-        <div class="mv-card reveal">
-            <div class="mv-icon">🔭</div>
-            <h3>Our Vision</h3>
-            <p>To become India's most trusted event decoration company, known for innovation, reliability, and creating magical moments that people cherish forever.</p>
-        </div>
-        <div class="mv-card reveal">
-            <div class="mv-icon">💎</div>
-            <h3>Our Values</h3>
-            <p>Creativity, integrity, excellence, and customer satisfaction are the core values that drive everything we do at PartyPlot Pro.</p>
-        </div>
-    </div>
-</section>
-
-<!-- TEAM SECTION -->
-<section class="team-section">
-    <div class="section-header">
-        <div class="section-tag">OUR TEAM</div>
-        <h2 class="section-title">Meet Our Experts</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">The passionate people behind every magical event</p>
-    </div>
-    <div class="team-grid">
-        <div class="team-card reveal">
-            <div class="team-img">
-                <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Team">
-                <div class="team-social">
-                    <a href="#">📘</a><a href="#">📸</a>
+            <!-- Image Side -->
+            <div class="story-img-wrap reveal">
+                <div class="story-img-frame">
+                    <div class="placeholder-img" style="height:100%;min-height:420px;border-radius:var(--radius-lg);">
+                        <!-- Replace: <img src="images/story.jpg" alt="Jay Ambe Decorators Story"> -->
+                        <span class="ph-icon">📸</span>
+                        <span class="ph-text">Our Story Photo<br>Replace with your photo</span>
+                    </div>
+                </div>
+                <!-- Floating elements -->
+                <div class="story-float-badge">
+                    <span class="sfb-num">2003</span>
+                    <span class="sfb-text">Founded</span>
+                </div>
+                <div class="story-float-card">
+                    <span>🏆</span>
+                    <div>
+                        <strong>21+ Years</strong>
+                        <small>of Excellence</small>
+                    </div>
                 </div>
             </div>
-            <div class="team-info">
-                <h3>Ramesh Shah</h3>
-                <span>Founder & CEO</span>
-                <p>10+ years of event decoration expertise</p>
-            </div>
-        </div>
-        <div class="team-card reveal">
-            <div class="team-img">
-                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Team">
-                <div class="team-social">
-                    <a href="#">📘</a><a href="#">📸</a>
+
+            <!-- Content Side -->
+            <div class="story-content reveal">
+                <div class="section-tag">Our Story</div>
+                <h2>From a Small Dream to<br>Ahmedabad's Most Trusted</h2>
+                <div class="divider" style="margin: 14px 0;"></div>
+
+                <p>Jay Ambe Decorators was founded in 2003 in Ahmedabad with a simple dream — to make every celebration truly unforgettable. Starting with a passionate team and dedication to quality, we began our journey decorating events across Ahmedabad.</p>
+
+                <p>Over two decades, our commitment to creativity, customer satisfaction, and attention to detail helped us grow into one of Gujarat's most trusted decoration companies. Today, our team of 50+ expert designers has successfully completed 1000+ events.</p>
+
+                <p>From intimate home celebrations to grand weddings of 2000+ guests, from simple birthday parties to large corporate events — we handle every event with the same passion and perfection that has defined us for 21+ years.</p>
+
+                <!-- Timeline -->
+                <div class="story-timeline">
+                    <div class="timeline-item">
+                        <div class="ti-year">2003</div>
+                        <div class="ti-content">
+                            <strong>Founded in Ahmedabad</strong>
+                            <span>Started with a small passionate team</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="ti-year">2010</div>
+                        <div class="ti-content">
+                            <strong>500+ Events Milestone</strong>
+                            <span>Expanded team and services across Gujarat</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="ti-year">2018</div>
+                        <div class="ti-content">
+                            <strong>50+ Expert Team</strong>
+                            <span>Became Ahmedabad's #1 decoration choice</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="ti-year">2024</div>
+                        <div class="ti-content">
+                            <strong>1000+ Events Completed</strong>
+                            <span>Still growing with the same passion</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="team-info">
-                <h3>Priya Desai</h3>
-                <span>Head of Design</span>
-                <p>Creative director with international experience</p>
-            </div>
-        </div>
-        <div class="team-card reveal">
-            <div class="team-img">
-                <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Team">
-                <div class="team-social">
-                    <a href="#">📘</a><a href="#">📸</a>
-                </div>
-            </div>
-            <div class="team-info">
-                <h3>Amit Kumar</h3>
-                <span>Event Manager</span>
-                <p>Specializes in large-scale corporate events</p>
-            </div>
-        </div>
-        <div class="team-card reveal">
-            <div class="team-img">
-                <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Team">
-                <div class="team-social">
-                    <a href="#">📘</a><a href="#">📸</a>
-                </div>
-            </div>
-            <div class="team-info">
-                <h3>Sneha Mehta</h3>
-                <span>Wedding Specialist</span>
-                <p>500+ weddings decorated with perfection</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section class="achievements-section">
-    <div class="section-header">
-        <div class="section-tag">ACHIEVEMENTS</div>
-        <h2 class="section-title">Our Numbers Speak</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="achievements-grid">
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="1500">0</span>
-            <p>Events Completed</p>
+<!-- ========== MISSION VISION SECTION ========== -->
+<section class="mission-section" id="mission">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Our Values</div>
+            <h2 class="section-title">Mission, Vision & Values</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">The principles that guide everything we do</p>
         </div>
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="800">0</span>
-            <p>Happy Clients</p>
-        </div>
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="10">0</span>
-            <p>Years Experience</p>
-        </div>
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="50">0</span>
-            <p>Team Members</p>
-        </div>
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="15">0</span>
-            <p>Awards Won</p>
-        </div>
-        <div class="achievement-card reveal">
-            <span class="stat-number" data-target="98">0</span>
-            <p>% Satisfaction Rate</p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 80px 30px; text-align: center;">
-    <h2 style="font-size:40px; color:white; margin-bottom:15px;">Ready to Work With Us? 🎉</h2>
-    <p style="color:rgba(255,255,255,0.9); font-size:18px; margin-bottom:35px;">Let's create something magical together!</p>
-    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn-white">📞 Contact Us</a>
-        <a href="services.html" class="btn btn-secondary-white" style="background:transparent; color:white; border:2px solid white; padding:13px 35px; border-radius:50px; font-size:15px; font-weight:600; text-decoration:none; transition:var(--transition);">🎭 Our Services</a>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <span class="footer-logo">🎉 PartyPlot Pro</span>
-            <p>Making celebrations special since 2014.</p>
-            <div class="social-links">
-                <a class="social-link" href="#">📘</a>
-                <a class="social-link" href="#">📸</a>
-                <a class="social-link" href="#">🐦</a>
-                <a class="social-link" href="#">▶️</a>
+        <div class="mv-grid reveal-grid">
+            <div class="mv-card reveal">
+                <div class="mv-icon-wrap">
+                    <span class="mv-icon">🎯</span>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To transform every event into an extraordinary experience that creates lasting memories through creative decoration, professional service, and unwavering attention to detail.</p>
+            </div>
+            <div class="mv-card reveal">
+                <div class="mv-icon-wrap">
+                    <span class="mv-icon">🔭</span>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To become Gujarat's most trusted and innovative event decoration company, known for creating magical moments that families in Ahmedabad cherish forever.</p>
+            </div>
+            <div class="mv-card reveal">
+                <div class="mv-icon-wrap">
+                    <span class="mv-icon">💎</span>
+                </div>
+                <h3>Our Values</h3>
+                <p>Creativity, integrity, excellence, punctuality, and 100% customer satisfaction are the core values that have driven our success for 21+ years in Ahmedabad.</p>
             </div>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">→ Home</a></li>
-                <li><a href="about.html">→ About</a></li>
-                <li><a href="services.html">→ Services</a></li>
-                <li><a href="gallery.html">→ Gallery</a></li>
-                <li><a href="packages.html">→ Packages</a></li>
-                <li><a href="contact.html">→ Contact</a></li>
-            </ul>
+    </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="why-about-section" id="why">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Why Choose Us</div>
+            <h2 class="section-title">What Makes Us Different</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">21+ years of trust and excellence sets us apart</p>
         </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
-                <li><a href="#">📱 +91 98765 43210</a></li>
-                <li><a href="#">📧 info@partyplotpro.com</a></li>
-            </ul>
+        <div class="why-about-grid reveal-grid">
+            <div class="wa-card reveal">
+                <div class="wa-num">01</div>
+                <div class="wa-icon">🏆</div>
+                <h3>21+ Years Experience</h3>
+                <p>Trusted decoration company serving Ahmedabad since 2003 with proven excellence</p>
+            </div>
+            <div class="wa-card reveal">
+                <div class="wa-num">02</div>
+                <div class="wa-icon">👨‍🎨</div>
+                <h3>50+ Expert Team</h3>
+                <p>Skilled decorators and designers dedicated to making your event perfect</p>
+            </div>
+            <div class="wa-card reveal">
+                <div class="wa-num">03</div>
+                <div class="wa-icon">⏰</div>
+                <h3>24/7 Available</h3>
+                <p>We are always available for consultations, bookings and support</p>
+            </div>
+            <div class="wa-card reveal">
+                <div class="wa-num">04</div>
+                <div class="wa-icon">💰</div>
+                <h3>Best Prices</h3>
+                <p>Premium quality decoration at the most competitive prices in Ahmedabad</p>
+            </div>
+            <div class="wa-card reveal">
+                <div class="wa-num">05</div>
+                <div class="wa-icon">🎨</div>
+                <h3>Custom Themes</h3>
+                <p>50+ unique themes tailored exactly to your vision, style and budget</p>
+            </div>
+            <div class="wa-card reveal">
+                <div class="wa-num">06</div>
+                <div class="wa-icon">✅</div>
+                <h3>100% Satisfaction</h3>
+                <p>1000+ happy families and guaranteed satisfaction on every single event</p>
+            </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+</section>
+
+<!-- ========== TEAM SECTION ========== -->
+<section class="team-section" id="team">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Our Team</div>
+            <h2 class="section-title">The People Behind the Magic</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Our passionate experts who make every event unforgettable</p>
+        </div>
+        <div class="team-grid reveal-grid">
+
+            <div class="team-card reveal">
+                <div class="team-img-wrap">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                        <!-- Replace: <img src="images/team1.jpg" alt="Owner"> -->
+                        <span class="ph-icon">👤</span>
+                        <span class="ph-text">Owner Photo</span>
+                    </div>
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Jainam Patel</h3>
+                    <span class="team-role">Founder & Owner</span>
+                    <p>21+ years of decoration expertise in Ahmedabad</p>
+                    <div class="team-tags">
+                        <span>Wedding</span>
+                        <span>Corporate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-img-wrap">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                        <span class="ph-icon">👤</span>
+                        <span class="ph-text">Team Member Photo</span>
+                    </div>
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Team Member</h3>
+                    <span class="team-role">Head of Design</span>
+                    <p>Creative designer with exceptional decoration skills</p>
+                    <div class="team-tags">
+                        <span>Design</span>
+                        <span>Floral</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-img-wrap">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                        <span class="ph-icon">👤</span>
+                        <span class="ph-text">Team Member Photo</span>
+                    </div>
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Team Member</h3>
+                    <span class="team-role">Event Manager</span>
+                    <p>Specializes in large-scale events and coordination</p>
+                    <div class="team-tags">
+                        <span>Events</span>
+                        <span>Corporate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-img-wrap">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                        <span class="ph-icon">👤</span>
+                        <span class="ph-text">Team Member Photo</span>
+                    </div>
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Team Member</h3>
+                    <span class="team-role">Wedding Specialist</span>
+                    <p>Expert in luxury wedding decoration setups</p>
+                    <div class="team-tags">
+                        <span>Wedding</span>
+                        <span>Floral</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== ACHIEVEMENTS / STATS ========== -->
+<section class="achievements-section" id="achievements">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag ach-tag">Our Achievements</div>
+            <h2 class="section-title" style="color:var(--white);">Numbers That Speak</h2>
+            <div class="divider" style="background:var(--accent);"></div>
+            <p class="section-subtitle" style="color:rgba(255,255,255,0.65);">
+                21+ years of results that our clients trust
+            </p>
+        </div>
+        <div class="achievements-grid reveal-grid">
+            <div class="achievement-card reveal">
+                <div class="ach-icon">🎊</div>
+                <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+                <p>Events Completed</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="ach-icon">😊</div>
+                <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+                <p>Happy Families</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="ach-icon">📅</div>
+                <span class="stat-number" data-target="21" data-suffix="+">0</span>
+                <p>Years Experience</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="ach-icon">👨‍🎨</div>
+                <span class="stat-number" data-target="50" data-suffix="+">0</span>
+                <p>Team Members</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="ach-icon">🏙️</div>
+                <span class="stat-number" data-target="10" data-suffix="+">0</span>
+                <p>Cities Served</p>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="ach-icon">⭐</div>
+                <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                <p>Satisfaction Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROCESS SECTION ========== -->
+<section class="process-section" id="process">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">How We Work</div>
+            <h2 class="section-title">Our Simple 4-Step Process</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">From first call to final celebration — we handle everything!</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <div class="ps-number">01</div>
+                <div class="ps-icon">📞</div>
+                <h3>Contact Us</h3>
+                <p>Call, WhatsApp or fill our form with your event details and requirements</p>
+            </div>
+            <div class="process-connector" aria-hidden="true">→</div>
+            <div class="process-step reveal">
+                <div class="ps-number">02</div>
+                <div class="ps-icon">💬</div>
+                <h3>Free Consultation</h3>
+                <p>We discuss your vision, theme, budget and all requirements in detail</p>
+            </div>
+            <div class="process-connector" aria-hidden="true">→</div>
+            <div class="process-step reveal">
+                <div class="ps-number">03</div>
+                <div class="ps-icon">🎨</div>
+                <h3>We Decorate</h3>
+                <p>Our expert team sets up everything perfectly on the day of your event</p>
+            </div>
+            <div class="process-connector" aria-hidden="true">→</div>
+            <div class="process-step reveal">
+                <div class="ps-number">04</div>
+                <div class="ps-icon">🎉</div>
+                <h3>You Celebrate!</h3>
+                <p>Enjoy your magical event while we handle setup and cleanup too</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="about-testimonials" id="reviews">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Client Reviews</div>
+            <h2 class="section-title">What Ahmedabad Says</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Real reviews from our 1000+ happy clients</p>
+        </div>
+        <div class="reviews-grid reveal-grid">
+            <div class="review-card reveal">
+                <div class="rc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="rc-text">"Jay Ambe Decorators made our wedding absolutely beautiful! Every detail was perfect. The team was so professional and creative. Best in Ahmedabad!"</p>
+                <div class="rc-author">
+                    <div class="rc-avatar">P</div>
+                    <div>
+                        <strong>Priya & Raj Shah</strong>
+                        <span>Wedding · Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card reveal">
+                <div class="rc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="rc-text">"Best birthday decoration! My son's superhero theme was perfect. Very budget-friendly and the team was amazing. Will definitely book again!"</p>
+                <div class="rc-author">
+                    <div class="rc-avatar">M</div>
+                    <div>
+                        <strong>Meera Patel</strong>
+                        <span>Birthday · Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card reveal">
+                <div class="rc-stars">⭐⭐⭐⭐⭐</div>
+                <p class="rc-text">"We use Jay Ambe for all our corporate events. Always professional, always on time, always excellent work. Highly recommended for all events!"</p>
+                <div class="rc-author">
+                    <div class="rc-avatar">A</div>
+                    <div>
+                        <strong>Amit Desai</strong>
+                        <span>Corporate · Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="about-cta">
+    <div class="container">
+        <div class="about-cta-content">
+            <div class="about-cta-text">
+                <h2>Ready to Work With Ahmedabad's Best? 🎊</h2>
+                <p>Call us now for a FREE consultation and quote!</p>
+                <div class="about-cta-info">
+                    <span>📱 +91 63581 11321</span>
+                    <span>⏰ Open 24/7</span>
+                </div>
+            </div>
+            <div class="about-cta-btns">
+                <a href="contact.html" class="btn btn-gold">📋 Book Now</a>
+                <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+                <a href="https://wa.me/916358111321"
+                   class="btn btn-wa"
+                   target="_blank"
+                   rel="noopener">💬 WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <span class="footer-logo">🎊 Jay Ambe Decorators</span>
+                    <span class="footer-logo-sub">Ahmedabad &middot; Since 2003</span>
+                </div>
+                <p>Ahmedabad's most trusted decoration company. 21+ years of making celebrations truly magical.</p>
+                <div class="social-links">
+                    <a class="social-link" href="#" aria-label="Facebook">📘</a>
+                    <a class="social-link" href="#" aria-label="Instagram">📸</a>
+                    <a class="social-link" href="https://wa.me/916358111321" aria-label="WhatsApp">💬</a>
+                    <a class="social-link" href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">ℹ️ About Us</a></li>
+                    <li><a href="services.html">🎭 Services</a></li>
+                    <li><a href="gallery.html">📸 Gallery</a></li>
+                    <li><a href="packages.html">💼 Packages</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">💍 Wedding Decoration</a></li>
+                    <li><a href="services.html">🎂 Birthday Parties</a></li>
+                    <li><a href="services.html">🌸 Engagement</a></li>
+                    <li><a href="services.html">🏢 Corporate Events</a></li>
+                    <li><a href="services.html">🎭 Theme Parties</a></li>
+                    <li><a href="services.html">🏡 Party Plot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
+                    <li><a href="https://wa.me/916358111321">💬 WhatsApp</a></li>
+                    <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
+                    <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
+                    <li><span>⏰ Open 24/7</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+<!-- ========== FLOATING BUTTONS ========== -->
+<div class="whatsapp-float">
+    <span class="wa-label">Chat Now</span>
+    <a href="https://wa.me/916358111321"
+       class="wa-btn"
+       target="_blank"
+       rel="noopener"
+       aria-label="WhatsApp">💬</a>
+</div>
 
+<button class="scroll-top"
+        id="scrollTop"
+        onclick="scrollToTop()"
+        aria-label="Scroll to top">↑</button>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+    <a href="tel:6358111321" class="mcb-call">📞 Call Now</a>
+    <a href="https://wa.me/916358111321" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<!-- Scripts -->
 <script src="js/common.js"></script>
 <script src="js/about.js"></script>
 </body>

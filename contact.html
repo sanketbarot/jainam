@@ -2,300 +2,555 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jay Ambe Decorators Ahmedabad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Contact Us - Jay Ambe Decorators | Book Decoration in Ahmedabad</title>
+    <meta name="description" content="Contact Jay Ambe Decorators for all decoration needs in Ahmedabad. Call +91 63581 11321. Open 24/7. Free consultation for all events.">
+    <meta name="keywords" content="contact Jay Ambe Decorators, book decoration Ahmedabad, decoration booking Gujarat, event decoration contact">
+    <meta name="author" content="Jay Ambe Decorators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Jay Ambe Decorators - Ahmedabad">
+    <meta property="og:description" content="Book your event decoration in Ahmedabad. Open 24/7. Call +91 63581 11321">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0F5132">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <div class="loader-icon">🎊</div>
-    <div class="loader-brand">JAY AMBE DECORATORS</div>
-    <div class="loader-sub">AHMEDABAD</div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+<!-- ========== LOADER ========== -->
+<div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-logo">
+        <div class="loader-icon"></div>
+        <div class="loader-brand">JAY AMBE DECORATORS</div>
+        <div class="loader-city">AHMEDABAD · SINCE 2003</div>
+    </div>
 </div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cookie-banner" id="cookieBanner">
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- NAV OVERLAY -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookieBanner" role="alert">
     <p>🍪 We use cookies to improve your experience.</p>
     <div class="cookie-btns">
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
-        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
 </div>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-contacts">
         <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
-        <span>💬 <a href="https://wa.me/916358111321">WhatsApp</a></span>
+        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
         <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
+        <span>⏰ Open 24/7</span>
     </div>
-    <span class="top-offer">⏰ Open 24/7 - Call Anytime!</span>
+    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
-<nav id="navbar">
-    <a href="index.html" class="logo-wrap">
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo-wrap" aria-label="Jay Ambe Decorators Home">
         <span class="logo-main">🎊 Jay Ambe Decorators</span>
-        <span class="logo-sub">Ahmedabad • Since 2003</span>
+        <span class="logo-sub">Ahmedabad &middot; Since 2003</span>
     </a>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+        <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
+        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navLinks">☰</button>
 </nav>
 
-<div class="page-hero">
-    <h1>Contact Us 📞</h1>
-    <p>Book Your Event with Jay Ambe Decorators - Ahmedabad</p>
-    <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span>›</span>
-        <span>Contact</span>
+<!-- PAGE HERO -->
+<div class="page-hero" role="banner">
+    <div class="page-hero-inner">
+        <div class="page-hero-badge">📞 Contact Us</div>
+        <h1>Book Your Dream Event<br>in Ahmedabad</h1>
+        <p>Call, WhatsApp or fill the form — our team responds within 1 hour!</p>
+        <div class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Contact</span>
+        </div>
     </div>
 </div>
 
-<!-- QUICK CONTACT CARDS -->
-<section class="quick-contact">
-    <div class="quick-cards">
-        <div class="quick-card reveal">
-            <div class="quick-icon">📱</div>
-            <h3>Call Us</h3>
-            <p>+91 63581 11321</p>
-            <a href="tel:6358111321" class="btn btn-primary">Call Now</a>
-        </div>
-        <div class="quick-card reveal">
-            <div class="quick-icon">💬</div>
-            <h3>WhatsApp</h3>
-            <p>+91 63581 11321</p>
-            <a href="https://wa.me/916358111321" class="btn btn-primary" target="_blank">WhatsApp Now</a>
-        </div>
-        <div class="quick-card reveal">
-            <div class="quick-icon">📧</div>
-            <h3>Email Us</h3>
-            <p>jainampatel1715@gmail.com</p>
-            <a href="mailto:jainampatel1715@gmail.com" class="btn btn-primary">Send Email</a>
-        </div>
-        <div class="quick-card reveal">
-            <div class="quick-icon">⏰</div>
-            <h3>Working Hours</h3>
-            <p>Open 24/7 - Always Available</p>
-            <a href="https://wa.me/916358111321" class="btn btn-primary">Chat Now</a>
-        </div>
-    </div>
-</section>
+<!-- ========== QUICK CONTACT CARDS ========== -->
+<section class="quick-contact" id="contact">
+    <div class="container">
+        <div class="quick-cards">
 
-<!-- BOOKING FORM -->
-<section class="booking-section">
-    <div class="booking-container">
-        <div class="booking-info reveal">
-            <div class="section-tag">BOOK NOW</div>
-            <h2>Plan Your Dream Event with Us! 🎊</h2>
-            <p>Fill the form and our team will call you back within 1 hour. We are available 24/7 for all your decoration needs in Ahmedabad.</p>
-
-            <div class="contact-details-box">
-                <div class="cd-item">
-                    <span class="cd-icon">📱</span>
-                    <div>
-                        <strong>Phone & WhatsApp</strong>
-                        <p>+91 63581 11321</p>
-                    </div>
+            <div class="quick-card reveal">
+                <div class="qc-icon-wrap">
+                    <span class="quick-icon">📱</span>
                 </div>
-                <div class="cd-item">
-                    <span class="cd-icon">📧</span>
-                    <div>
-                        <strong>Email</strong>
-                        <p>jainampatel1715@gmail.com</p>
-                    </div>
-                </div>
-                <div class="cd-item">
-                    <span class="cd-icon">📍</span>
-                    <div>
-                        <strong>Location</strong>
-                        <p>Ahmedabad, Gujarat</p>
-                    </div>
-                </div>
-                <div class="cd-item">
-                    <span class="cd-icon">⏰</span>
-                    <div>
-                        <strong>Working Hours</strong>
-                        <p>Open 24/7 - Always Available</p>
-                    </div>
-                </div>
-                <div class="cd-item">
-                    <span class="cd-icon">🏆</span>
-                    <div>
-                        <strong>Experience</strong>
-                        <p>21+ Years • 1000+ Events Done</p>
-                    </div>
-                </div>
+                <h3>Call Us</h3>
+                <p>+91 63581 11321</p>
+                <p class="qc-sub">Available 24/7</p>
+                <a href="tel:6358111321" class="btn btn-primary">Call Now</a>
             </div>
 
-            <div class="direct-btns">
-                <a href="tel:6358111321" class="btn btn-primary">📞 Call: 63581 11321</a>
-                <a href="https://wa.me/916358111321" target="_blank" class="btn-wa-large">💬 WhatsApp Us</a>
-            </div>
-        </div>
-
-        <div class="booking-form-wrap reveal">
-            <h3>📋 Online Booking Form</h3>
-            <div id="pkgSelected" class="pkg-selected-tag" style="display:none;"></div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>👤 Your Name *</label>
-                    <input type="text" id="cName" placeholder="Full name">
+            <div class="quick-card reveal">
+                <div class="qc-icon-wrap">
+                    <span class="quick-icon">💬</span>
                 </div>
-                <div class="form-group">
-                    <label>📱 Phone Number *</label>
-                    <input type="tel" id="cPhone" placeholder="+91 XXXXX XXXXX">
+                <h3>WhatsApp</h3>
+                <p>+91 63581 11321</p>
+                <p class="qc-sub">Instant Response</p>
+                <a href="https://wa.me/916358111321"
+                   class="btn btn-wa"
+                   target="_blank" rel="noopener">WhatsApp Now</a>
+            </div>
+
+            <div class="quick-card reveal">
+                <div class="qc-icon-wrap">
+                    <span class="quick-icon">📧</span>
                 </div>
+                <h3>Email Us</h3>
+                <p>jainampatel1715@gmail.com</p>
+                <p class="qc-sub">Reply within 2 hours</p>
+                <a href="mailto:jainampatel1715@gmail.com" class="btn btn-primary">Send Email</a>
             </div>
 
-            <div class="form-group">
-                <label>📧 Email Address</label>
-                <input type="email" id="cEmail" placeholder="your@email.com">
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>🎉 Event Type *</label>
-                    <select id="cEvent">
-                        <option value="">Select Event</option>
-                        <option>💍 Wedding</option>
-                        <option>🎂 Birthday Party</option>
-                        <option>🌸 Engagement</option>
-                        <option>🏢 Corporate Event</option>
-                        <option>🎭 Theme Party</option>
-                        <option>💑 Anniversary</option>
-                        <option>🍼 Baby Shower</option>
-                        <option>🎓 Graduation</option>
-                        <option>🕌 Navratri/Festival</option>
-                        <option>Other</option>
-                    </select>
+            <div class="quick-card reveal">
+                <div class="qc-icon-wrap">
+                    <span class="quick-icon">📍</span>
                 </div>
-                <div class="form-group">
-                    <label>📅 Event Date *</label>
-                    <input type="date" id="cDate">
-                </div>
+                <h3>Our Location</h3>
+                <p>Ahmedabad, Gujarat</p>
+                <p class="qc-sub">Serving all of Gujarat</p>
+                <a href="https://maps.google.com/?q=Jay+Ambe+Decorators+Ahmedabad"
+                   class="btn btn-primary"
+                   target="_blank" rel="noopener">Get Directions</a>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label>👥 Guest Count</label>
-                    <select id="cGuests">
-                        <option value="">Select</option>
-                        <option>Less than 50</option>
-                        <option>50 - 150</option>
-                        <option>150 - 300</option>
-                        <option>300 - 500</option>
-                        <option>500 - 1000</option>
-                        <option>1000+</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>💰 Your Budget</label>
-                    <select id="cBudget">
-                        <option value="">Select Budget</option>
-                        <option>Under ₹10,000</option>
-                        <option>₹10,000 - ₹25,000</option>
-                        <option>₹25,000 - ₹50,000</option>
-                        <option>₹50,000 - ₹1,00,000</option>
-                        <option>₹1,00,000+</option>
-                        <option>Custom Budget</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>📍 Event Venue/Area in Ahmedabad</label>
-                <input type="text" id="cVenue" placeholder="Venue name or area in Ahmedabad">
-            </div>
-
-            <div class="form-group">
-                <label>💬 Special Requirements</label>
-                <textarea id="cMsg" placeholder="Tell us about your event, theme preferences, special requirements..."></textarea>
-            </div>
-
-            <button class="submit-btn" onclick="submitBooking()">
-                🎊 Submit Booking Request
-            </button>
-
-            <div class="success-box" id="successBox">
-                <div class="success-icon">🎉</div>
-                <h4>Booking Request Submitted!</h4>
-                <p>Thank you! Our team will call you within 1 hour.<br>
-                You can also reach us at <strong>+91 63581 11321</strong></p>
-            </div>
         </div>
     </div>
 </section>
 
-<!-- GOOGLE MAP -->
+<!-- ========== BOOKING SECTION ========== -->
+<section class="booking-section" id="booking">
+    <div class="container">
+        <div class="booking-container">
+
+            <!-- Left: Info -->
+            <div class="booking-info reveal">
+                <div class="section-tag">Book Now</div>
+                <h2>Plan Your Dream Event<br>with Jay Ambe Decorators! 🎊</h2>
+                <p>Fill the form and our expert team will call you back within <strong>1 hour</strong>. We provide free consultation for all events in Ahmedabad &amp; Gujarat.</p>
+
+                <!-- Contact Details -->
+                <div class="contact-details-box">
+                    <div class="cd-item">
+                        <div class="cd-icon-wrap">
+                            <span class="cd-icon">📱</span>
+                        </div>
+                        <div class="cd-text">
+                            <strong>Phone &amp; WhatsApp</strong>
+                            <a href="tel:6358111321">+91 63581 11321</a>
+                        </div>
+                    </div>
+                    <div class="cd-item">
+                        <div class="cd-icon-wrap">
+                            <span class="cd-icon">📧</span>
+                        </div>
+                        <div class="cd-text">
+                            <strong>Email Address</strong>
+                            <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="cd-item">
+                        <div class="cd-icon-wrap">
+                            <span class="cd-icon">📍</span>
+                        </div>
+                        <div class="cd-text">
+                            <strong>Location</strong>
+                            <span>Ahmedabad, Gujarat</span>
+                        </div>
+                    </div>
+                    <div class="cd-item">
+                        <div class="cd-icon-wrap">
+                            <span class="cd-icon">⏰</span>
+                        </div>
+                        <div class="cd-text">
+                            <strong>Working Hours</strong>
+                            <span>Open 24/7 — Always Available</span>
+                        </div>
+                    </div>
+                    <div class="cd-item">
+                        <div class="cd-icon-wrap">
+                            <span class="cd-icon">🏆</span>
+                        </div>
+                        <div class="cd-text">
+                            <strong>Our Experience</strong>
+                            <span>21+ Years &bull; 1000+ Events Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose -->
+                <div class="why-contact">
+                    <h4>Why Contact Us?</h4>
+                    <div class="wc-grid">
+                        <div class="wc-item">
+                            <span>✅</span>
+                            <span>Free Consultation</span>
+                        </div>
+                        <div class="wc-item">
+                            <span>⚡</span>
+                            <span>1 Hour Response</span>
+                        </div>
+                        <div class="wc-item">
+                            <span>💰</span>
+                            <span>Best Prices</span>
+                        </div>
+                        <div class="wc-item">
+                            <span>🎨</span>
+                            <span>Custom Packages</span>
+                        </div>
+                        <div class="wc-item">
+                            <span>⏰</span>
+                            <span>Open 24/7</span>
+                        </div>
+                        <div class="wc-item">
+                            <span>🏆</span>
+                            <span>21+ Years Exp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Contact Buttons -->
+                <div class="direct-btns">
+                    <a href="tel:6358111321" class="btn btn-primary">
+                        📞 Call: 63581 11321
+                    </a>
+                    <a href="https://wa.me/916358111321?text=Hi Jay Ambe Decorators! I want to book a decoration."
+                       class="btn btn-wa"
+                       target="_blank" rel="noopener">
+                        💬 WhatsApp Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="booking-form-wrap reveal" id="bookingForm">
+                <div class="bfw-header">
+                    <h3>📋 Online Booking Form</h3>
+                    <p>Fill all details for faster processing</p>
+                </div>
+
+                <!-- Package selected tag -->
+                <div id="pkgSelected" class="pkg-selected-tag" style="display:none;"
+                     role="status" aria-live="polite"></div>
+
+                <!-- Form -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cName">👤 Your Name <span class="req">*</span></label>
+                        <input type="text" id="cName"
+                               placeholder="Your full name"
+                               autocomplete="name"
+                               maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="cPhone">📱 Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="cPhone"
+                               placeholder="+91 XXXXX XXXXX"
+                               autocomplete="tel"
+                               maxlength="15"
+                               pattern="[0-9+\-\s]{10,15}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cEmail">📧 Email Address</label>
+                    <input type="email" id="cEmail"
+                           placeholder="your@email.com"
+                           autocomplete="email">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cEvent">🎉 Event Type <span class="req">*</span></label>
+                        <select id="cEvent" autocomplete="off">
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">💍 Wedding</option>
+                            <option value="birthday">🎂 Birthday Party</option>
+                            <option value="engagement">🌸 Engagement</option>
+                            <option value="corporate">🏢 Corporate Event</option>
+                            <option value="theme">🎭 Theme Party</option>
+                            <option value="anniversary">💑 Anniversary</option>
+                            <option value="babyshower">🍼 Baby Shower</option>
+                            <option value="graduation">🎓 Graduation</option>
+                            <option value="navratri">🕌 Navratri/Festival</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cDate">📅 Event Date <span class="req">*</span></label>
+                        <input type="date" id="cDate" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cGuests">👥 Guest Count</label>
+                        <select id="cGuests">
+                            <option value="">Select Count</option>
+                            <option>Less than 50</option>
+                            <option>50 - 150</option>
+                            <option>150 - 300</option>
+                            <option>300 - 500</option>
+                            <option>500 - 1000</option>
+                            <option>1000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cBudget">💰 Budget Range</label>
+                        <select id="cBudget">
+                            <option value="">Select Budget</option>
+                            <option>Under ₹10,000</option>
+                            <option>₹10,000 - ₹25,000</option>
+                            <option>₹25,000 - ₹50,000</option>
+                            <option>₹50,000 - ₹1,00,000</option>
+                            <option>₹1,00,000+</option>
+                            <option>Custom Budget</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cPackage">📦 Preferred Package</label>
+                    <select id="cPackage">
+                        <option value="">Select Package (Optional)</option>
+                        <option value="Basic">🌿 Basic Package</option>
+                        <option value="Standard">🌳 Standard Package</option>
+                        <option value="Premium">🏅 Premium Package</option>
+                        <option value="Elite">💎 Elite Wedding Package</option>
+                        <option value="Custom">🎨 Custom Package</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cVenue">📍 Event Venue / Area in Ahmedabad</label>
+                    <input type="text" id="cVenue"
+                           placeholder="Venue name or area (e.g. Satellite, Bopal, Vastrapur...)">
+                </div>
+
+                <div class="form-group">
+                    <label for="cMsg">💬 Special Requirements</label>
+                    <textarea id="cMsg"
+                              placeholder="Tell us about your event, theme, decorations you need..."
+                              maxlength="500"></textarea>
+                    <div class="char-count">
+                        <span id="charCount">0</span>/500 characters
+                    </div>
+                </div>
+
+                <button class="submit-btn" id="submitBtn" onclick="submitBooking()">
+                    <span class="btn-text">🎊 Submit Booking Request</span>
+                    <span class="btn-loader" style="display:none;">⏳ Submitting...</span>
+                </button>
+
+                <!-- Success Message -->
+                <div class="success-box" id="successBox" role="alert" aria-live="polite">
+                    <div class="success-icon">🎉</div>
+                    <h4>Booking Request Submitted!</h4>
+                    <p>Thank you! Our team will call you within <strong>1 hour</strong>.</p>
+                    <p>You can also reach us directly at:</p>
+                    <div class="success-btns">
+                        <a href="tel:6358111321" class="btn btn-white btn-sm">📞 Call Now</a>
+                        <a href="https://wa.me/916358111321"
+                           class="btn btn-sm"
+                           style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.3);"
+                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                    </div>
+                </div>
+
+                <p class="form-note">
+                    <span>🔒</span> Your information is safe and will never be shared.
+                    By submitting, you agree to be contacted about your booking.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== MAP SECTION ========== -->
 <div class="map-section">
+    <div class="map-overlay-bar">
+        <div class="mob-info">
+            <span>📍</span>
+            <div>
+                <strong>Jay Ambe Decorators</strong>
+                <span>Ahmedabad, Gujarat</span>
+            </div>
+        </div>
+        <a href="https://maps.google.com/?q=Jay+Ambe+Decorators+Ahmedabad"
+           class="btn btn-gold btn-sm"
+           target="_blank" rel="noopener">
+            Open in Maps
+        </a>
+    </div>
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.0!2d72.5714!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83001d1b46e3%3A0x8c0ca9facff66c27!2sJay%20Ambe%20Decorators!5e0!3m2!1sen!2sin!4v1234567890"
         width="100%"
-        height="400"
-        style="border:0;"
+        height="380"
+        style="border:0; display:block;"
         allowfullscreen=""
         loading="lazy"
+        title="Jay Ambe Decorators Location"
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </div>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <div class="footer-logo-wrap">
-                <span class="footer-logo-main">🎊 Jay Ambe Decorators</span>
-                <span class="footer-logo-sub">AHMEDABAD • SINCE 2003</span>
-            </div>
-            <p>Ahmedabad's most trusted decoration company with 21+ years of experience and 1000+ successful events.</p>
-            <div class="social-links">
-                <a class="social-link" href="#">📘</a>
-                <a class="social-link" href="#">📸</a>
-                <a class="social-link" href="https://wa.me/916358111321">💬</a>
-            </div>
+<!-- ========== FAQ SECTION ========== -->
+<section class="contact-faq">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Quick Answers</div>
+            <h2 class="section-title">Common Questions</h2>
+            <div class="divider"></div>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">→ Home</a></li>
-                <li><a href="about.html">→ About Us</a></li>
-                <li><a href="services.html">→ Services</a></li>
-                <li><a href="gallery.html">→ Gallery</a></li>
-                <li><a href="packages.html">→ Packages</a></li>
-                <li><a href="contact.html">→ Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-                <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
-                <li><a href="https://wa.me/916358111321">💬 WhatsApp: 63581 11321</a></li>
-                <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
-                <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
-                <li><a href="#">⏰ Open 24/7</a></li>
-            </ul>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How quickly will you respond to my inquiry?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    We respond to all inquiries within 1 hour! You can also call or WhatsApp us directly at +91 63581 11321. We are available 24/7 for all your decoration needs.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do you provide free consultation?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We provide completely free consultation for all events. Our expert team will discuss your vision, budget, and requirements to create the perfect decoration plan for you.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How far in advance should I book?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    We recommend booking 2-4 weeks in advance for regular events and 2-3 months for weddings. However, we also accommodate last-minute bookings based on availability!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do you serve outside Ahmedabad?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We serve across Gujarat including Gandhinagar, Surat, Vadodara, Rajkot, Anand, and other cities. Additional travel charges may apply. Contact us for details.
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>© 2024 Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <span class="footer-logo">🎊 Jay Ambe Decorators</span>
+                    <span class="footer-logo-sub">Ahmedabad &middot; Since 2003</span>
+                </div>
+                <p>Ahmedabad's most trusted decoration company. 21+ years of making celebrations magical for 1000+ happy families.</p>
+                <div class="social-links">
+                    <a class="social-link" href="#" aria-label="Facebook">📘</a>
+                    <a class="social-link" href="#" aria-label="Instagram">📸</a>
+                    <a class="social-link" href="https://wa.me/916358111321" aria-label="WhatsApp">💬</a>
+                    <a class="social-link" href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">ℹ️ About Us</a></li>
+                    <li><a href="services.html">🎭 Services</a></li>
+                    <li><a href="gallery.html">📸 Gallery</a></li>
+                    <li><a href="packages.html">💼 Packages</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">💍 Wedding Decoration</a></li>
+                    <li><a href="services.html">🎂 Birthday Parties</a></li>
+                    <li><a href="services.html">🌸 Engagement</a></li>
+                    <li><a href="services.html">🏢 Corporate Events</a></li>
+                    <li><a href="services.html">🎭 Theme Parties</a></li>
+                    <li><a href="services.html">🏡 Party Plot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
+                    <li><a href="https://wa.me/916358111321">💬 WhatsApp Us</a></li>
+                    <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
+                    <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
+                    <li><span>⏰ Open 24/7 Always</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/916358111321" class="whatsapp-btn" target="_blank">💬</a>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+<!-- FLOATING -->
+<div class="whatsapp-float">
+    <span class="wa-label">Chat Now</span>
+    <a href="https://wa.me/916358111321" class="wa-btn"
+       target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</div>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+<!-- MOBILE CALL BAR -->
+<div class="mobile-call-bar">
+    <a href="tel:6358111321" class="mcb-call">📞 Call Now</a>
+    <a href="https://wa.me/916358111321" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
 
 <script src="js/common.js"></script>
 <script src="js/contact.js"></script>
