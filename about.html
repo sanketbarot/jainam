@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO -->
     <title>About Us - Jay Ambe Decorators | Ahmedabad Since 2003</title>
     <meta name="description" content="Know about Jay Ambe Decorators - Ahmedabad's most trusted decoration company since 2003. 21+ years experience, 50+ expert team, 1000+ events completed.">
     <meta name="keywords" content="about Jay Ambe Decorators, decoration company Ahmedabad, event management Gujarat, wedding decorators Ahmedabad">
@@ -13,25 +12,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="about.html">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="About Jay Ambe Decorators - Ahmedabad">
     <meta property="og:description" content="21+ years of excellence in decoration. 1000+ events, 50+ expert team.">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1E1B4B">
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#0F5132">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
-<!-- ========== LOADER ========== -->
+<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-logo">
         <div class="loader-icon"></div>
@@ -40,34 +31,23 @@
     </div>
 </div>
 
-<!-- ========== CURSOR ========== -->
+<!-- CURSOR -->
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
-<!-- ========== NAV OVERLAY ========== -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+<!-- NAV OVERLAY -->
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-<!-- ========== COOKIE BANNER ========== -->
+<!-- COOKIE -->
 <div class="cookie-banner" id="cookieBanner" role="alert">
-    <p>🍪 We use cookies to improve your experience on our website.</p>
+    <p>🍪 We use cookies to improve your experience.</p>
     <div class="cookie-btns">
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
         <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
 </div>
 
-<!-- ========== TOP BAR ========== -->
-<div class="top-bar">
-    <div class="top-contacts">
-        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
-        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
-        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
-        <span>⏰ Open 24/7</span>
-    </div>
-    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
-</div>
-
-<!-- ========== NAVBAR ========== -->
+<!-- NAVBAR -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="logo-wrap" aria-label="Jay Ambe Decorators Home">
         <span class="logo-main">🎊 Jay Ambe Decorators</span>
@@ -79,20 +59,30 @@
         <li role="none"><a href="services.html" role="menuitem">Services</a></li>
         <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
         <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
-        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
+        <li role="none">
+            <a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a>
+        </li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()"
-            aria-label="Toggle menu"
+    <button class="hamburger"
+            id="hamburgerBtn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="navLinks">☰</button>
+            aria-controls="navLinks">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+    </button>
 </nav>
 
-<!-- ========== PAGE HERO ========== -->
+<!-- PAGE HERO -->
 <div class="page-hero" role="banner">
     <div class="page-hero-inner">
         <div class="page-hero-badge">🏆 About Us</div>
-        <h1>Ahmedabad's Most Trusted<br>Decoration Company</h1>
-        <p>21+ years of making celebrations magical with passion, creativity & excellence</p>
+        <h1>Ahmedabad's Most Trusted<br>
+            <span class="hero-gradient-text">Decoration Company</span>
+        </h1>
+        <p>21+ years of making celebrations magical with passion, creativity &amp; excellence</p>
         <div class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
             <span aria-hidden="true">›</span>
@@ -101,21 +91,21 @@
     </div>
 </div>
 
-<!-- ========== STORY SECTION ========== -->
+<!-- STORY SECTION -->
 <section class="story-section" id="story">
     <div class="container">
         <div class="story-grid">
 
             <!-- Image Side -->
-            <div class="story-img-wrap reveal">
+            <div class="story-img-wrap reveal-left">
                 <div class="story-img-frame">
-                    <div class="placeholder-img" style="height:100%;min-height:420px;border-radius:var(--radius-lg);">
-                        <!-- Replace: <img src="images/story.jpg" alt="Jay Ambe Decorators Story"> -->
+                    <div class="placeholder-img"
+                         style="height:100%;min-height:420px;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
                         <span class="ph-text">Our Story Photo<br>Replace with your photo</span>
                     </div>
                 </div>
-                <!-- Floating elements -->
+                <div class="story-corner" aria-hidden="true"></div>
                 <div class="story-float-badge">
                     <span class="sfb-num">2003</span>
                     <span class="sfb-text">Founded</span>
@@ -130,10 +120,10 @@
             </div>
 
             <!-- Content Side -->
-            <div class="story-content reveal">
+            <div class="story-content reveal-right">
                 <div class="section-tag">Our Story</div>
                 <h2>From a Small Dream to<br>Ahmedabad's Most Trusted</h2>
-                <div class="divider" style="margin: 14px 0;"></div>
+                <div class="divider" style="margin:14px 0;"></div>
 
                 <p>Jay Ambe Decorators was founded in 2003 in Ahmedabad with a simple dream — to make every celebration truly unforgettable. Starting with a passionate team and dedication to quality, we began our journey decorating events across Ahmedabad.</p>
 
@@ -141,7 +131,6 @@
 
                 <p>From intimate home celebrations to grand weddings of 2000+ guests, from simple birthday parties to large corporate events — we handle every event with the same passion and perfection that has defined us for 21+ years.</p>
 
-                <!-- Timeline -->
                 <div class="story-timeline">
                     <div class="timeline-item">
                         <div class="ti-year">2003</div>
@@ -177,16 +166,16 @@
     </div>
 </section>
 
-<!-- ========== MISSION VISION SECTION ========== -->
+<!-- MISSION VISION -->
 <section class="mission-section" id="mission">
     <div class="container">
         <div class="section-header">
             <div class="section-tag">Our Values</div>
-            <h2 class="section-title">Mission, Vision & Values</h2>
+            <h2 class="section-title">Mission, Vision &amp; Values</h2>
             <div class="divider"></div>
             <p class="section-subtitle">The principles that guide everything we do</p>
         </div>
-        <div class="mv-grid reveal-grid">
+        <div class="mv-grid stagger">
             <div class="mv-card reveal">
                 <div class="mv-icon-wrap">
                     <span class="mv-icon">🎯</span>
@@ -212,16 +201,16 @@
     </div>
 </section>
 
-<!-- ========== WHY CHOOSE US ========== -->
+<!-- WHY CHOOSE US -->
 <section class="why-about-section" id="why">
     <div class="container">
         <div class="section-header">
-            <div class="section-tag">Why Choose Us</div>
-            <h2 class="section-title">What Makes Us Different</h2>
-            <div class="divider"></div>
-            <p class="section-subtitle">21+ years of trust and excellence sets us apart</p>
+            <div class="section-tag why-tag">Why Choose Us</div>
+            <h2 class="section-title why-title">What Makes Us Different</h2>
+            <div class="divider divider-accent"></div>
+            <p class="section-subtitle why-sub">21+ years of trust and excellence sets us apart</p>
         </div>
-        <div class="why-about-grid reveal-grid">
+        <div class="why-about-grid stagger">
             <div class="wa-card reveal">
                 <div class="wa-num">01</div>
                 <div class="wa-icon">🏆</div>
@@ -262,7 +251,7 @@
     </div>
 </section>
 
-<!-- ========== TEAM SECTION ========== -->
+<!-- TEAM -->
 <section class="team-section" id="team">
     <div class="container">
         <div class="section-header">
@@ -271,12 +260,10 @@
             <div class="divider"></div>
             <p class="section-subtitle">Our passionate experts who make every event unforgettable</p>
         </div>
-        <div class="team-grid reveal-grid">
-
+        <div class="team-grid stagger">
             <div class="team-card reveal">
                 <div class="team-img-wrap">
-                    <div class="placeholder-img" style="height:220px;border-radius:0;">
-                        <!-- Replace: <img src="images/team1.jpg" alt="Owner"> -->
+                    <div class="placeholder-img" style="height:220px;border-radius:0;border:none;">
                         <span class="ph-icon">👤</span>
                         <span class="ph-text">Owner Photo</span>
                     </div>
@@ -289,7 +276,7 @@
                 </div>
                 <div class="team-info">
                     <h3>Jainam Patel</h3>
-                    <span class="team-role">Founder & Owner</span>
+                    <span class="team-role">Founder &amp; Owner</span>
                     <p>21+ years of decoration expertise in Ahmedabad</p>
                     <div class="team-tags">
                         <span>Wedding</span>
@@ -297,10 +284,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="team-card reveal">
                 <div class="team-img-wrap">
-                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;border:none;">
                         <span class="ph-icon">👤</span>
                         <span class="ph-text">Team Member Photo</span>
                     </div>
@@ -321,10 +307,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="team-card reveal">
                 <div class="team-img-wrap">
-                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;border:none;">
                         <span class="ph-icon">👤</span>
                         <span class="ph-text">Team Member Photo</span>
                     </div>
@@ -345,10 +330,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="team-card reveal">
                 <div class="team-img-wrap">
-                    <div class="placeholder-img" style="height:220px;border-radius:0;">
+                    <div class="placeholder-img" style="height:220px;border-radius:0;border:none;">
                         <span class="ph-icon">👤</span>
                         <span class="ph-text">Team Member Photo</span>
                     </div>
@@ -369,23 +353,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- ========== ACHIEVEMENTS / STATS ========== -->
+<!-- ACHIEVEMENTS -->
 <section class="achievements-section" id="achievements">
     <div class="container">
         <div class="section-header">
             <div class="section-tag ach-tag">Our Achievements</div>
-            <h2 class="section-title" style="color:var(--white);">Numbers That Speak</h2>
-            <div class="divider" style="background:var(--accent);"></div>
-            <p class="section-subtitle" style="color:rgba(255,255,255,0.65);">
-                21+ years of results that our clients trust
-            </p>
+            <h2 class="section-title ach-title">Numbers That Speak</h2>
+            <div class="divider divider-gradient"></div>
+            <p class="section-subtitle ach-sub">21+ years of results that our clients trust</p>
         </div>
-        <div class="achievements-grid reveal-grid">
+        <div class="achievements-grid stagger">
             <div class="achievement-card reveal">
                 <div class="ach-icon">🎊</div>
                 <span class="stat-number" data-target="1000" data-suffix="+">0</span>
@@ -420,7 +401,7 @@
     </div>
 </section>
 
-<!-- ========== PROCESS SECTION ========== -->
+<!-- PROCESS -->
 <section class="process-section" id="process">
     <div class="container">
         <div class="section-header">
@@ -434,34 +415,34 @@
                 <div class="ps-number">01</div>
                 <div class="ps-icon">📞</div>
                 <h3>Contact Us</h3>
-                <p>Call, WhatsApp or fill our form with your event details and requirements</p>
+                <p>Call, WhatsApp or fill our form with your event details</p>
             </div>
             <div class="process-connector" aria-hidden="true">→</div>
             <div class="process-step reveal">
                 <div class="ps-number">02</div>
                 <div class="ps-icon">💬</div>
                 <h3>Free Consultation</h3>
-                <p>We discuss your vision, theme, budget and all requirements in detail</p>
+                <p>We discuss your vision, theme and budget in detail</p>
             </div>
             <div class="process-connector" aria-hidden="true">→</div>
             <div class="process-step reveal">
                 <div class="ps-number">03</div>
                 <div class="ps-icon">🎨</div>
                 <h3>We Decorate</h3>
-                <p>Our expert team sets up everything perfectly on the day of your event</p>
+                <p>Our expert team sets up everything perfectly</p>
             </div>
             <div class="process-connector" aria-hidden="true">→</div>
             <div class="process-step reveal">
                 <div class="ps-number">04</div>
                 <div class="ps-icon">🎉</div>
                 <h3>You Celebrate!</h3>
-                <p>Enjoy your magical event while we handle setup and cleanup too</p>
+                <p>Enjoy your magical event while we handle cleanup too</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== TESTIMONIALS ========== -->
+<!-- TESTIMONIALS -->
 <section class="about-testimonials" id="reviews">
     <div class="container">
         <div class="section-header">
@@ -470,37 +451,40 @@
             <div class="divider"></div>
             <p class="section-subtitle">Real reviews from our 1000+ happy clients</p>
         </div>
-        <div class="reviews-grid reveal-grid">
+        <div class="reviews-grid stagger">
             <div class="review-card reveal">
+                <div class="rc-quote" aria-hidden="true">❝</div>
                 <div class="rc-stars">⭐⭐⭐⭐⭐</div>
                 <p class="rc-text">"Jay Ambe Decorators made our wedding absolutely beautiful! Every detail was perfect. The team was so professional and creative. Best in Ahmedabad!"</p>
                 <div class="rc-author">
                     <div class="rc-avatar">P</div>
                     <div>
-                        <strong>Priya & Raj Shah</strong>
-                        <span>Wedding · Ahmedabad</span>
+                        <strong>Priya &amp; Raj Shah</strong>
+                        <span>Wedding &middot; Ahmedabad</span>
                     </div>
                 </div>
             </div>
             <div class="review-card reveal">
+                <div class="rc-quote" aria-hidden="true">❝</div>
                 <div class="rc-stars">⭐⭐⭐⭐⭐</div>
                 <p class="rc-text">"Best birthday decoration! My son's superhero theme was perfect. Very budget-friendly and the team was amazing. Will definitely book again!"</p>
                 <div class="rc-author">
                     <div class="rc-avatar">M</div>
                     <div>
                         <strong>Meera Patel</strong>
-                        <span>Birthday · Ahmedabad</span>
+                        <span>Birthday &middot; Ahmedabad</span>
                     </div>
                 </div>
             </div>
             <div class="review-card reveal">
+                <div class="rc-quote" aria-hidden="true">❝</div>
                 <div class="rc-stars">⭐⭐⭐⭐⭐</div>
-                <p class="rc-text">"We use Jay Ambe for all our corporate events. Always professional, always on time, always excellent work. Highly recommended for all events!"</p>
+                <p class="rc-text">"We use Jay Ambe for all our corporate events. Always professional, always on time, always excellent. Highly recommended for all events!"</p>
                 <div class="rc-author">
                     <div class="rc-avatar">A</div>
                     <div>
                         <strong>Amit Desai</strong>
-                        <span>Corporate · Ahmedabad</span>
+                        <span>Corporate &middot; Ahmedabad</span>
                     </div>
                 </div>
             </div>
@@ -508,12 +492,14 @@
     </div>
 </section>
 
-<!-- ========== CTA SECTION ========== -->
+<!-- CTA -->
 <section class="about-cta">
+    <div class="about-cta-orb about-orb-1" aria-hidden="true"></div>
+    <div class="about-cta-orb about-orb-2" aria-hidden="true"></div>
     <div class="container">
         <div class="about-cta-content">
             <div class="about-cta-text">
-                <h2>Ready to Work With Ahmedabad's Best? 🎊</h2>
+                <h2>Ready to Work With<br>Ahmedabad's Best? 🎊</h2>
                 <p>Call us now for a FREE consultation and quote!</p>
                 <div class="about-cta-info">
                     <span>📱 +91 63581 11321</span>
@@ -521,18 +507,16 @@
                 </div>
             </div>
             <div class="about-cta-btns">
-                <a href="contact.html" class="btn btn-gold">📋 Book Now</a>
-                <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+                <a href="contact.html" class="btn btn-white">📋 Book Now</a>
+                <a href="tel:6358111321" class="btn btn-outline-white">📞 Call Now</a>
                 <a href="https://wa.me/916358111321"
-                   class="btn btn-wa"
-                   target="_blank"
-                   rel="noopener">💬 WhatsApp</a>
+                   class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
 <footer role="contentinfo">
     <div class="footer-inner">
         <div class="footer-grid">
@@ -592,28 +576,21 @@
     </div>
 </footer>
 
-<!-- ========== FLOATING BUTTONS ========== -->
+<!-- FLOATING -->
 <div class="whatsapp-float">
     <span class="wa-label">Chat Now</span>
-    <a href="https://wa.me/916358111321"
-       class="wa-btn"
-       target="_blank"
-       rel="noopener"
-       aria-label="WhatsApp">💬</a>
+    <a href="https://wa.me/916358111321" class="wa-btn"
+       target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 </div>
+<button class="scroll-top" id="scrollTop"
+        onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
-<button class="scroll-top"
-        id="scrollTop"
-        onclick="scrollToTop()"
-        aria-label="Scroll to top">↑</button>
-
-<!-- Mobile Call Bar -->
+<!-- MOBILE CALL BAR -->
 <div class="mobile-call-bar">
     <a href="tel:6358111321" class="mcb-call">📞 Call Now</a>
     <a href="https://wa.me/916358111321" class="mcb-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
-<!-- Scripts -->
 <script src="js/common.js"></script>
 <script src="js/about.js"></script>
 </body>

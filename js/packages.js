@@ -1,19 +1,22 @@
 /* ============================================
-   JAY AMBE DECORATORS - PACKAGES PAGE JS
-   Emerald Green + Gold + Cream Theme
+   JAY AMBE DECORATORS — PACKAGES PAGE JS
+   Lavender + Blue + Violet | Glassmorphism
    ============================================ */
 
-(function () {
-    'use strict';
+'use strict';
 
-    // ========== PACKAGE FILTER ==========
+(function () {
+
     let activeFilter = 'all';
 
+    /* ============================================
+       PACKAGE FILTER
+       ============================================ */
     window.filterPackages = function (type, btn) {
         if (activeFilter === type) return;
         activeFilter = type;
 
-        // Update buttons
+        /* Update buttons */
         document.querySelectorAll('.pkg-filter-btn').forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
@@ -24,70 +27,99 @@
             btn.setAttribute('aria-selected', 'true');
         }
 
-        // Filter cards
+        /* Filter cards with stagger */
         const cards = document.querySelectorAll('.package-card');
-        let visibleCount = 0;
+        let count   = 0;
 
         cards.forEach(card => {
             const cats = card.getAttribute('data-pkg') || '';
             const show = type === 'all' || cats.includes(type);
 
             if (show) {
-                card.style.display = '';
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.95) translateY(10px)';
+                card.style.display   = '';
+                card.style.opacity   = '0';
+                card.style.transform = 'scale(0.95) translateY(12px)';
+
+                const isPopular = card.classList.contains('popular');
+                const d = count;
 
                 setTimeout(() => {
-                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = card.classList.contains('popular')
-                        ? 'translateY(-8px)' : '';
-                    visibleCount++;
-                }, visibleCount * 70);
+                    card.style.transition =
+                        'opacity 0.4s ease, transform 0.4s ease';
+                    card.style.opacity   = '1';
+                    card.style.transform = isPopular
+                        ? 'translateY(-8px)'
+                        : 'translateY(0)';
+                    count++;
+                }, d * 70);
 
             } else {
-                card.style.opacity = '0';
+                card.style.opacity   = '0';
                 card.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
+                setTimeout(() => { card.style.display = 'none'; }, 300);
             }
         });
     };
 
-    // ========== BOOK PACKAGE ==========
-    // Override common.js bookPackage for this page
+    /* ============================================
+       BOOK PACKAGE
+       ============================================ */
     window.bookPackage = function (pkg) {
-        // Redirect to contact with package pre-selected
-        window.location.href = `contact.html?package=${encodeURIComponent(pkg)}`;
+        window.location.href =
+            `contact.html?package=${encodeURIComponent(pkg)}`;
     };
 
-    // ========== INIT ==========
+    /* ============================================
+       INIT
+       ============================================ */
     document.addEventListener('DOMContentLoaded', () => {
+        checkUrlFilter();
+        updateWhatsAppLinks();
+        initCardHovers();
+        initTableScrollHint();
+        initTableRowHover();
+        initTouchSupport();
+        initCardReveal();
+    });
 
-        // Check URL for package param
-        const urlParams = new URLSearchParams(window.location.search);
-        const pkgParam = urlParams.get('highlight');
-        if (pkgParam) {
-            const filterMap = {
-                'wedding': 'wedding',
-                'birthday': 'birthday',
-                'corporate': 'corporate'
-            };
-            const filter = filterMap[pkgParam.toLowerCase()];
-            if (filter) {
-                const btn = document.querySelector(`[data-filter="${filter}"]`);
-                if (btn) filterPackages(filter, btn);
-            }
+    /* ---- URL filter param ---- */
+    function checkUrlFilter() {
+        const p   = new URLSearchParams(window.location.search);
+        const pkg = p.get('highlight');
+        if (!pkg) return;
+
+        const map = { wedding: 'wedding', birthday: 'birthday', corporate: 'corporate' };
+        const f   = map[pkg.toLowerCase()];
+        if (f) {
+            const btn = document.querySelector(`[data-filter="${f}"]`);
+            if (btn) filterPackages(f, btn);
         }
+    }
 
-        // ========== CARD HOVER EFFECTS ==========
+    /* ---- Dynamic WhatsApp links ---- */
+    function updateWhatsAppLinks() {
+        document.querySelectorAll('.pkg-wa-btn').forEach(btn => {
+            const card = btn.closest('.package-card');
+            const name = card?.querySelector('h3')?.textContent?.trim();
+            if (!name) return;
+
+            const msg = encodeURIComponent(
+                `Hi Jay Ambe Decorators! I'm interested in the ${name} package. Please share details.`
+            );
+            btn.href = `https://wa.me/916358111321?text=${msg}`;
+        });
+    }
+
+    /* ---- Card hover effects ---- */
+    function initCardHovers() {
+        if ('ontouchstart' in window) return;
+
         document.querySelectorAll('.package-card').forEach(card => {
             const isPopular = card.classList.contains('popular');
 
             card.addEventListener('mouseenter', () => {
                 if (!isPopular) {
-                    card.style.borderColor = 'rgba(212,175,55,0.3)';
+                    card.style.borderColor = 'rgba(139,92,246,0.3)';
                 }
             });
 
@@ -96,36 +128,62 @@
                     card.style.borderColor = '';
                 }
             });
-        });
 
-        // ========== COMPARE TABLE SCROLL INDICATOR ==========
-        const tableWrap = document.querySelector('.compare-table-wrap');
-        if (tableWrap) {
-            const hasScroll = tableWrap.scrollWidth > tableWrap.clientWidth;
-            if (hasScroll) {
-                const hint = document.createElement('div');
-                hint.style.cssText = `
-                    text-align: center;
-                    font-size: 11px;
-                    color: var(--text-light);
-                    margin-top: 8px;
-                    font-weight: 500;
-                `;
-                hint.textContent = '← Scroll to see full table →';
-                tableWrap.parentNode.insertBefore(hint, tableWrap.nextSibling);
+            /* Subtle glass shine effect */
+            if (!isPopular) {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x    = e.clientX - rect.left;
+                    const y    = e.clientY - rect.top;
 
-                // Hide on scroll
-                tableWrap.addEventListener('scroll', () => {
-                    hint.style.opacity = '0';
-                }, { once: true, passive: true });
+                    card.style.background = `
+                        radial-gradient(
+                            circle at ${x}px ${y}px,
+                            rgba(139,92,246,0.06) 0%,
+                            transparent 60%
+                        ),
+                        rgba(255,255,255,0.05)
+                    `;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.background = '';
+                    card.style.borderColor = '';
+                });
             }
-        }
+        });
+    }
 
-        // ========== FEATURE HIGHLIGHT ON HOVER ==========
+    /* ---- Table scroll hint ---- */
+    function initTableScrollHint() {
+        const tableWrap = document.querySelector('.compare-table-wrap');
+        if (!tableWrap) return;
+
+        if (tableWrap.scrollWidth > tableWrap.clientWidth) {
+            const hint = document.createElement('div');
+            hint.style.cssText = `
+                text-align: center;
+                font-size: 11px;
+                color: var(--text-light);
+                margin-top: 8px;
+                font-weight: 500;
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            `;
+            hint.textContent = '← Scroll to see full table →';
+            tableWrap.parentNode.insertBefore(hint, tableWrap.nextSibling);
+
+            tableWrap.addEventListener('scroll', () => {
+                hint.style.opacity = '0';
+            }, { once: true, passive: true });
+        }
+    }
+
+    /* ---- Table row hover highlight ---- */
+    function initTableRowHover() {
         document.querySelectorAll('.compare-table tbody tr').forEach(row => {
             row.addEventListener('mouseenter', () => {
-                const cells = row.querySelectorAll('td');
-                cells.forEach(cell => {
+                row.querySelectorAll('td').forEach(cell => {
                     if (!cell.classList.contains('ct-feature')) {
                         cell.style.fontWeight = '600';
                     }
@@ -133,72 +191,73 @@
             });
 
             row.addEventListener('mouseleave', () => {
-                const cells = row.querySelectorAll('td');
-                cells.forEach(cell => {
+                row.querySelectorAll('td').forEach(cell => {
                     cell.style.fontWeight = '';
                 });
             });
         });
+    }
 
-        // ========== TOUCH SUPPORT FOR CARDS ==========
-        if ('ontouchstart' in window) {
-            document.querySelectorAll('.package-card').forEach(card => {
-                card.addEventListener('touchstart', () => {
-                    if (!card.classList.contains('popular')) {
-                        card.style.transform = 'translateY(-5px)';
-                        card.style.borderColor = 'rgba(212,175,55,0.3)';
-                    }
-                }, { passive: true });
+    /* ---- Touch support ---- */
+    function initTouchSupport() {
+        if (!('ontouchstart' in window)) return;
 
-                card.addEventListener('touchend', () => {
-                    if (!card.classList.contains('popular')) {
-                        setTimeout(() => {
-                            card.style.transform = '';
-                            card.style.borderColor = '';
-                        }, 300);
-                    }
-                }, { passive: true });
-            });
-        }
+        document.querySelectorAll('.package-card').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                if (!card.classList.contains('popular')) {
+                    card.style.transform   = 'translateY(-5px)';
+                    card.style.borderColor = 'rgba(139,92,246,0.3)';
+                    card.style.boxShadow   = 'var(--sh-glow)';
+                }
+            }, { passive: true });
 
-        // ========== ANIMATE CARDS ON SCROLL ==========
-        if ('IntersectionObserver' in window) {
-            const cardObs = new IntersectionObserver((entries) => {
-                entries.forEach((entry, i) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            if (entry.target.classList.contains('popular')) {
-                                entry.target.style.transform = 'translateY(-8px)';
-                            } else {
-                                entry.target.style.transform = 'translateY(0)';
-                            }
-                        }, i * 100);
-                        cardObs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.package-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease';
-                cardObs.observe(card);
-            });
-        }
-
-        // ========== UPDATE WHATSAPP LINKS ==========
-        document.querySelectorAll('.pkg-wa-btn').forEach(btn => {
-            const card = btn.closest('.package-card');
-            const pkgName = card?.querySelector('h3')?.textContent?.trim();
-            if (pkgName) {
-                const msg = encodeURIComponent(
-                    `Hi Jay Ambe Decorators! I'm interested in the ${pkgName} package. Please share details.`
-                );
-                btn.href = `https://wa.me/916358111321?text=${msg}`;
-            }
+            card.addEventListener('touchend', () => {
+                if (!card.classList.contains('popular')) {
+                    setTimeout(() => {
+                        card.style.transform   = '';
+                        card.style.borderColor = '';
+                        card.style.boxShadow   = '';
+                    }, 300);
+                }
+            }, { passive: true });
         });
+    }
 
-    });
+    /* ---- Card scroll reveal ---- */
+    function initCardReveal() {
+        if (!('IntersectionObserver' in window)) {
+            document.querySelectorAll('.package-card').forEach(card => {
+                card.style.opacity   = '1';
+                card.style.transform = card.classList.contains('popular')
+                    ? 'translateY(-8px)' : 'translateY(0)';
+            });
+            return;
+        }
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (!entry.isIntersecting) return;
+
+                const isPopular = entry.target.classList.contains('popular');
+
+                setTimeout(() => {
+                    entry.target.style.opacity   = '1';
+                    entry.target.style.transform = isPopular
+                        ? 'translateY(-8px)' : 'translateY(0)';
+                }, i * 100);
+
+                obs.unobserve(entry.target);
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.package-card').forEach(card => {
+            card.style.opacity    = '0';
+            card.style.transform  = 'translateY(20px)';
+            card.style.transition =
+                'opacity 0.5s ease, transform 0.5s ease, ' +
+                'border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease';
+            obs.observe(card);
+        });
+    }
 
 })();

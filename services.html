@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO -->
     <title>Our Services - Jay Ambe Decorators | Ahmedabad</title>
     <meta name="description" content="Jay Ambe Decorators offers Wedding, Birthday, Corporate, Engagement, Theme Party & all decoration services in Ahmedabad. Call: +91 63581 11321">
     <meta name="keywords" content="decoration services Ahmedabad, wedding decoration, birthday decoration, corporate events, theme party, party plot Ahmedabad">
@@ -13,23 +12,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="services.html">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Decoration Services - Jay Ambe Decorators Ahmedabad">
     <meta property="og:description" content="Complete decoration solutions for all events in Ahmedabad since 2003">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0F5132">
+    <meta name="theme-color" content="#1E1B4B">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
 
-<!-- ========== LOADER ========== -->
+<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-logo">
         <div class="loader-icon"></div>
@@ -43,7 +36,7 @@
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
 <!-- NAV OVERLAY -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
 <!-- COOKIE -->
 <div class="cookie-banner" id="cookieBanner" role="alert">
@@ -52,17 +45,6 @@
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
         <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
-</div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div class="top-contacts">
-        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
-        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
-        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
-        <span>⏰ Open 24/7</span>
-    </div>
-    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
 <!-- NAVBAR -->
@@ -77,19 +59,29 @@
         <li role="none"><a href="services.html" role="menuitem">Services</a></li>
         <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
         <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
-        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
+        <li role="none">
+            <a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a>
+        </li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()"
-            aria-label="Toggle menu"
+    <button class="hamburger"
+            id="hamburgerBtn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="navLinks">☰</button>
+            aria-controls="navLinks">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+    </button>
 </nav>
 
 <!-- PAGE HERO -->
 <div class="page-hero" role="banner">
     <div class="page-hero-inner">
         <div class="page-hero-badge">🎭 Our Services</div>
-        <h1>Complete Decoration<br>Solutions for All Events</h1>
+        <h1>Complete Decoration<br>
+            <span class="hero-gradient-text">Solutions for All Events</span>
+        </h1>
         <p>From intimate home celebrations to grand weddings — we decorate it all!</p>
         <div class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
@@ -99,37 +91,37 @@
     </div>
 </div>
 
-<!-- ========== SERVICES FILTER ========== -->
-<div class="services-filter-bar">
+<!-- FILTER BAR -->
+<div class="services-filter-bar" role="navigation" aria-label="Service categories">
     <div class="container">
         <div class="filter-inner">
-            <button class="filter-btn active" data-filter="all" onclick="filterServices('all', this)">
-                🌟 All Services
-            </button>
-            <button class="filter-btn" data-filter="wedding" onclick="filterServices('wedding', this)">
-                💍 Wedding
-            </button>
-            <button class="filter-btn" data-filter="birthday" onclick="filterServices('birthday', this)">
-                🎂 Birthday
-            </button>
-            <button class="filter-btn" data-filter="corporate" onclick="filterServices('corporate', this)">
-                🏢 Corporate
-            </button>
-            <button class="filter-btn" data-filter="social" onclick="filterServices('social', this)">
-                🌸 Social
-            </button>
-            <button class="filter-btn" data-filter="special" onclick="filterServices('special', this)">
-                ✨ Special
-            </button>
+            <button class="filter-btn active" data-filter="all"
+                    onclick="filterServices('all', this)"
+                    aria-pressed="true">🌟 All</button>
+            <button class="filter-btn" data-filter="wedding"
+                    onclick="filterServices('wedding', this)"
+                    aria-pressed="false">💍 Wedding</button>
+            <button class="filter-btn" data-filter="birthday"
+                    onclick="filterServices('birthday', this)"
+                    aria-pressed="false">🎂 Birthday</button>
+            <button class="filter-btn" data-filter="corporate"
+                    onclick="filterServices('corporate', this)"
+                    aria-pressed="false">🏢 Corporate</button>
+            <button class="filter-btn" data-filter="social"
+                    onclick="filterServices('social', this)"
+                    aria-pressed="false">🌸 Social</button>
+            <button class="filter-btn" data-filter="special"
+                    onclick="filterServices('special', this)"
+                    aria-pressed="false">✨ Special</button>
         </div>
     </div>
 </div>
 
-<!-- ========== ALL SERVICES ========== -->
+<!-- ALL SERVICES -->
 <section class="all-services" id="services">
     <div class="container">
         <div class="section-header">
-            <div class="section-tag">What We Offer</div>
+            <div class="section-tag svc-tag">What We Offer</div>
             <h2 class="section-title">All Decoration Services</h2>
             <div class="divider"></div>
             <p class="section-subtitle">
@@ -137,13 +129,12 @@
             </p>
         </div>
 
-        <div class="services-detailed-grid" id="servicesGrid">
+        <div class="services-detailed-grid stagger" id="servicesGrid">
 
             <!-- Wedding -->
             <div class="service-detailed-card reveal" data-cat="wedding">
                 <div class="service-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
-                        <!-- Replace: <img src="images/wedding.jpg" alt="Wedding Decoration"> -->
                         <span class="ph-icon">📸</span>
                         <span class="ph-text">Wedding Photo</span>
                     </div>
@@ -158,7 +149,7 @@
                             <strong>Call for Price</strong>
                         </div>
                     </div>
-                    <p>Transform your wedding into a fairy tale with exquisite floral arrangements, mandap decoration, and reception setups. We handle every detail with perfection.</p>
+                    <p>Transform your wedding into a fairy tale with exquisite floral arrangements, mandap decoration, and reception setups.</p>
                     <ul class="service-features">
                         <li><span class="sf-check">✓</span> Floral Mandap &amp; Stage</li>
                         <li><span class="sf-check">✓</span> Reception Decoration</li>
@@ -168,9 +159,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Wedding Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Wedding+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -203,9 +193,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Birthday Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Birthday+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -238,9 +227,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Corporate Event Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Corporate+Event+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -263,7 +251,7 @@
                             <strong>Call for Price</strong>
                         </div>
                     </div>
-                    <p>Romantic floral walls, ring ceremony setups, and elegant backdrops that make your engagement truly special and memorable.</p>
+                    <p>Romantic floral walls, ring ceremony setups, and elegant backdrops that make your engagement truly special.</p>
                     <ul class="service-features">
                         <li><span class="sf-check">✓</span> Floral Wall Backdrop</li>
                         <li><span class="sf-check">✓</span> Ring Ceremony Setup</li>
@@ -273,9 +261,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Engagement Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Engagement+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -298,7 +285,7 @@
                             <strong>Call for Price</strong>
                         </div>
                     </div>
-                    <p>Custom theme decorations from 50+ themes — Bollywood, Royal, Beach, Retro, Jungle, Superhero, Fairy Tale &amp; many more!</p>
+                    <p>Custom theme decorations from 50+ themes — Bollywood, Royal, Beach, Retro, Jungle, Superhero &amp; many more!</p>
                     <ul class="service-features">
                         <li><span class="sf-check">✓</span> 50+ Theme Options</li>
                         <li><span class="sf-check">✓</span> Custom Props &amp; Setup</li>
@@ -308,9 +295,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Theme Party Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Theme+Party+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -343,9 +329,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Party Plot"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Party+Plot"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -378,9 +363,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Anniversary Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Anniversary+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -413,9 +397,8 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Baby Shower Decoration"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Baby+Shower+Decoration"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -448,37 +431,35 @@
                     </ul>
                     <div class="service-actions">
                         <a href="contact.html" class="btn btn-primary">Book Now</a>
-                        <a href="https://wa.me/916358111321?text=Hi, I need Photo Booth Setup"
-                           class="btn btn-wa btn-sm"
-                           target="_blank" rel="noopener">💬 WhatsApp</a>
+                        <a href="https://wa.me/916358111321?text=Hi%2C+I+need+Photo+Booth+Setup"
+                           class="btn btn-wa btn-sm" target="_blank" rel="noopener">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- No results message -->
+        <!-- No Results -->
         <div class="no-results" id="noResults" style="display:none;">
             <span>🔍</span>
             <p>No services found in this category.</p>
             <button onclick="filterServices('all', document.querySelector('[data-filter=all]'))"
                     class="btn btn-primary">Show All Services</button>
         </div>
-
     </div>
 </section>
 
-<!-- ========== PROCESS SECTION ========== -->
+<!-- PROCESS -->
 <section class="process-section" id="process">
     <div class="container">
         <div class="section-header">
-            <div class="section-tag">How It Works</div>
-            <h2 class="section-title">Our Simple 5-Step Process</h2>
-            <div class="divider"></div>
-            <p class="section-subtitle">From your first call to your celebration — we handle everything!</p>
+            <div class="section-tag proc-tag">How It Works</div>
+            <h2 class="section-title proc-title">Our Simple 5-Step Process</h2>
+            <div class="divider divider-accent"></div>
+            <p class="section-subtitle proc-sub">From your first call to your celebration — we handle everything!</p>
         </div>
         <div class="process-steps">
-            <div class="process-step reveal">
+            <div class="process-step">
                 <div class="step-circle">
                     <div class="step-num">1</div>
                     <div class="step-icon">📞</div>
@@ -487,8 +468,7 @@
                 <p>Call, WhatsApp or fill our form with your event details</p>
             </div>
             <div class="step-arrow" aria-hidden="true">→</div>
-
-            <div class="process-step reveal">
+            <div class="process-step">
                 <div class="step-circle">
                     <div class="step-num">2</div>
                     <div class="step-icon">💬</div>
@@ -497,8 +477,7 @@
                 <p>Free consultation to understand your vision and budget</p>
             </div>
             <div class="step-arrow" aria-hidden="true">→</div>
-
-            <div class="process-step reveal">
+            <div class="process-step">
                 <div class="step-circle">
                     <div class="step-num">3</div>
                     <div class="step-icon">📋</div>
@@ -507,8 +486,7 @@
                 <p>Detailed design plan and quote for your approval</p>
             </div>
             <div class="step-arrow" aria-hidden="true">→</div>
-
-            <div class="process-step reveal">
+            <div class="process-step">
                 <div class="step-circle">
                     <div class="step-num">4</div>
                     <div class="step-icon">🎨</div>
@@ -517,8 +495,7 @@
                 <p>Our expert team sets up everything perfectly</p>
             </div>
             <div class="step-arrow" aria-hidden="true">→</div>
-
-            <div class="process-step reveal">
+            <div class="process-step">
                 <div class="step-circle">
                     <div class="step-num">5</div>
                     <div class="step-icon">🎉</div>
@@ -530,7 +507,7 @@
     </div>
 </section>
 
-<!-- ========== WHY US STRIP ========== -->
+<!-- WHY STRIP -->
 <section class="why-strip">
     <div class="container">
         <div class="why-strip-grid">
@@ -566,20 +543,21 @@
     </div>
 </section>
 
-<!-- ========== CTA SECTION ========== -->
+<!-- CTA -->
 <section class="services-cta">
+    <div class="svc-cta-orb svc-orb-1" aria-hidden="true"></div>
+    <div class="svc-cta-orb svc-orb-2" aria-hidden="true"></div>
     <div class="container">
         <div class="services-cta-inner">
             <div class="scta-left">
                 <h2>Need a Custom Decoration?</h2>
-                <p>Tell us your requirements and we'll create the perfect setup for your event!</p>
+                <p>Tell us your requirements and we'll create the perfect setup!</p>
             </div>
             <div class="scta-right">
-                <a href="contact.html" class="btn btn-gold">📋 Get Free Quote</a>
+                <a href="contact.html" class="btn btn-white">📋 Get Free Quote</a>
                 <a href="tel:6358111321" class="btn btn-outline-white">📞 Call Now</a>
                 <a href="https://wa.me/916358111321"
-                   class="btn btn-wa"
-                   target="_blank" rel="noopener">💬 WhatsApp</a>
+                   class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
         </div>
     </div>
@@ -636,7 +614,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators. All Rights Reserved.</p>
             <div class="footer-bottom-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms</a>
@@ -648,9 +626,11 @@
 <!-- FLOATING -->
 <div class="whatsapp-float">
     <span class="wa-label">Chat Now</span>
-    <a href="https://wa.me/916358111321" class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    <a href="https://wa.me/916358111321" class="wa-btn"
+       target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 </div>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+<button class="scroll-top" id="scrollTop"
+        onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
 <!-- MOBILE CALL BAR -->
 <div class="mobile-call-bar">

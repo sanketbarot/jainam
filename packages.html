@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO -->
     <title>Packages & Pricing - Jay Ambe Decorators | Ahmedabad</title>
     <meta name="description" content="Jay Ambe Decorators offers flexible decoration packages for all budgets in Ahmedabad. Wedding, Birthday, Corporate packages available. Call: +91 63581 11321">
     <meta name="keywords" content="decoration packages Ahmedabad, wedding decoration price, birthday decoration cost, event decoration packages Gujarat">
@@ -13,23 +12,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="packages.html">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Decoration Packages - Jay Ambe Decorators Ahmedabad">
     <meta property="og:description" content="Flexible decoration packages for every budget. 21+ years experience in Ahmedabad.">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0F5132">
+    <meta name="theme-color" content="#1E1B4B">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/packages.css">
 </head>
 <body>
 
-<!-- ========== LOADER ========== -->
+<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-logo">
         <div class="loader-icon"></div>
@@ -43,7 +36,7 @@
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
 <!-- NAV OVERLAY -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
 <!-- COOKIE -->
 <div class="cookie-banner" id="cookieBanner" role="alert">
@@ -52,17 +45,6 @@
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
         <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
-</div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div class="top-contacts">
-        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
-        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
-        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
-        <span>⏰ Open 24/7</span>
-    </div>
-    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
 <!-- NAVBAR -->
@@ -77,19 +59,29 @@
         <li role="none"><a href="services.html" role="menuitem">Services</a></li>
         <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
         <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
-        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
+        <li role="none">
+            <a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a>
+        </li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()"
-            aria-label="Toggle menu"
+    <button class="hamburger"
+            id="hamburgerBtn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="navLinks">☰</button>
+            aria-controls="navLinks">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+    </button>
 </nav>
 
 <!-- PAGE HERO -->
 <div class="page-hero" role="banner">
     <div class="page-hero-inner">
-        <div class="page-hero-badge">💼 Packages & Pricing</div>
-        <h1>Flexible Packages<br>for Every Budget</h1>
+        <div class="page-hero-badge">💼 Packages &amp; Pricing</div>
+        <h1>Flexible Packages<br>
+            <span class="hero-gradient-text">for Every Budget</span>
+        </h1>
         <p>Transparent pricing with no hidden charges — all packages include setup, materials &amp; cleanup</p>
         <div class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
@@ -99,7 +91,7 @@
     </div>
 </div>
 
-<!-- ========== TRUST BAR ========== -->
+<!-- TRUST BAR -->
 <div class="trust-bar">
     <div class="container">
         <div class="trust-inner">
@@ -126,44 +118,32 @@
     </div>
 </div>
 
-<!-- ========== PACKAGES SECTION ========== -->
+<!-- PACKAGES SECTION -->
 <section class="packages-section" id="packages">
     <div class="container">
         <div class="section-header">
             <div class="section-tag pkg-tag">Pricing Plans</div>
-            <h2 class="section-title" style="color:var(--white);">Choose Your Package</h2>
-            <div class="divider" style="background:var(--accent);"></div>
-            <p class="section-subtitle" style="color:rgba(255,255,255,0.65);">
+            <h2 class="section-title pkg-title">Choose Your Package</h2>
+            <div class="divider divider-accent"></div>
+            <p class="section-subtitle pkg-sub">
                 All packages include setup, decoration materials, and cleanup
             </p>
         </div>
 
-        <!-- Event Type Filter -->
+        <!-- Filter -->
         <div class="pkg-filter" role="tablist" aria-label="Filter packages by event type">
-            <button class="pkg-filter-btn active"
-                    data-filter="all"
+            <button class="pkg-filter-btn active" data-filter="all"
                     onclick="filterPackages('all', this)"
-                    role="tab" aria-selected="true">
-                🌟 All Events
-            </button>
-            <button class="pkg-filter-btn"
-                    data-filter="wedding"
+                    role="tab" aria-selected="true">🌟 All Events</button>
+            <button class="pkg-filter-btn" data-filter="wedding"
                     onclick="filterPackages('wedding', this)"
-                    role="tab" aria-selected="false">
-                💍 Wedding
-            </button>
-            <button class="pkg-filter-btn"
-                    data-filter="birthday"
+                    role="tab" aria-selected="false">💍 Wedding</button>
+            <button class="pkg-filter-btn" data-filter="birthday"
                     onclick="filterPackages('birthday', this)"
-                    role="tab" aria-selected="false">
-                🎂 Birthday
-            </button>
-            <button class="pkg-filter-btn"
-                    data-filter="corporate"
+                    role="tab" aria-selected="false">🎂 Birthday</button>
+            <button class="pkg-filter-btn" data-filter="corporate"
                     onclick="filterPackages('corporate', this)"
-                    role="tab" aria-selected="false">
-                🏢 Corporate
-            </button>
+                    role="tab" aria-selected="false">🏢 Corporate</button>
         </div>
 
         <!-- Package Cards -->
@@ -184,46 +164,18 @@
                     <p class="pkg-period">per event &bull; all inclusive</p>
                 </div>
                 <ul class="pkg-features">
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Balloon Decoration
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Welcome Arch
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Table Setup (5 Tables)
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Basic LED Lighting
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        4 Hours Setup
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Cleanup Included
-                    </li>
-                    <li class="pf-no">
-                        <span class="pf-cross">✗</span>
-                        Stage Decoration
-                    </li>
-                    <li class="pf-no">
-                        <span class="pf-cross">✗</span>
-                        Photo Booth
-                    </li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Balloon Decoration</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Welcome Arch</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Table Setup (5 Tables)</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Basic LED Lighting</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>4 Hours Setup</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Cleanup Included</li>
+                    <li class="pf-no"><span class="pf-cross">✗</span>Stage Decoration</li>
+                    <li class="pf-no"><span class="pf-cross">✗</span>Photo Booth</li>
                 </ul>
-                <button class="pkg-btn" onclick="bookPackage('Basic')">
-                    Get Started →
-                </button>
+                <button class="pkg-btn" onclick="bookPackage('Basic')">Get Started →</button>
                 <a href="https://wa.me/916358111321?text=Hi, I'm interested in Basic Package"
-                   class="pkg-wa-btn" target="_blank" rel="noopener">
-                    💬 Ask on WhatsApp
-                </a>
+                   class="pkg-wa-btn" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
             </div>
 
             <!-- STANDARD - POPULAR -->
@@ -242,46 +194,18 @@
                     <p class="pkg-period">per event &bull; all inclusive</p>
                 </div>
                 <ul class="pkg-features">
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Full Balloon Art
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Floral Arrangements
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Table Setup (15 Tables)
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Professional LED Setup
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Stage Decoration
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Photo Backdrop
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        8 Hours Setup
-                    </li>
-                    <li class="pf-no">
-                        <span class="pf-cross">✗</span>
-                        Photo Booth
-                    </li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Full Balloon Art</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Floral Arrangements</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Table Setup (15 Tables)</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Professional LED Setup</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Stage Decoration</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Photo Backdrop</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>8 Hours Setup</li>
+                    <li class="pf-no"><span class="pf-cross">✗</span>Photo Booth</li>
                 </ul>
-                <button class="pkg-btn popular-btn" onclick="bookPackage('Standard')">
-                    Get Started →
-                </button>
+                <button class="pkg-btn popular-btn" onclick="bookPackage('Standard')">Get Started →</button>
                 <a href="https://wa.me/916358111321?text=Hi, I'm interested in Standard Package"
-                   class="pkg-wa-btn popular-wa" target="_blank" rel="noopener">
-                    💬 Ask on WhatsApp
-                </a>
+                   class="pkg-wa-btn popular-wa" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
             </div>
 
             <!-- PREMIUM -->
@@ -299,46 +223,18 @@
                     <p class="pkg-period">per event &bull; all inclusive</p>
                 </div>
                 <ul class="pkg-features">
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Luxury Decoration
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Floral Wall &amp; Grand Arch
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Table Setup (30 Tables)
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Premium Lighting
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Grand Stage &amp; Backdrop
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Photo Booth Setup
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Welcome Gate
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Full Day Setup
-                    </li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Luxury Decoration</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Floral Wall &amp; Grand Arch</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Table Setup (30 Tables)</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Premium Lighting</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Grand Stage &amp; Backdrop</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Photo Booth Setup</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Welcome Gate</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Full Day Setup</li>
                 </ul>
-                <button class="pkg-btn" onclick="bookPackage('Premium')">
-                    Get Started →
-                </button>
+                <button class="pkg-btn" onclick="bookPackage('Premium')">Get Started →</button>
                 <a href="https://wa.me/916358111321?text=Hi, I'm interested in Premium Package"
-                   class="pkg-wa-btn" target="_blank" rel="noopener">
-                    💬 Ask on WhatsApp
-                </a>
+                   class="pkg-wa-btn" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
             </div>
 
             <!-- ELITE WEDDING -->
@@ -357,64 +253,35 @@
                     <p class="pkg-period">per event &bull; fully managed</p>
                 </div>
                 <ul class="pkg-features">
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Full Venue Transformation
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Luxury Floral Design
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Table Setup (60+ Tables)
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Crystal Chandelier Setup
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Grand Stage &amp; Mandap
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Multiple Photo Booths
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        Dedicated Event Manager
-                    </li>
-                    <li class="pf-yes">
-                        <span class="pf-check">✓</span>
-                        2-Day Setup
-                    </li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Full Venue Transformation</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Luxury Floral Design</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Table Setup (60+ Tables)</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Crystal Chandelier Setup</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Grand Stage &amp; Mandap</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Multiple Photo Booths</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>Dedicated Event Manager</li>
+                    <li class="pf-yes"><span class="pf-check">✓</span>2-Day Setup</li>
                 </ul>
-                <button class="pkg-btn elite-btn" onclick="bookPackage('Elite Wedding')">
-                    Book Elite →
-                </button>
+                <button class="pkg-btn elite-btn" onclick="bookPackage('Elite Wedding')">Book Elite →</button>
                 <a href="https://wa.me/916358111321?text=Hi, I'm interested in Elite Wedding Package"
-                   class="pkg-wa-btn" target="_blank" rel="noopener">
-                    💬 Ask on WhatsApp
-                </a>
+                   class="pkg-wa-btn" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
             </div>
 
         </div>
 
-        <!-- Custom Package Note -->
+        <!-- Custom Note -->
         <div class="custom-pkg-note">
             <span>🎨</span>
             <div>
                 <strong>Need a Custom Package?</strong>
-                <p>Tell us your requirements and budget — we'll create the perfect package for your event!</p>
+                <p>Tell us your requirements and budget — we'll create the perfect package!</p>
             </div>
-            <a href="contact.html" class="btn btn-gold">Get Custom Quote</a>
+            <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
         </div>
-
     </div>
 </section>
 
-<!-- ========== COMPARE TABLE ========== -->
+<!-- COMPARE TABLE -->
 <section class="compare-section" id="compare">
     <div class="container">
         <div class="section-header">
@@ -500,38 +367,22 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td>
-                            <button class="ct-book-btn" onclick="bookPackage('Basic')">
-                                Book
-                            </button>
-                        </td>
-                        <td class="ct-highlight">
-                            <button class="ct-book-btn ct-popular-btn" onclick="bookPackage('Standard')">
-                                Book
-                            </button>
-                        </td>
-                        <td>
-                            <button class="ct-book-btn" onclick="bookPackage('Premium')">
-                                Book
-                            </button>
-                        </td>
-                        <td>
-                            <button class="ct-book-btn ct-elite-btn" onclick="bookPackage('Elite Wedding')">
-                                Book
-                            </button>
-                        </td>
+                        <td><button class="ct-book-btn" onclick="bookPackage('Basic')">Book</button></td>
+                        <td class="ct-highlight"><button class="ct-book-btn ct-popular-btn" onclick="bookPackage('Standard')">Book</button></td>
+                        <td><button class="ct-book-btn" onclick="bookPackage('Premium')">Book</button></td>
+                        <td><button class="ct-book-btn ct-elite-btn" onclick="bookPackage('Elite Wedding')">Book</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <p class="compare-note">
-            * Prices are indicative. Final price depends on event size, location &amp; custom requirements.
+            * Prices are indicative. Final price depends on event size, location &amp; requirements.
             <a href="contact.html">Contact us</a> for exact quote.
         </p>
     </div>
 </section>
 
-<!-- ========== FAQ SECTION ========== -->
+<!-- FAQ -->
 <section class="faq-section" id="faq">
     <div class="container">
         <div class="section-header">
@@ -541,82 +392,71 @@
             <p class="section-subtitle">Everything you need to know about our packages</p>
         </div>
         <div class="faq-container">
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Can I customize a package?
-                    <span class="faq-icon">+</span>
+                    Can I customize a package? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Absolutely! We love creating custom packages tailored to your specific needs and budget. Contact us on WhatsApp or call us for a free consultation. We will design the perfect package for your event.
+                    Absolutely! We love creating custom packages tailored to your specific needs and budget. Contact us on WhatsApp or call us for a free consultation.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    What is included in the package price?
-                    <span class="faq-icon">+</span>
+                    What is included in the package price? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    All packages include decoration materials, professional setup team, on-site coordination, and complete cleanup after the event. There are absolutely no hidden charges.
+                    All packages include decoration materials, professional setup team, on-site coordination, and complete cleanup after the event. No hidden charges.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    How far in advance should I book?
-                    <span class="faq-icon">+</span>
+                    How far in advance should I book? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    We recommend booking at least 2-4 weeks in advance for regular events and 2-3 months for weddings. However, we also accommodate urgent bookings based on availability. We are available 24/7 for inquiries.
+                    We recommend booking at least 2-4 weeks in advance for regular events and 2-3 months for weddings. We accommodate urgent bookings based on availability.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    How do I confirm a booking?
-                    <span class="faq-icon">+</span>
+                    How do I confirm a booking? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Simply click "Get Started" on any package or contact us on WhatsApp/phone. We require a 30% advance payment to confirm your booking. The remaining amount is paid on or before the event day.
+                    Click "Get Started" on any package or contact us on WhatsApp/phone. We require a 30% advance payment to confirm your booking.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    Do you serve outside Ahmedabad?
-                    <span class="faq-icon">+</span>
+                    Do you serve outside Ahmedabad? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Yes! We provide decoration services across Gujarat including Gandhinagar, Surat, Vadodara, Rajkot, and other cities. Additional travel charges may apply for locations outside Ahmedabad.
+                    Yes! We provide decoration services across Gujarat. Additional travel charges may apply for locations outside Ahmedabad.
                 </div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    What is the cancellation policy?
-                    <span class="faq-icon">+</span>
+                    What is the cancellation policy? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Cancellations 7+ days before the event receive a full refund. 3-7 days: 50% refund. Within 48 hours: non-refundable. We also offer rescheduling options at no extra charge.
+                    Cancellations 7+ days before the event receive a full refund. 3-7 days: 50% refund. Within 48 hours: non-refundable. Rescheduling available.
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- ========== CTA SECTION ========== -->
+<!-- CTA -->
 <section class="packages-cta">
+    <div class="pkg-cta-orb pkg-orb-1" aria-hidden="true"></div>
+    <div class="pkg-cta-orb pkg-orb-2" aria-hidden="true"></div>
     <div class="container">
         <div class="pkg-cta-inner">
             <div class="pkg-cta-text">
                 <h2>Still Not Sure Which Package? 🤔</h2>
-                <p>Talk to our expert team — we'll help you choose the right package within your budget!</p>
+                <p>Talk to our expert team — we'll help you choose within your budget!</p>
             </div>
             <div class="pkg-cta-btns">
-                <a href="contact.html" class="btn btn-gold">📋 Get Free Quote</a>
-                <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+                <a href="contact.html" class="btn btn-white">📋 Get Free Quote</a>
+                <a href="tel:6358111321" class="btn btn-outline-white">📞 Call Now</a>
                 <a href="https://wa.me/916358111321?text=Hi, I need help choosing a decoration package"
                    class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
@@ -674,7 +514,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators. All Rights Reserved.</p>
             <div class="footer-bottom-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms</a>

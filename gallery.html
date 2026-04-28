@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO -->
     <title>Gallery - Jay Ambe Decorators | Decoration Work in Ahmedabad</title>
     <meta name="description" content="View our beautiful decoration work gallery - Wedding, Birthday, Corporate, Engagement & Theme Party decorations by Jay Ambe Decorators, Ahmedabad.">
     <meta name="keywords" content="decoration gallery Ahmedabad, wedding decoration photos, birthday decoration photos, Jay Ambe Decorators gallery">
@@ -13,23 +12,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="gallery.html">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Gallery - Jay Ambe Decorators Ahmedabad">
     <meta property="og:description" content="View our beautiful decoration work - 1000+ events completed in Ahmedabad">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0F5132">
+    <meta name="theme-color" content="#1E1B4B">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
 
-<!-- ========== LOADER ========== -->
+<!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-logo">
         <div class="loader-icon"></div>
@@ -43,7 +36,7 @@
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
 <!-- NAV OVERLAY -->
-<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
 <!-- COOKIE -->
 <div class="cookie-banner" id="cookieBanner" role="alert">
@@ -52,17 +45,6 @@
         <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
         <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept All</button>
     </div>
-</div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div class="top-contacts">
-        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
-        <span>💬 <a href="https://wa.me/916358111321" target="_blank" rel="noopener">WhatsApp Us</a></span>
-        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
-        <span>⏰ Open 24/7</span>
-    </div>
-    <span class="top-offer">🎊 Ahmedabad's Trusted Decorators Since 2003!</span>
 </div>
 
 <!-- NAVBAR -->
@@ -77,19 +59,29 @@
         <li role="none"><a href="services.html" role="menuitem">Services</a></li>
         <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
         <li role="none"><a href="packages.html" role="menuitem">Packages</a></li>
-        <li role="none"><a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a></li>
+        <li role="none">
+            <a href="contact.html" class="nav-book-btn" role="menuitem">📞 Book Now</a>
+        </li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()"
-            aria-label="Toggle menu"
+    <button class="hamburger"
+            id="hamburgerBtn"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="navLinks">☰</button>
+            aria-controls="navLinks">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+    </button>
 </nav>
 
 <!-- PAGE HERO -->
 <div class="page-hero" role="banner">
     <div class="page-hero-inner">
         <div class="page-hero-badge">📸 Our Gallery</div>
-        <h1>Our Beautiful<br>Decoration Work</h1>
+        <h1>Our Beautiful<br>
+            <span class="hero-gradient-text">Decoration Work</span>
+        </h1>
         <p>1000+ events decorated with passion &amp; perfection in Ahmedabad &amp; Gujarat</p>
         <div class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
@@ -99,25 +91,25 @@
     </div>
 </div>
 
-<!-- ========== GALLERY STATS ========== -->
-<div class="gallery-stats">
+<!-- GALLERY STATS -->
+<div class="gallery-stats" role="region" aria-label="Gallery statistics">
     <div class="container">
         <div class="gs-inner">
             <div class="gs-item">
                 <strong>1000+</strong>
                 <span>Events Done</span>
             </div>
-            <div class="gs-divider"></div>
+            <div class="gs-divider" aria-hidden="true"></div>
             <div class="gs-item">
-                <strong>6+</strong>
+                <strong>7+</strong>
                 <span>Event Types</span>
             </div>
-            <div class="gs-divider"></div>
+            <div class="gs-divider" aria-hidden="true"></div>
             <div class="gs-item">
                 <strong>21+</strong>
                 <span>Years Experience</span>
             </div>
-            <div class="gs-divider"></div>
+            <div class="gs-divider" aria-hidden="true"></div>
             <div class="gs-item">
                 <strong>100%</strong>
                 <span>Satisfaction</span>
@@ -126,80 +118,50 @@
     </div>
 </div>
 
-<!-- ========== GALLERY SECTION ========== -->
+<!-- GALLERY SECTION -->
 <section class="gallery-section" id="gallery">
     <div class="container">
 
-        <!-- Filter Bar -->
-        <div class="gallery-filter" role="tablist" aria-label="Filter gallery by category">
-            <button class="filter-btn active"
-                    data-filter="all"
+        <!-- Filter -->
+        <div class="gallery-filter" role="tablist" aria-label="Filter photos by category">
+            <button class="filter-btn active" data-filter="all"
                     onclick="filterGallery('all', this)"
-                    role="tab"
-                    aria-selected="true">
-                🌟 All
-            </button>
-            <button class="filter-btn"
-                    data-filter="wedding"
+                    role="tab" aria-selected="true">🌟 All</button>
+            <button class="filter-btn" data-filter="wedding"
                     onclick="filterGallery('wedding', this)"
-                    role="tab"
-                    aria-selected="false">
-                💍 Wedding
-            </button>
-            <button class="filter-btn"
-                    data-filter="birthday"
+                    role="tab" aria-selected="false">💍 Wedding</button>
+            <button class="filter-btn" data-filter="birthday"
                     onclick="filterGallery('birthday', this)"
-                    role="tab"
-                    aria-selected="false">
-                🎂 Birthday
-            </button>
-            <button class="filter-btn"
-                    data-filter="corporate"
+                    role="tab" aria-selected="false">🎂 Birthday</button>
+            <button class="filter-btn" data-filter="corporate"
                     onclick="filterGallery('corporate', this)"
-                    role="tab"
-                    aria-selected="false">
-                🏢 Corporate
-            </button>
-            <button class="filter-btn"
-                    data-filter="engagement"
+                    role="tab" aria-selected="false">🏢 Corporate</button>
+            <button class="filter-btn" data-filter="engagement"
                     onclick="filterGallery('engagement', this)"
-                    role="tab"
-                    aria-selected="false">
-                🌸 Engagement
-            </button>
-            <button class="filter-btn"
-                    data-filter="theme"
+                    role="tab" aria-selected="false">🌸 Engagement</button>
+            <button class="filter-btn" data-filter="theme"
                     onclick="filterGallery('theme', this)"
-                    role="tab"
-                    aria-selected="false">
-                🎭 Theme
-            </button>
-            <button class="filter-btn"
-                    data-filter="anniversary"
+                    role="tab" aria-selected="false">🎭 Theme</button>
+            <button class="filter-btn" data-filter="anniversary"
                     onclick="filterGallery('anniversary', this)"
-                    role="tab"
-                    aria-selected="false">
-                💑 Anniversary
-            </button>
+                    role="tab" aria-selected="false">💑 Anniversary</button>
         </div>
 
-        <!-- Gallery Count -->
-        <div class="gallery-count">
-            <span id="galleryCount">Showing <strong>12</strong> photos</span>
+        <!-- Count -->
+        <div class="gallery-count" aria-live="polite">
+            <span id="galleryCount">Showing <strong>16</strong> photos</span>
         </div>
 
-        <!-- Gallery Grid -->
+        <!-- Grid -->
         <div class="gallery-grid" id="galleryGrid" role="list">
 
-            <!-- Wedding 1 - Large -->
+            <!-- Wedding 1 — Large -->
             <div class="gallery-item gi-large" data-cat="wedding"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Royal Wedding Setup">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Royal Wedding Setup photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
-                        <!-- Replace: <img src="images/gallery/wedding1.jpg" alt="Royal Wedding Setup"> -->
                         <span class="ph-icon">📸</span>
                         <span class="ph-text">Wedding Photo 1</span>
                     </div>
@@ -216,9 +178,8 @@
             <!-- Birthday 1 -->
             <div class="gallery-item" data-cat="birthday"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Princess Birthday">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Princess Birthday photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -237,9 +198,8 @@
             <!-- Corporate 1 -->
             <div class="gallery-item" data-cat="corporate"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Corporate Gala Night">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Corporate Gala Night photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -258,9 +218,8 @@
             <!-- Engagement 1 -->
             <div class="gallery-item" data-cat="engagement"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Floral Engagement">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Floral Engagement photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -279,9 +238,8 @@
             <!-- Theme 1 -->
             <div class="gallery-item" data-cat="theme"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Bollywood Night">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Bollywood Night photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -300,9 +258,8 @@
             <!-- Birthday 2 -->
             <div class="gallery-item" data-cat="birthday"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Balloon Wonderland">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Balloon Wonderland photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -321,9 +278,8 @@
             <!-- Wedding 2 -->
             <div class="gallery-item" data-cat="wedding"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Garden Wedding">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Garden Wedding photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -339,12 +295,11 @@
                 </div>
             </div>
 
-            <!-- Corporate 2 - Large -->
+            <!-- Corporate 2 — Large -->
             <div class="gallery-item gi-large" data-cat="corporate"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Product Launch Event">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Product Launch Event photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -363,9 +318,8 @@
             <!-- Theme 2 -->
             <div class="gallery-item" data-cat="theme"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Royal Theme Party">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Royal Theme Party photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -384,9 +338,8 @@
             <!-- Engagement 2 -->
             <div class="gallery-item" data-cat="engagement"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Romantic Engagement">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Romantic Engagement photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -405,9 +358,8 @@
             <!-- Birthday 3 -->
             <div class="gallery-item" data-cat="birthday"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Superhero Birthday">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Superhero Birthday photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -426,9 +378,8 @@
             <!-- Anniversary 1 -->
             <div class="gallery-item" data-cat="anniversary"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Romantic Anniversary">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Romantic Anniversary photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -447,9 +398,8 @@
             <!-- Wedding 3 -->
             <div class="gallery-item" data-cat="wedding"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Indoor Wedding">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Indoor Wedding photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -465,12 +415,11 @@
                 </div>
             </div>
 
-            <!-- Theme 3 - Large -->
+            <!-- Theme 3 — Large -->
             <div class="gallery-item gi-large" data-cat="theme"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Beach Theme Party">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Beach Theme Party photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -489,9 +438,8 @@
             <!-- Anniversary 2 -->
             <div class="gallery-item" data-cat="anniversary"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Golden Anniversary">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Golden Anniversary photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -510,9 +458,8 @@
             <!-- Corporate 3 -->
             <div class="gallery-item" data-cat="corporate"
                  onclick="openLightbox(this)"
-                 role="listitem"
-                 tabindex="0"
-                 aria-label="Award Night">
+                 role="listitem" tabindex="0"
+                 aria-label="Open Award Night photo">
                 <div class="gi-img">
                     <div class="placeholder-img" style="height:100%;border-radius:0;border:none;">
                         <span class="ph-icon">📸</span>
@@ -531,44 +478,47 @@
         </div>
 
         <!-- No Results -->
-        <div class="no-gallery-results" id="noGalleryResults" style="display:none;">
-            <span>🔍</span>
+        <div class="no-gallery-results" id="noGalleryResults"
+             style="display:none;" role="status" aria-live="polite">
+            <span aria-hidden="true">🔍</span>
             <p>No photos found in this category.</p>
             <button onclick="filterGallery('all', document.querySelector('[data-filter=all]'))"
                     class="btn btn-primary">Show All Photos</button>
         </div>
 
-        <!-- Load More Button -->
+        <!-- Load More -->
         <div class="gallery-load-more" id="loadMoreWrap">
             <p class="lm-text">Want to see more of our work?</p>
-            <a href="https://wa.me/916358111321?text=Hi, I want to see more decoration photos"
-               class="btn btn-primary"
-               target="_blank" rel="noopener">
+            <a href="https://wa.me/916358111321?text=Hi%2C+I+want+to+see+more+decoration+photos"
+               class="btn btn-primary" target="_blank" rel="noopener">
                 💬 Request More Photos
             </a>
         </div>
-
     </div>
 </section>
 
-<!-- ========== LIGHTBOX ========== -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox"
+     role="dialog" aria-modal="true" aria-label="Photo viewer">
     <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
     <div class="lightbox-inner">
-        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close photo viewer">✕</button>
-        <button class="lb-nav lb-prev" onclick="lightboxNav(-1)" aria-label="Previous photo">❮</button>
+        <button class="lightbox-close" onclick="closeLightbox()"
+                aria-label="Close photo viewer">✕</button>
+        <button class="lb-nav lb-prev" onclick="lightboxNav(-1)"
+                aria-label="Previous photo">❮</button>
         <div class="lb-img-wrap">
             <div class="lb-placeholder placeholder-img" id="lbPlaceholder"
                  style="height:100%;border-radius:0;border:none;">
                 <span class="ph-icon">📸</span>
-                <span class="ph-text">Loading...</span>
+                <span class="ph-text">Photo Placeholder</span>
             </div>
             <img src="" id="lightboxImg" alt="Gallery photo" style="display:none;">
-            <div class="lb-loader" id="lbLoader">
+            <div class="lb-loader" id="lbLoader" style="display:none;">
                 <div class="lb-spinner"></div>
             </div>
         </div>
-        <button class="lb-nav lb-next" onclick="lightboxNav(1)" aria-label="Next photo">❯</button>
+        <button class="lb-nav lb-next" onclick="lightboxNav(1)"
+                aria-label="Next photo">❯</button>
         <div class="lb-footer">
             <div class="lb-caption" id="lbCaption"></div>
             <div class="lb-counter" id="lbCounter"></div>
@@ -576,20 +526,21 @@
     </div>
 </div>
 
-<!-- ========== CTA SECTION ========== -->
+<!-- CTA -->
 <section class="gallery-cta">
+    <div class="gallery-cta-orb gcta-orb-1" aria-hidden="true"></div>
+    <div class="gallery-cta-orb gcta-orb-2" aria-hidden="true"></div>
     <div class="container">
-        <div class="gallery-cta-inner">
+        <div class="gallery-cta-inner reveal-scale">
             <div class="gcta-left">
                 <h2>Like What You See? 🎊</h2>
                 <p>Let us create something beautiful for your next event in Ahmedabad!</p>
             </div>
             <div class="gcta-right">
-                <a href="contact.html" class="btn btn-gold">📋 Book Now</a>
-                <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+                <a href="contact.html" class="btn btn-white">📋 Book Now</a>
+                <a href="tel:6358111321" class="btn btn-outline-white">📞 Call Now</a>
                 <a href="https://wa.me/916358111321"
-                   class="btn btn-wa"
-                   target="_blank" rel="noopener">💬 WhatsApp</a>
+                   class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
         </div>
     </div>
@@ -646,7 +597,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+            <p>© <span class="footer-year">2024</span> Jay Ambe Decorators. All Rights Reserved.</p>
             <div class="footer-bottom-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms</a>
@@ -661,7 +612,8 @@
     <a href="https://wa.me/916358111321" class="wa-btn"
        target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 </div>
-<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+<button class="scroll-top" id="scrollTop"
+        onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
 <!-- MOBILE CALL BAR -->
 <div class="mobile-call-bar">
