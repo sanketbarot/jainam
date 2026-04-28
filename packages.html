@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - PartyPlot Pro</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/packages.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="loader-icon">🎉</div>
+    <div class="loader-text">LOADING...</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="top-contacts">
+        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
+        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+    </div>
+    <span class="top-offer">🎊 20% OFF This Month!</span>
+</div>
+
+<nav id="navbar">
+    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<div class="page-hero">
+    <h1>Our Packages 💼</h1>
+    <p>Flexible Pricing for Every Budget</p>
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Packages</span>
+    </div>
+</div>
+
+<!-- PACKAGES -->
+<section class="packages-section">
+    <div class="section-header">
+        <div class="section-tag">PRICING PLANS</div>
+        <h2 class="section-title">Choose Your Package</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">All packages include setup, decoration materials, and cleanup</p>
+    </div>
+
+    <!-- BILLING TOGGLE -->
+    <div class="billing-toggle">
+        <span class="toggle-label">Per Event</span>
+        <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()">
+            <div class="toggle-circle"></div>
+        </div>
+        <span class="toggle-label">Package Deal <span class="save-badge">Save 20%</span></span>
+    </div>
+
+    <!-- EVENT TYPE FILTER -->
+    <div class="pkg-filter">
+        <button class="pkg-filter-btn active" onclick="filterPackages('all', this)">All Events</button>
+        <button class="pkg-filter-btn" onclick="filterPackages('wedding', this)">💍 Wedding</button>
+        <button class="pkg-filter-btn" onclick="filterPackages('birthday', this)">🎂 Birthday</button>
+        <button class="pkg-filter-btn" onclick="filterPackages('corporate', this)">🏢 Corporate</button>
+    </div>
+
+    <div class="package-cards" id="packageCards">
+        <!-- BASIC -->
+        <div class="package-card reveal" data-pkg="all birthday">
+            <div class="pkg-icon">🥉</div>
+            <h3>Basic</h3>
+            <p class="pkg-desc">Perfect for small gatherings & home events</p>
+            <div class="pkg-price" id="price1">₹15,000</div>
+            <p class="pkg-period">per event • all inclusive</p>
+            <ul class="pkg-features">
+                <li><span class="check">✓</span> Balloon Decoration</li>
+                <li><span class="check">✓</span> Welcome Arch</li>
+                <li><span class="check">✓</span> Table Setup (5 Tables)</li>
+                <li><span class="check">✓</span> Basic LED Lighting</li>
+                <li><span class="check">✓</span> 4 Hours Setup</li>
+                <li><span class="check">✓</span> Cleanup Included</li>
+                <li class="cross"><span>✗</span> Stage Decoration</li>
+                <li class="cross"><span>✗</span> Photo Booth</li>
+            </ul>
+            <button class="pkg-btn" onclick="bookPackage('Basic')">Get Started</button>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="package-card popular reveal" data-pkg="all birthday corporate">
+            <div class="popular-ribbon">⭐ Most Popular</div>
+            <div class="pkg-icon">🥈</div>
+            <h3>Standard</h3>
+            <p class="pkg-desc">Best choice for medium-size celebrations</p>
+            <div class="pkg-price" id="price2">₹35,000</div>
+            <p class="pkg-period">per event • all inclusive</p>
+            <ul class="pkg-features">
+                <li><span class="check">✓</span> Full Balloon Art</li>
+                <li><span class="check">✓</span> Floral Arrangements</li>
+                <li><span class="check">✓</span> Table Setup (15 Tables)</li>
+                <li><span class="check">✓</span> Professional LED Setup</li>
+                <li><span class="check">✓</span> Stage Decoration</li>
+                <li><span class="check">✓</span> Photo Backdrop</li>
+                <li><span class="check">✓</span> 8 Hours Setup</li>
+                <li class="cross"><span>✗</span> Photo Booth</li>
+            </ul>
+            <button class="pkg-btn popular-btn" onclick="bookPackage('Standard')">Get Started</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="package-card reveal" data-pkg="all wedding corporate">
+            <div class="pkg-icon">🥇</div>
+            <h3>Premium</h3>
+            <p class="pkg-desc">For grand celebrations & luxury events</p>
+            <div class="pkg-price" id="price3">₹75,000</div>
+            <p class="pkg-period">per event • all inclusive</p>
+            <ul class="pkg-features">
+                <li><span class="check">✓</span> Luxury Decoration</li>
+                <li><span class="check">✓</span> Floral Wall & Grand Arch</li>
+                <li><span class="check">✓</span> Table Setup (30 Tables)</li>
+                <li><span class="check">✓</span> Premium Lighting</li>
+                <li><span class="check">✓</span> Grand Stage & Backdrop</li>
+                <li><span class="check">✓</span> Photo Booth Setup</li>
+                <li><span class="check">✓</span> Welcome Gate</li>
+                <li><span class="check">✓</span> Full Day Setup</li>
+            </ul>
+            <button class="pkg-btn" onclick="bookPackage('Premium')">Get Started</button>
+        </div>
+
+        <!-- ELITE WEDDING -->
+        <div class="package-card elite reveal" data-pkg="all wedding">
+            <div class="pkg-icon">👑</div>
+            <h3>Elite Wedding</h3>
+            <p class="pkg-desc">The ultimate luxury wedding experience</p>
+            <div class="pkg-price" id="price4">₹1,50,000</div>
+            <p class="pkg-period">per event • fully managed</p>
+            <ul class="pkg-features">
+                <li><span class="check">✓</span> Full Venue Transformation</li>
+                <li><span class="check">✓</span> Luxury Floral Design</li>
+                <li><span class="check">✓</span> Table Setup (60+ Tables)</li>
+                <li><span class="check">✓</span> Crystal Chandelier Setup</li>
+                <li><span class="check">✓</span> Grand Stage & Mandap</li>
+                <li><span class="check">✓</span> Multiple Photo Booths</li>
+                <li><span class="check">✓</span> Dedicated Event Manager</li>
+                <li><span class="check">✓</span> 2-Day Setup</li>
+            </ul>
+            <button class="pkg-btn elite-btn" onclick="bookPackage('Elite Wedding')">Book Elite</button>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section class="compare-section">
+    <div class="section-header">
+        <div class="section-tag">COMPARE</div>
+        <h2 class="section-title">Package Comparison</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="compare-table-wrap">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Basic</th>
+                    <th class="highlight">Standard</th>
+                    <th>Premium</th>
+                    <th>Elite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Balloon Decoration</td>
+                    <td>Basic</td>
+                    <td class="highlight">Full</td>
+                    <td>Luxury</td>
+                    <td>Premium</td>
+                </tr>
+                <tr>
+                    <td>Floral Arrangement</td>
+                    <td>❌</td>
+                    <td class="highlight">✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Stage Decoration</td>
+                    <td>❌</td>
+                    <td class="highlight">✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Photo Booth</td>
+                    <td>❌</td>
+                    <td class="highlight">❌</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Table Setup</td>
+                    <td>5 Tables</td>
+                    <td class="highlight">15 Tables</td>
+                    <td>30 Tables</td>
+                    <td>60+ Tables</td>
+                </tr>
+                <tr>
+                    <td>Setup Duration</td>
+                    <td>4 Hours</td>
+                    <td class="highlight">8 Hours</td>
+                    <td>Full Day</td>
+                    <td>2 Days</td>
+                </tr>
+                <tr>
+                    <td>Event Manager</td>
+                    <td>❌</td>
+                    <td class="highlight">❌</td>
+                    <td>❌</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>₹15,000</td>
+                    <td class="highlight">₹35,000</td>
+                    <td>₹75,000</td>
+                    <td>₹1,50,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Package FAQs</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Can I customize a package? <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Absolutely! We love creating custom packages tailored to your specific needs and budget. Contact us for a free consultation.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                What is included in the price? <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">All packages include decoration materials, professional setup team, on-site coordination, and complete cleanup after the event.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                How do I book a package? <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Simply click "Get Started" on any package or visit our Contact page. We require 30% advance payment to confirm your booking.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                What is the cancellation policy? <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Cancellations 7+ days before event: full refund. 3-7 days: 50% refund. Within 48 hours: non-refundable. Rescheduling available.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <span class="footer-logo">🎉 PartyPlot Pro</span>
+            <p>Making celebrations special since 2014.</p>
+            <div class="social-links">
+                <a class="social-link" href="#">📘</a>
+                <a class="social-link" href="#">📸</a>
+                <a class="social-link" href="#">🐦</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">→ Home</a></li>
+                <li><a href="about.html">→ About</a></li>
+                <li><a href="services.html">→ Services</a></li>
+                <li><a href="gallery.html">→ Gallery</a></li>
+                <li><a href="packages.html">→ Packages</a></li>
+                <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
+                <li><a href="#">📱 +91 98765 43210</a></li>
+                <li><a href="#">📧 info@partyplotpro.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script src="js/common.js"></script>
+<script src="js/packages.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - PartyPlot Pro</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="loader-icon">🎉</div>
+    <div class="loader-text">LOADING...</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="top-contacts">
+        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
+        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+    </div>
+    <span class="top-offer">🎊 20% OFF This Month!</span>
+</div>
+
+<nav id="navbar">
+    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<div class="page-hero">
+    <h1>Our Gallery 📸</h1>
+    <p>A Glimpse of Our Beautiful Work</p>
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Gallery</span>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+    <div class="gallery-filter">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">🌟 All</button>
+        <button class="filter-btn" onclick="filterGallery('wedding', this)">💍 Wedding</button>
+        <button class="filter-btn" onclick="filterGallery('birthday', this)">🎂 Birthday</button>
+        <button class="filter-btn" onclick="filterGallery('corporate', this)">🏢 Corporate</button>
+        <button class="filter-btn" onclick="filterGallery('engagement', this)">🌸 Engagement</button>
+        <button class="filter-btn" onclick="filterGallery('theme', this)">🎭 Theme</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item large" data-cat="wedding" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800" alt="Wedding">
+            <div class="gallery-overlay"><h4>Royal Wedding Setup</h4><span>💍 Wedding • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday">
+            <div class="gallery-overlay"><h4>Princess Birthday</h4><span>🎂 Birthday • Pune</span></div>
+        </div>
+        <div class="gallery-item" data-cat="corporate" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500" alt="Corporate">
+            <div class="gallery-overlay"><h4>Corporate Gala Night</h4><span>🏢 Corporate • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="engagement" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement">
+            <div class="gallery-overlay"><h4>Floral Engagement</h4><span>🌸 Engagement • Nashik</span></div>
+        </div>
+        <div class="gallery-item" data-cat="theme" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme">
+            <div class="gallery-overlay"><h4>Bollywood Night</h4><span>🎭 Theme • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=500" alt="Party">
+            <div class="gallery-overlay"><h4>Balloon Wonderland</h4><span>🎈 Birthday • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="wedding" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding2">
+            <div class="gallery-overlay"><h4>Garden Wedding</h4><span>💍 Wedding • Pune</span></div>
+        </div>
+        <div class="gallery-item large" data-cat="corporate" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Corporate2">
+            <div class="gallery-overlay"><h4>Product Launch Event</h4><span>🏢 Corporate • Delhi</span></div>
+        </div>
+        <div class="gallery-item" data-cat="theme" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme2">
+            <div class="gallery-overlay"><h4>Royal Theme Party</h4><span>🎭 Theme • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="engagement" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement2">
+            <div class="gallery-overlay"><h4>Romantic Engagement</h4><span>🌸 Engagement • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="birthday" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday2">
+            <div class="gallery-overlay"><h4>Superhero Birthday</h4><span>🎂 Birthday • Mumbai</span></div>
+        </div>
+        <div class="gallery-item" data-cat="wedding" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding3">
+            <div class="gallery-overlay"><h4>Indoor Wedding</h4><span>💍 Wedding • Mumbai</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" onclick="lightboxNav(-1)">❮</button>
+    <img src="" id="lightboxImg" alt="Gallery Image">
+    <button class="lb-next" onclick="lightboxNav(1)">❯</button>
+    <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <span class="footer-logo">🎉 PartyPlot Pro</span>
+            <p>Making celebrations special since 2014.</p>
+            <div class="social-links">
+                <a class="social-link" href="#">📘</a>
+                <a class="social-link" href="#">📸</a>
+                <a class="social-link" href="#">🐦</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">→ Home</a></li>
+                <li><a href="about.html">→ About</a></li>
+                <li><a href="services.html">→ Services</a></li>
+                <li><a href="gallery.html">→ Gallery</a></li>
+                <li><a href="packages.html">→ Packages</a></li>
+                <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
+                <li><a href="#">📱 +91 98765 43210</a></li>
+                <li><a href="#">📧 info@partyplotpro.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script src="js/common.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

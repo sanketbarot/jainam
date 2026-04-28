@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Ambe Decorators - Best Decoration & Party Plot in Ahmedabad</title>
+    <meta name="description" content="Jay Ambe Decorators - Premium Wedding, Birthday & Event Decoration services in Ahmedabad since 2003. Call: 6358111321">
+    <meta name="keywords" content="decoration Ahmedabad, wedding decoration Ahmedabad, birthday decoration, party plot Ahmedabad, Jay Ambe Decorators">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-icon">🎊</div>
+    <div class="loader-brand">JAY AMBE DECORATORS</div>
+    <div class="loader-sub">AHMEDABAD</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies to improve your experience on our website.</p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+    </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-contacts">
+        <span>📱 <a href="tel:6358111321">+91 63581 11321</a></span>
+        <span>💬 <a href="https://wa.me/916358111321">WhatsApp Us</a></span>
+        <span>📧 <a href="mailto:jainampatel1715@gmail.com">jainampatel1715@gmail.com</a></span>
+        <span>⏰ Open 24/7</span>
+    </div>
+    <span class="top-offer">🎊 20+ Years of Excellence in Ahmedabad!</span>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <a href="index.html" class="logo-wrap">
+        <span class="logo-main">🎊 Jay Ambe Decorators</span>
+        <span class="logo-sub">Ahmedabad • Since 2003</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+    <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600" alt="Wedding Decoration">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">✨ Ahmedabad's Trusted Decorators Since 2003</div>
+                <h1>Jay Ambe Decorators</h1>
+                <p>Making Every Celebration Magical in Ahmedabad<br>Wedding • Birthday • Corporate • All Events</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-gold">🎊 Book Now</a>
+                    <a href="gallery.html" class="btn btn-white">📸 Our Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600" alt="Birthday">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">💍 Premium Wedding Decoration</div>
+                <h1>Dream Weddings<br>Made Real</h1>
+                <p>Luxury wedding decoration with 20+ years expertise<br>Serving Ahmedabad & All of Gujarat</p>
+                <div class="hero-btns">
+                    <a href="packages.html" class="btn btn-gold">💼 View Packages</a>
+                    <a href="services.html" class="btn btn-white">🎭 Our Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600" alt="Events">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">🎂 Birthday & All Events</div>
+                <h1>1000+ Events<br>Successfully Done</h1>
+                <p>Trusted by 1000+ happy families in Ahmedabad<br>50+ Expert Team Members</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-gold">📞 Call Now</a>
+                    <a href="about.html" class="btn btn-white">🏆 About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="hero-nav hero-prev" onclick="changeSlide(-1)">❮</button>
+    <button class="hero-nav hero-next" onclick="changeSlide(1)">❯</button>
+    <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+    <div class="stat-item">
+        <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+        <span class="stat-label">🎊 Events Done</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+        <span class="stat-label">😊 Happy Families</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="21" data-suffix="+">0</span>
+        <span class="stat-label">🏆 Years Experience</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="50" data-suffix="+">0</span>
+        <span class="stat-label">👨‍🎨 Expert Team</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="100" data-suffix="%">0</span>
+        <span class="stat-label">⭐ Satisfaction</span>
+    </div>
+</div>
+
+<!-- ABOUT PREVIEW -->
+<section class="about-preview">
+    <div class="about-container">
+        <div class="about-img reveal">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600" alt="Jay Ambe Decorators">
+            <div class="about-badge">
+                <span>21+</span>
+                Years of Trust
+            </div>
+        </div>
+        <div class="about-content reveal">
+            <div class="section-tag">ABOUT US</div>
+            <h2>Ahmedabad's Most Trusted Decoration Company Since 2003</h2>
+            <p>Jay Ambe Decorators has been creating magical celebrations in Ahmedabad since 2003. With 21+ years of experience and 1000+ successful events, we are the most trusted name in decoration and event management in Gujarat.</p>
+            <p>Our team of 50+ expert designers and decorators work with passion to make your special moments truly unforgettable. We are available 24/7 for all your decoration needs.</p>
+            <div class="about-features">
+                <div class="about-feature"><span>✅</span> 21+ Years Experience</div>
+                <div class="about-feature"><span>✅</span> 50+ Expert Team</div>
+                <div class="about-feature"><span>✅</span> 1000+ Events Done</div>
+                <div class="about-feature"><span>✅</span> 24/7 Available</div>
+                <div class="about-feature"><span>✅</span> All Events Covered</div>
+                <div class="about-feature"><span>✅</span> 100% Satisfaction</div>
+            </div>
+            <a href="about.html" class="btn btn-primary" style="margin-top:25px;">Know More About Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+    <div class="section-header">
+        <div class="section-tag">OUR SERVICES</div>
+        <h2 class="section-title">All Decoration Services</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Complete decoration solutions for every occasion in Ahmedabad</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <span class="service-icon">💍</span>
+            <h3>Wedding Decoration</h3>
+            <p>Luxury wedding setups with floral arrangements, mandap, stage & reception decoration.</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-icon">🎂</span>
+            <h3>Birthday Decoration</h3>
+            <p>Fun & colorful birthday setups with custom themes, balloon art & cake table.</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-icon">🌸</span>
+            <h3>Engagement Ceremony</h3>
+            <p>Romantic floral walls, ring ceremony setups & elegant backdrops.</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-icon">🏢</span>
+            <h3>Corporate Events</h3>
+            <p>Professional decoration for conferences, product launches & corporate parties.</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-icon">🎭</span>
+            <h3>Theme Parties</h3>
+            <p>50+ custom theme decorations - Bollywood, Royal, Beach & more!</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-icon">🏡</span>
+            <h3>Party Plot Rental</h3>
+            <p>Spacious party plots in Ahmedabad for 100-2000 guests with full amenities.</p>
+            <a href="services.html" class="service-link">View Details →</a>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+        <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-preview">
+    <div class="section-header">
+        <div class="section-tag">REVIEWS</div>
+        <h2 class="section-title">What Ahmedabad Says</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Trusted by 1000+ happy families across Ahmedabad</p>
+    </div>
+    <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Jay Ambe Decorators made our wedding absolutely beautiful! The decoration was beyond our expectations. Very professional team and delivered everything on time. Highly recommended in Ahmedabad!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">P</div>
+                    <div class="author-info">
+                        <h4>Priya & Raj Shah</h4>
+                        <span>💍 Wedding • Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Best birthday decoration in Ahmedabad! My son's superhero theme party was exactly what he wanted. The team was very creative and budget-friendly. Will definitely book again!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <h4>Meera Patel</h4>
+                        <span>🎂 Birthday • Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"We have been using Jay Ambe Decorators for our annual corporate events for 5 years. Always professional, always on time, always amazing! Best event decorators in Ahmedabad!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                        <h4>Amit Desai</h4>
+                        <span>🏢 Corporate • Ahmedabad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-nav" id="testimonialDots"></div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us-section">
+    <div class="section-header">
+        <div class="section-tag">WHY CHOOSE US</div>
+        <h2 class="section-title">Why Jay Ambe Decorators?</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="why-grid">
+        <div class="why-card reveal">
+            <div class="why-icon">🏆</div>
+            <h3>21+ Years Experience</h3>
+            <p>Trusted and experienced decoration company in Ahmedabad since 2003</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="why-icon">⏰</div>
+            <h3>24/7 Available</h3>
+            <p>We are available round the clock for all your decoration requirements</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="why-icon">👨‍🎨</div>
+            <h3>50+ Expert Team</h3>
+            <p>Professional team of 50+ skilled decorators and event managers</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="why-icon">💰</div>
+            <h3>Budget Friendly</h3>
+            <p>Premium quality decoration at affordable prices for every budget</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="why-icon">🎨</div>
+            <h3>Custom Themes</h3>
+            <p>50+ custom theme options tailored exactly to your vision and style</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="why-icon">✅</div>
+            <h3>100% Satisfaction</h3>
+            <p>1000+ happy clients and 100% satisfaction guarantee on all events</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>Ready to Make Your Event Special? 🎊</h2>
+        <p>Call us now or WhatsApp for FREE consultation!</p>
+        <div class="cta-info">
+            <span>📱 +91 63581 11321</span>
+            <span>⏰ Open 24/7</span>
+            <span>📍 Ahmedabad, Gujarat</span>
+        </div>
+        <div class="cta-btns">
+            <a href="tel:6358111321" class="btn btn-white">📞 Call Now</a>
+            <a href="https://wa.me/916358111321" class="btn btn-wa" target="_blank">💬 WhatsApp</a>
+            <a href="contact.html" class="btn btn-outline-white">📋 Book Online</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo-wrap">
+                <span class="footer-logo-main">🎊 Jay Ambe Decorators</span>
+                <span class="footer-logo-sub">AHMEDABAD • SINCE 2003</span>
+            </div>
+            <p>Ahmedabad's most trusted decoration company. Making celebrations magical for 21+ years with 1000+ successful events.</p>
+            <div class="social-links">
+                <a class="social-link" href="#">📘</a>
+                <a class="social-link" href="#">📸</a>
+                <a class="social-link" href="#">▶️</a>
+                <a class="social-link" href="https://wa.me/916358111321">💬</a>
+            </div>
+            <div style="margin-top:20px;">
+                <p style="color:var(--primary); font-size:13px; margin-bottom:8px; font-weight:600;">📩 Subscribe Newsletter</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Your email">
+                    <button onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">→ Home</a></li>
+                <li><a href="about.html">→ About Us</a></li>
+                <li><a href="services.html">→ Services</a></li>
+                <li><a href="gallery.html">→ Gallery</a></li>
+                <li><a href="packages.html">→ Packages</a></li>
+                <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+                <li><a href="services.html">→ Wedding Decoration</a></li>
+                <li><a href="services.html">→ Birthday Decoration</a></li>
+                <li><a href="services.html">→ Engagement Ceremony</a></li>
+                <li><a href="services.html">→ Corporate Events</a></li>
+                <li><a href="services.html">→ Theme Parties</a></li>
+                <li><a href="services.html">→ Party Plot Rental</a></li>
+                <li><a href="services.html">→ Anniversary Decoration</a></li>
+                <li><a href="services.html">→ Baby Shower</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+                <li><a href="tel:6358111321">📱 +91 63581 11321</a></li>
+                <li><a href="https://wa.me/916358111321">💬 WhatsApp: 63581 11321</a></li>
+                <li><a href="mailto:jainampatel1715@gmail.com">📧 jainampatel1715@gmail.com</a></li>
+                <li><a href="#">📍 Ahmedabad, Gujarat</a></li>
+                <li><a href="#">⏰ Open 24/7</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Jay Ambe Decorators, Ahmedabad. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/916358111321" class="whatsapp-btn" target="_blank" title="WhatsApp Jay Ambe Decorators">💬</a>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

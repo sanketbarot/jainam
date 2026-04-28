@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - PartyPlot Pro</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="loader-icon">🎉</div>
+    <div class="loader-text">LOADING...</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="top-contacts">
+        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
+        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+    </div>
+    <span class="top-offer">🎊 20% OFF This Month!</span>
+</div>
+
+<nav id="navbar">
+    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<div class="page-hero">
+    <h1>Our Services 🎭</h1>
+    <p>Complete Decoration Solutions for Every Occasion</p>
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Services</span>
+    </div>
+</div>
+
+<!-- ALL SERVICES -->
+<section class="all-services">
+    <div class="section-header">
+        <div class="section-tag">WHAT WE OFFER</div>
+        <h2 class="section-title">All Our Services</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">From intimate celebrations to grand events, we provide complete decoration solutions</p>
+    </div>
+    <div class="services-detailed-grid">
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Wedding">
+                <div class="service-badge">💍 Wedding</div>
+            </div>
+            <div class="service-body">
+                <h3>Wedding Decoration</h3>
+                <p>Transform your wedding into a fairy tale with our exquisite floral arrangements, mandap decoration, and reception setups. We handle every detail from entrance gate to honeymoon suite.</p>
+                <ul class="service-features">
+                    <li>✅ Floral Mandap & Stage</li>
+                    <li>✅ Reception Decoration</li>
+                    <li>✅ Entrance Gate Setup</li>
+                    <li>✅ Table Centerpieces</li>
+                    <li>✅ Bridal Room Decoration</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹50,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Birthday">
+                <div class="service-badge">🎂 Birthday</div>
+            </div>
+            <div class="service-body">
+                <h3>Birthday Parties</h3>
+                <p>Make birthdays unforgettable with custom themes, balloon art, cake table decoration, and fun photo booth setups. We specialize in both kids and adult birthday parties.</p>
+                <ul class="service-features">
+                    <li>✅ Custom Theme Setup</li>
+                    <li>✅ Balloon Decoration</li>
+                    <li>✅ Cake Table Design</li>
+                    <li>✅ Photo Booth Setup</li>
+                    <li>✅ Welcome Banner</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹8,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500" alt="Corporate">
+                <div class="service-badge">🏢 Corporate</div>
+            </div>
+            <div class="service-body">
+                <h3>Corporate Events</h3>
+                <p>Professional and elegant event setups for conferences, product launches, award nights, and office parties. We understand corporate aesthetics and brand requirements.</p>
+                <ul class="service-features">
+                    <li>✅ Stage & Podium Setup</li>
+                    <li>✅ Brand Themed Decoration</li>
+                    <li>✅ Award Night Setup</li>
+                    <li>✅ Conference Decoration</li>
+                    <li>✅ Photo Wall Setup</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹25,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Engagement">
+                <div class="service-badge">🌸 Engagement</div>
+            </div>
+            <div class="service-body">
+                <h3>Engagement Ceremony</h3>
+                <p>Romantic floral walls, ring ceremony setups, and elegant backdrops that make your engagement truly special and Instagram-worthy.</p>
+                <ul class="service-features">
+                    <li>✅ Floral Wall Backdrop</li>
+                    <li>✅ Ring Ceremony Setup</li>
+                    <li>✅ Couple Seating Decor</li>
+                    <li>✅ Fairy Light Setup</li>
+                    <li>✅ Photo Arch</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹20,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?w=500" alt="Theme">
+                <div class="service-badge">🎭 Theme</div>
+            </div>
+            <div class="service-body">
+                <h3>Theme Parties</h3>
+                <p>Custom theme decorations from 50+ themes - Bollywood, Royal, Beach, Retro, Jungle, Superhero, Fairy Tale, Hollywood, and many more!</p>
+                <ul class="service-features">
+                    <li>✅ 50+ Theme Options</li>
+                    <li>✅ Custom Props & Setup</li>
+                    <li>✅ Themed Table Setting</li>
+                    <li>✅ Character Cutouts</li>
+                    <li>✅ Themed Photo Booth</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹15,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=500" alt="Party Plot">
+                <div class="service-badge">🏡 Plot</div>
+            </div>
+            <div class="service-body">
+                <h3>Party Plot Rental</h3>
+                <p>Spacious and well-maintained party plots available for 100-2000 guests with parking, catering support, and complete amenities.</p>
+                <ul class="service-features">
+                    <li>✅ Capacity: 100-2000 Guests</li>
+                    <li>✅ Ample Parking</li>
+                    <li>✅ Catering Support</li>
+                    <li>✅ Power Backup</li>
+                    <li>✅ AC & Non-AC Options</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹10,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500" alt="Anniversary">
+                <div class="service-badge">💑 Anniversary</div>
+            </div>
+            <div class="service-body">
+                <h3>Anniversary Decoration</h3>
+                <p>Romantic candlelight setups, flower arrangements, and surprise decoration for your anniversary celebrations at home or venue.</p>
+                <ul class="service-features">
+                    <li>✅ Candlelight Setup</li>
+                    <li>✅ Rose Petal Arrangement</li>
+                    <li>✅ Balloon Decoration</li>
+                    <li>✅ Custom Banner</li>
+                    <li>✅ Home Decoration</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹5,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500" alt="Baby Shower">
+                <div class="service-badge">🍼 Baby Shower</div>
+            </div>
+            <div class="service-body">
+                <h3>Baby Shower</h3>
+                <p>Adorable baby shower decorations with gender reveal setups, balloon garlands, floral arrangements, and sweet table displays.</p>
+                <ul class="service-features">
+                    <li>✅ Gender Reveal Setup</li>
+                    <li>✅ Balloon Garland</li>
+                    <li>✅ Sweet Table Display</li>
+                    <li>✅ Custom Backdrop</li>
+                    <li>✅ Welcome Sign</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹8,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <div class="service-detailed-card reveal">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500" alt="Photo Booth">
+                <div class="service-badge">📸 Photo Booth</div>
+            </div>
+            <div class="service-body">
+                <h3>Photo Booth Setup</h3>
+                <p>Instagram-worthy photo booth setups with props, neon signs, balloon walls, flower walls, and custom backdrops for any event.</p>
+                <ul class="service-features">
+                    <li>✅ Flower Wall</li>
+                    <li>✅ Balloon Wall</li>
+                    <li>✅ Neon Sign Setup</li>
+                    <li>✅ Props & Accessories</li>
+                    <li>✅ Custom Backdrop</li>
+                </ul>
+                <div class="service-price">Starting from <strong>₹6,000</strong></div>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+    <div class="section-header">
+        <div class="section-tag">HOW IT WORKS</div>
+        <h2 class="section-title">Our Simple Process</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="process-steps">
+        <div class="process-step reveal">
+            <div class="step-num">1</div>
+            <div class="step-icon">📞</div>
+            <h3>Contact</h3>
+            <p>Call or fill our form with event details</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step reveal">
+            <div class="step-num">2</div>
+            <div class="step-icon">💬</div>
+            <h3>Consult</h3>
+            <p>Free consultation to understand your vision</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step reveal">
+            <div class="step-num">3</div>
+            <div class="step-icon">📋</div>
+            <h3>Plan</h3>
+            <p>Detailed design plan for your approval</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step reveal">
+            <div class="step-num">4</div>
+            <div class="step-icon">🎨</div>
+            <h3>Decorate</h3>
+            <p>Expert team sets up everything perfectly</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="process-step reveal">
+            <div class="step-num">5</div>
+            <div class="step-icon">🎉</div>
+            <h3>Celebrate!</h3>
+            <p>Enjoy while we handle cleanup too!</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <span class="footer-logo">🎉 PartyPlot Pro</span>
+            <p>Making celebrations special since 2014.</p>
+            <div class="social-links">
+                <a class="social-link" href="#">📘</a>
+                <a class="social-link" href="#">📸</a>
+                <a class="social-link" href="#">🐦</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">→ Home</a></li>
+                <li><a href="about.html">→ About</a></li>
+                <li><a href="services.html">→ Services</a></li>
+                <li><a href="gallery.html">→ Gallery</a></li>
+                <li><a href="packages.html">→ Packages</a></li>
+                <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
+                <li><a href="#">📱 +91 98765 43210</a></li>
+                <li><a href="#">📧 info@partyplotpro.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script src="js/common.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+.packages-section {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 80px 30px;
+}
+
+.packages-section .section-title { color: white; }
+.packages-section .section-subtitle { color: rgba(255,255,255,0.7); }
+.packages-section .divider { background: rgba(255,255,255,0.3); }
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.toggle-label { color: white; font-size: 15px; font-weight: 500; }
+
+.toggle-switch {
+    width: 60px; height: 30px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.toggle-switch.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.toggle-circle {
+    width: 24px; height: 24px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px; left: 3px;
+    transition: var(--transition);
+}
+
+.toggle-switch.active .toggle-circle { left: 33px; }
+
+.save-badge {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pkg-filter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.pkg-filter-btn {
+    padding: 8px 22px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pkg-filter-btn.active,
+.pkg-filter-btn:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-color: transparent;
+}
+
+.package-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.package-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 40px 30px;
+    width: 280px;
+    color: white;
+    transition: var(--transition);
+    position: relative;
+    text-align: center;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255,107,107,0.4);
+}
+
+.package-card.popular {
+    background: white;
+    color: var(--dark);
+    border: none;
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(255,107,107,0.3);
+}
+
+.package-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.package-card.elite {
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,107,107,0.1));
+    border-color: gold;
+}
+
+.popular-ribbon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.pkg-icon { font-size: 50px; margin-bottom: 15px; display: block; }
+
+.package-card h3 { font-size: 24px; margin-bottom: 8px; }
+.package-card.popular h3 { color: var(--primary); }
+
+.pkg-desc {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.pkg-price {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.package-card.popular .pkg-price {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pkg-period { font-size: 13px; opacity: 0.6; margin-bottom: 25px; }
+
+.pkg-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.pkg-features li {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.package-card.popular .pkg-features li {
+    border-bottom-color: #f0f0f0;
+    color: #555;
+}
+
+.pkg-features li.cross { opacity: 0.4; }
+
+.check {
+    width: 20px; height: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+    color: white;
+}
+
+.pkg-btn {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pkg-btn:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.02);
+}
+
+.popular-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    color: white;
+}
+
+.popular-btn:hover {
+    box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+    transform: scale(1.02);
+}
+
+.elite-btn {
+    background: linear-gradient(135deg, gold, orange);
+    border: none;
+    color: white;
+}
+
+/* COMPARE TABLE */
+.compare-section {
+    background: var(--light);
+    padding: 80px 30px;
+}
+
+.compare-table-wrap {
+    overflow-x: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.compare-table th {
+    padding: 18px 20px;
+    text-align: center;
+    background: var(--dark);
+    color: white;
+    font-size: 16px;
+}
+
+.compare-table th.highlight {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.compare-table td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #555;
+}
+
+.compare-table td.highlight {
+    background: rgba(255,107,107,0.05);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.compare-table tr:hover td { background: var(--light); }
+.compare-table tr:hover td.highlight { background: rgba(255,107,107,0.1); }
+
+/* FAQ */
+.faq-section { background: white; padding: 80px 30px; }
+
+.faq-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--light);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.faq-question:hover { color: var(--primary); }
+.faq-icon { font-size: 22px; transition: var(--transition); color: var(--primary); }
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 25px;
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 25px 20px;
+}
+
+@media (max-width: 768px) {
+    .package-card.popular { transform: scale(1); }
+    .package-card.popular:hover { transform: translateY(-10px); }
+}

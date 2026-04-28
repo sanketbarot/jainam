@@ -1,0 +1,219 @@
+/* ========== STORY ========== */
+.story-section {
+    background: white;
+    padding: 80px 30px;
+}
+
+.story-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.story-img { flex: 1; min-width: 280px; }
+
+.story-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.story-content { flex: 1; min-width: 280px; }
+
+.story-content h2 {
+    font-size: 34px;
+    color: var(--dark);
+    margin: 15px 0 20px;
+    line-height: 1.3;
+}
+
+.story-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* ========== MISSION ========== */
+.mission-section {
+    background: var(--light);
+    padding: 80px 30px;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mv-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.mv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mv-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.mv-card h3 {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.mv-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* ========== TEAM ========== */
+.team-section {
+    background: white;
+    padding: 80px 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-img img { transform: scale(1.08); }
+
+.team-social {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-social { opacity: 1; }
+
+.team-social a {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.team-social a:hover { background: var(--primary); }
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.team-info span {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.team-info p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ========== ACHIEVEMENTS ========== */
+.achievements-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 80px 30px;
+}
+
+.achievements-section .section-title { color: white; }
+.achievements-section .section-subtitle { color: rgba(255,255,255,0.8); }
+.achievements-section .divider { background: rgba(255,255,255,0.4); }
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    text-align: center;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    padding: 30px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.achievement-card .stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .story-container { flex-direction: column; }
+}

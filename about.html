@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PartyPlot Pro</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="loader-icon">🎉</div>
+    <div class="loader-text">LOADING...</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cookie-banner" id="cookieBanner">
+    <p>🍪 We use cookies. <a href="#">Learn more</a></p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-decline" onclick="closeCookie()">Decline</button>
+        <button class="cookie-btn cookie-accept" onclick="closeCookie()">Accept</button>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="top-contacts">
+        <span>📱 <a href="tel:+919876543210">+91 98765 43210</a></span>
+        <span>📧 <a href="mailto:info@partyplotpro.com">info@partyplotpro.com</a></span>
+    </div>
+    <span class="top-offer">🎊 20% OFF This Month!</span>
+</div>
+
+<nav id="navbar">
+    <a href="index.html" class="logo">🎉 PartyPlot Pro</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html" class="nav-book-btn">📞 Book Now</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <h1>About Us 🏆</h1>
+    <p>Mumbai's Premier Decoration & Event Management Company</p>
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>About Us</span>
+    </div>
+</div>
+
+<!-- STORY SECTION -->
+<section class="story-section">
+    <div class="story-container">
+        <div class="story-img reveal">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600" alt="Our Story">
+        </div>
+        <div class="story-content reveal">
+            <div class="section-tag">OUR STORY</div>
+            <h2>From a Small Dream to Mumbai's Best</h2>
+            <p>PartyPlot Pro was founded in 2014 by passionate event decorator Ramesh Shah with a simple dream - to make every celebration unforgettable. Starting with a small team of 3 people and basic equipment, we began decorating small birthday parties in Mumbai.</p>
+            <p>Over the years, our dedication to quality, creativity, and customer satisfaction helped us grow. Today, we are a team of 50+ expert designers and decorators who have successfully executed over 1,500 events across Maharashtra.</p>
+            <p>From intimate anniversaries to grand weddings of 2000+ guests, from simple birthday parties to elaborate corporate galas - we handle every event with the same passion and precision.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION VISION -->
+<section class="mission-section">
+    <div class="section-header">
+        <div class="section-tag">OUR VALUES</div>
+        <h2 class="section-title">Mission & Vision</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="mv-grid">
+        <div class="mv-card reveal">
+            <div class="mv-icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>To transform every event into an extraordinary experience that creates lasting memories through creative decoration, professional service, and attention to detail.</p>
+        </div>
+        <div class="mv-card reveal">
+            <div class="mv-icon">🔭</div>
+            <h3>Our Vision</h3>
+            <p>To become India's most trusted event decoration company, known for innovation, reliability, and creating magical moments that people cherish forever.</p>
+        </div>
+        <div class="mv-card reveal">
+            <div class="mv-icon">💎</div>
+            <h3>Our Values</h3>
+            <p>Creativity, integrity, excellence, and customer satisfaction are the core values that drive everything we do at PartyPlot Pro.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team-section">
+    <div class="section-header">
+        <div class="section-tag">OUR TEAM</div>
+        <h2 class="section-title">Meet Our Experts</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">The passionate people behind every magical event</p>
+    </div>
+    <div class="team-grid">
+        <div class="team-card reveal">
+            <div class="team-img">
+                <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Team">
+                <div class="team-social">
+                    <a href="#">📘</a><a href="#">📸</a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Ramesh Shah</h3>
+                <span>Founder & CEO</span>
+                <p>10+ years of event decoration expertise</p>
+            </div>
+        </div>
+        <div class="team-card reveal">
+            <div class="team-img">
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Team">
+                <div class="team-social">
+                    <a href="#">📘</a><a href="#">📸</a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Priya Desai</h3>
+                <span>Head of Design</span>
+                <p>Creative director with international experience</p>
+            </div>
+        </div>
+        <div class="team-card reveal">
+            <div class="team-img">
+                <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Team">
+                <div class="team-social">
+                    <a href="#">📘</a><a href="#">📸</a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Amit Kumar</h3>
+                <span>Event Manager</span>
+                <p>Specializes in large-scale corporate events</p>
+            </div>
+        </div>
+        <div class="team-card reveal">
+            <div class="team-img">
+                <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Team">
+                <div class="team-social">
+                    <a href="#">📘</a><a href="#">📸</a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Sneha Mehta</h3>
+                <span>Wedding Specialist</span>
+                <p>500+ weddings decorated with perfection</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements-section">
+    <div class="section-header">
+        <div class="section-tag">ACHIEVEMENTS</div>
+        <h2 class="section-title">Our Numbers Speak</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="achievements-grid">
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="1500">0</span>
+            <p>Events Completed</p>
+        </div>
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="800">0</span>
+            <p>Happy Clients</p>
+        </div>
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="10">0</span>
+            <p>Years Experience</p>
+        </div>
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="50">0</span>
+            <p>Team Members</p>
+        </div>
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="15">0</span>
+            <p>Awards Won</p>
+        </div>
+        <div class="achievement-card reveal">
+            <span class="stat-number" data-target="98">0</span>
+            <p>% Satisfaction Rate</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 80px 30px; text-align: center;">
+    <h2 style="font-size:40px; color:white; margin-bottom:15px;">Ready to Work With Us? 🎉</h2>
+    <p style="color:rgba(255,255,255,0.9); font-size:18px; margin-bottom:35px;">Let's create something magical together!</p>
+    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-white">📞 Contact Us</a>
+        <a href="services.html" class="btn btn-secondary-white" style="background:transparent; color:white; border:2px solid white; padding:13px 35px; border-radius:50px; font-size:15px; font-weight:600; text-decoration:none; transition:var(--transition);">🎭 Our Services</a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <span class="footer-logo">🎉 PartyPlot Pro</span>
+            <p>Making celebrations special since 2014.</p>
+            <div class="social-links">
+                <a class="social-link" href="#">📘</a>
+                <a class="social-link" href="#">📸</a>
+                <a class="social-link" href="#">🐦</a>
+                <a class="social-link" href="#">▶️</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">→ Home</a></li>
+                <li><a href="about.html">→ About</a></li>
+                <li><a href="services.html">→ Services</a></li>
+                <li><a href="gallery.html">→ Gallery</a></li>
+                <li><a href="packages.html">→ Packages</a></li>
+                <li><a href="contact.html">→ Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+                <li><a href="#">📍 123 Party Street, Mumbai</a></li>
+                <li><a href="#">📱 +91 98765 43210</a></li>
+                <li><a href="#">📧 info@partyplotpro.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 PartyPlot Pro. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">💬</a>
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script src="js/common.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>
