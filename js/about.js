@@ -1,6 +1,7 @@
 /* ============================================
    JAY AMBE DECORATORS — ABOUT PAGE JS
-   Lavender + Blue + Violet | Glassmorphism
+   Green Glassmorphism Theme
+   Colors handled in CSS — JS updated for green
    ============================================ */
 
 'use strict';
@@ -58,15 +59,15 @@
 
         if (!('IntersectionObserver' in window)) {
             steps.forEach(step => {
-                step.style.opacity = '1';
+                step.style.opacity   = '1';
                 step.style.transform = 'none';
             });
             return;
         }
 
         steps.forEach(step => {
-            step.style.opacity = '0';
-            step.style.transform = 'translateY(22px)';
+            step.style.opacity    = '0';
+            step.style.transform  = 'translateY(22px)';
             step.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
         });
 
@@ -76,7 +77,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         setTimeout(() => {
-                            entry.target.style.opacity = '1';
+                            entry.target.style.opacity   = '1';
                             entry.target.style.transform = 'translateY(0)';
                         }, i * 140);
                         i++;
@@ -91,7 +92,7 @@
     }
 
     /* ============================================
-       TEAM CARDS — touch device hover fix
+       TEAM CARDS — touch hover fix
        ============================================ */
     function initTeamTouch() {
         if (!('ontouchstart' in window)) return;
@@ -111,14 +112,15 @@
             }
         }, { passive: true });
 
-        /* Violet theme touch styles */
+        /* Green theme touch styles */
         const s = document.createElement('style');
         s.textContent = `
             .team-card.touch-active {
                 transform: translateY(-5px);
-                box-shadow: 0 12px 36px rgba(139,92,246,0.2),
-                            0 4px 18px rgba(0,0,0,0.1);
-                border-color: rgba(139,92,246,0.3);
+                box-shadow:
+                    0 12px 36px rgba(5,150,105,0.18),
+                    0 4px 18px rgba(16,185,129,0.12);
+                border-color: rgba(16,185,129,0.28);
             }
             .team-card.touch-active .team-overlay {
                 opacity: 1 !important;
@@ -131,12 +133,13 @@
        CARD HOVER MICRO-ANIMATIONS
        ============================================ */
     function initCardHovers() {
+
         /* MV card icon spin */
         document.querySelectorAll('.mv-card').forEach(card => {
             const icon = card.querySelector('.mv-icon');
             if (!icon) return;
             card.addEventListener('mouseenter', () => {
-                icon.style.transform = 'scale(1.18) rotate(8deg)';
+                icon.style.transform  = 'scale(1.18) rotate(8deg)';
                 icon.style.transition = 'transform 0.3s ease';
             });
             card.addEventListener('mouseleave', () => {
@@ -149,12 +152,12 @@
             const num = card.querySelector('.wa-num');
             if (!num) return;
             card.addEventListener('mouseenter', () => {
-                num.style.opacity = '0.12';
-                num.style.transform = 'scale(1.15)';
+                num.style.opacity    = '0.14';
+                num.style.transform  = 'scale(1.15)';
                 num.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             });
             card.addEventListener('mouseleave', () => {
-                num.style.opacity = '';
+                num.style.opacity   = '';
                 num.style.transform = '';
             });
         });
@@ -164,7 +167,7 @@
             card.addEventListener('mouseenter', () => {
                 const quote = card.querySelector('.rc-quote');
                 if (quote) {
-                    quote.style.opacity = '0.35';
+                    quote.style.opacity    = '0.38';
                     quote.style.transition = 'opacity 0.3s ease';
                 }
             });
@@ -180,7 +183,7 @@
                 const icon = card.querySelector('.ach-icon');
                 if (!icon) return;
                 icon.style.animation = 'bounceIcon 0.4s ease';
-                icon.style.display = 'inline-block';
+                icon.style.display   = 'inline-block';
             });
             card.addEventListener('animationend', () => {
                 const icon = card.querySelector('.ach-icon');
@@ -190,8 +193,8 @@
 
         /* Inject bounce keyframe */
         if (!document.getElementById('bounce-icon-style')) {
-            const s = document.createElement('style');
-            s.id = 'bounce-icon-style';
+            const s  = document.createElement('style');
+            s.id     = 'bounce-icon-style';
             s.textContent = `
                 @keyframes bounceIcon {
                     0%   { transform: translateY(0) scale(1); }
@@ -205,7 +208,7 @@
     }
 
     /* ============================================
-       GLASS CARD SUBTLE 3D EFFECT
+       GLASS CARDS — Green 3D tilt effect
        ============================================ */
     function initGlassCards() {
         if ('ontouchstart' in window) return;
@@ -220,7 +223,42 @@
                 const yPct = (y / rect.height - 0.5) * 15;
 
                 card.style.transform =
-                    `perspective(600px) rotateX(${-yPct * 0.3}deg) rotateY(${xPct * 0.3}deg) translateY(-5px)`;
+                    `perspective(600px) ` +
+                    `rotateX(${-yPct * 0.3}deg) ` +
+                    `rotateY(${xPct * 0.3}deg) ` +
+                    `translateY(-5px)`;
+
+                /* Green spotlight effect */
+                card.style.background = `
+                    radial-gradient(
+                        circle at ${x}px ${y}px,
+                        rgba(16,185,129,0.07) 0%,
+                        transparent 60%
+                    ),
+                    rgba(255,255,255,0.05)
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform  = '';
+                card.style.background = '';
+            });
+        });
+
+        /* MV cards subtle tilt */
+        document.querySelectorAll('.mv-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x    = e.clientX - rect.left;
+                const y    = e.clientY - rect.top;
+                const xPct = (x / rect.width  - 0.5) * 10;
+                const yPct = (y / rect.height - 0.5) * 10;
+
+                card.style.transform =
+                    `perspective(700px) ` +
+                    `rotateX(${-yPct * 0.25}deg) ` +
+                    `rotateY(${xPct * 0.25}deg) ` +
+                    `translateY(-7px)`;
             });
 
             card.addEventListener('mouseleave', () => {
@@ -235,7 +273,8 @@
     function initCounterBackup() {
         if ('IntersectionObserver' in window) return;
         document.querySelectorAll('.stat-number').forEach(el => {
-            el.textContent = (el.dataset.target || '0') + (el.dataset.suffix || '+');
+            el.textContent =
+                (el.dataset.target || '0') + (el.dataset.suffix || '+');
         });
     }
 

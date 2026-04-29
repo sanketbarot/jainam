@@ -1,7 +1,7 @@
 /* ============================================
-   JAY AMBE DECORATORS — CONTACT PAGE
-   Lavender #EDE7F6 + Blue #60A5FA + Violet #8B5CF6
-   Glassmorphism Theme
+   JAY AMBE DECORATORS — CONTACT PAGE CSS
+   Green Glassmorphism Theme
+   Emerald #10B981 + Forest #022C22 + Mint #6EE7B7
    ============================================ */
 
 /* ========== PAGE HERO ========== */
@@ -18,26 +18,9 @@
     background-clip: text;
 }
 
-.page-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(196,181,253,0.12);
-    color: var(--accent);
-    padding: 5px 18px;
-    border-radius: var(--r-full);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    border: 1px solid rgba(196,181,253,0.2);
-    backdrop-filter: blur(8px);
-}
-
 /* ========== QUICK CONTACT CARDS ========== */
 .quick-contact {
-    background: var(--lavender);
+    background: var(--sage);
     padding: 55px 24px;
 }
 
@@ -49,14 +32,18 @@
     margin: 0 auto;
 }
 
+/* ===== QUICK CARD — White Glass on Sage ===== */
 .quick-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(16,185,129,0.12);
+    box-shadow: 0 4px 20px rgba(5,150,105,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.90);
     border-radius: var(--r-xl);
     padding: 30px 20px;
     text-align: center;
-    box-shadow: var(--sh-sm);
     transition: var(--t);
-    border: 1.5px solid rgba(139,92,246,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +51,7 @@
     overflow: hidden;
 }
 
-/* Gradient top on hover */
+/* Green top line on hover */
 .quick-card::before {
     content: '';
     position: absolute;
@@ -82,16 +69,22 @@
 
 .quick-card:hover {
     transform: translateY(-7px);
-    box-shadow: var(--sh-lg), var(--sh-violet);
-    border-color: rgba(139,92,246,0.25);
+    box-shadow: 0 16px 48px rgba(5,150,105,0.14),
+                var(--sh-green),
+                inset 0 1px 0 rgba(255,255,255,1);
+    border-color: rgba(16,185,129,0.28);
 }
 
+/* Icon wrap — Emerald glass */
 .qc-icon-wrap {
     width: 68px;
     height: 68px;
-    background: var(--purple-pale);
+    background: rgba(16,185,129,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 50%;
-    border: 1px solid rgba(139,92,246,0.12);
+    border: 1px solid rgba(16,185,129,0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,13 +96,10 @@
     background: var(--gradient);
     border-color: transparent;
     transform: scale(1.07);
-    box-shadow: var(--sh-violet);
+    box-shadow: var(--sh-green);
 }
 
-.quick-icon {
-    font-size: 28px;
-    display: block;
-}
+.quick-icon { font-size: 28px; display: block; }
 
 .quick-card h3 {
     font-size: 16px;
@@ -126,7 +116,7 @@
     font-weight: 500;
 }
 
-/* Gradient sub text */
+/* Green gradient sub text */
 .qc-sub {
     background: var(--gradient) !important;
     -webkit-background-clip: text !important;
@@ -177,13 +167,17 @@
     font-size: 14px;
 }
 
-/* Contact Details Box */
+/* Contact Details Box — Sage Glass */
 .contact-details-box {
-    background: var(--lavender-lt);
+    background: rgba(236,253,245,0.80);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(16,185,129,0.12);
+    box-shadow: 0 4px 16px rgba(5,150,105,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.70);
     border-radius: var(--r-lg);
     padding: 4px 16px;
     margin-bottom: 22px;
-    border: 1px solid rgba(139,92,246,0.1);
 }
 
 .cd-item {
@@ -191,16 +185,18 @@
     align-items: center;
     gap: 14px;
     padding: 13px 0;
-    border-bottom: 1px solid rgba(139,92,246,0.06);
+    border-bottom: 1px solid rgba(16,185,129,0.07);
 }
 
 .cd-item:last-child { border-bottom: none; }
 
-/* Icon wrap with gradient hover */
+/* CD icon wrap — Emerald glass */
 .cd-icon-wrap {
     width: 42px;
     height: 42px;
-    background: var(--purple-pale);
+    background: rgba(16,185,129,0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: var(--r-sm);
     display: flex;
     align-items: center;
@@ -208,17 +204,22 @@
     flex-shrink: 0;
     font-size: 18px;
     transition: var(--t-fast);
-    border: 1px solid rgba(139,92,246,0.1);
+    border: 1px solid rgba(16,185,129,0.12);
 }
 
 .cd-item:hover .cd-icon-wrap {
     background: var(--gradient);
     border-color: transparent;
+    box-shadow: var(--sh-green);
 }
 
 .cd-icon { font-size: 18px; }
 
-.cd-text { display: flex; flex-direction: column; gap: 2px; }
+.cd-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
 
 .cd-text strong {
     font-size: 11px;
@@ -236,9 +237,8 @@
     transition: var(--t-fast);
 }
 
-.cd-text a:hover {
-    color: var(--violet);
-}
+/* Green hover on links */
+.cd-text a:hover { color: var(--emerald); }
 
 /* Why Contact */
 .why-contact { margin-bottom: 22px; }
@@ -258,6 +258,7 @@
     gap: 8px;
 }
 
+/* WC item — Sage glass with green left border */
 .wc-item {
     display: flex;
     align-items: center;
@@ -266,15 +267,20 @@
     color: var(--text-gray);
     font-weight: 600;
     padding: 8px 10px;
-    background: var(--lavender-lt);
+    background: rgba(236,253,245,0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: var(--r-xs);
-    border-left: 3px solid var(--violet);
+    border-left: 3px solid var(--emerald);
     transition: var(--t-fast);
+    border-top: 1px solid rgba(16,185,129,0.08);
+    border-right: 1px solid rgba(16,185,129,0.08);
+    border-bottom: 1px solid rgba(16,185,129,0.08);
 }
 
 .wc-item:hover {
-    background: var(--purple-pale);
-    border-left-color: var(--blue);
+    background: rgba(16,185,129,0.08);
+    border-left-color: var(--green);
     color: var(--text-dark);
 }
 
@@ -285,21 +291,25 @@
     flex-wrap: wrap;
 }
 
-/* ===== FORM SIDE ===== */
+/* ===== FORM SIDE — Green Glass ===== */
 .booking-form-wrap {
     flex: 1.4;
     min-width: 300px;
-    background: var(--lavender-lt);
+    /* Sage green glass */
+    background: rgba(240,255,248,0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(16,185,129,0.14);
+    box-shadow: 0 8px 32px rgba(5,150,105,0.08),
+                inset 0 1px 0 rgba(255,255,255,0.80);
     border-radius: var(--r-xl);
     padding: 32px;
-    border: 1.5px solid rgba(139,92,246,0.1);
-    box-shadow: var(--sh-sm);
 }
 
 .bfw-header {
     margin-bottom: 22px;
     padding-bottom: 16px;
-    border-bottom: 2px solid rgba(139,92,246,0.08);
+    border-bottom: 2px solid rgba(16,185,129,0.10);
 }
 
 .bfw-header h3 {
@@ -315,10 +325,11 @@
     font-weight: 500;
 }
 
-/* Package Selected Tag — gradient */
+/* Package Selected Tag — green gradient */
 .pkg-selected-tag {
     background: var(--gradient);
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
     padding: 11px 16px;
     border-radius: var(--r-sm);
     font-weight: 700;
@@ -327,14 +338,28 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    -webkit-text-fill-color: var(--white);
-    box-shadow: var(--sh-violet);
+    box-shadow: var(--sh-green);
 }
 
 /* Required star */
 .req {
     color: var(--red-err);
     font-size: 14px;
+}
+
+/* ---- Override form inputs for green focus ---- */
+.booking-form-wrap .form-group input,
+.booking-form-wrap .form-group select,
+.booking-form-wrap .form-group textarea {
+    background: rgba(255,255,255,0.90);
+    border-color: rgba(16,185,129,0.14);
+}
+
+.booking-form-wrap .form-group input:focus,
+.booking-form-wrap .form-group select:focus,
+.booking-form-wrap .form-group textarea:focus {
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px rgba(5,150,105,0.10);
 }
 
 /* Char counter */
@@ -346,10 +371,11 @@
     font-weight: 500;
 }
 
-/* ---- Submit Button — Gradient ---- */
+/* ---- Submit Button — Green Gradient ---- */
 .submit-btn {
     background: var(--gradient);
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
     padding: 14px 20px;
     border: none;
     border-radius: var(--r-sm);
@@ -366,8 +392,7 @@
     gap: 6px;
     -webkit-tap-highlight-color: transparent;
     margin-bottom: 14px;
-    box-shadow: var(--sh-violet);
-    -webkit-text-fill-color: var(--white);
+    box-shadow: var(--sh-green);
     background-size: 200% 200%;
     animation: gradient-shift 4s ease infinite;
 }
@@ -375,7 +400,7 @@
 .submit-btn:hover {
     filter: brightness(1.08);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(139,92,246,0.4);
+    box-shadow: 0 10px 30px rgba(5,150,105,0.45);
 }
 
 .submit-btn:active { transform: scale(0.98); }
@@ -387,11 +412,11 @@
     animation: none;
 }
 
-/* ---- Success Box ---- */
+/* ---- Success Box — Forest Green Glass ---- */
 .success-box {
     display: none;
-    background: var(--indigo);
-    border: 1px solid rgba(139,92,246,0.3);
+    background: var(--forest);
+    border: 1px solid rgba(16,185,129,0.30);
     color: var(--pure-white);
     padding: 28px 22px;
     border-radius: var(--r-lg);
@@ -399,6 +424,8 @@
     margin-bottom: 14px;
     animation: scaleIn 0.35s ease;
     box-shadow: var(--sh-glow);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .success-icon {
@@ -419,7 +446,7 @@
 
 .success-box p {
     font-size: 13px;
-    color: rgba(196,181,253,0.8);
+    color: rgba(110,231,183,0.82);
     line-height: 1.6;
     margin-bottom: 6px;
 }
@@ -436,8 +463,8 @@
 .success-wa-btn {
     background: rgba(37,211,102,0.12) !important;
     color: #4ade80 !important;
-    border: 1px solid rgba(37,211,102,0.2) !important;
     -webkit-text-fill-color: #4ade80 !important;
+    border: 1px solid rgba(37,211,102,0.22) !important;
 }
 
 /* Form Note */
@@ -458,9 +485,9 @@
     overflow: hidden;
 }
 
-/* Gradient map overlay bar */
+/* Forest green overlay bar */
 .map-overlay-bar {
-    background: var(--indigo);
+    background: var(--forest);
     padding: 14px 24px;
     display: flex;
     align-items: center;
@@ -470,7 +497,7 @@
     position: relative;
 }
 
-/* Bottom gradient line */
+/* Green gradient bottom line */
 .map-overlay-bar::after {
     content: '';
     position: absolute;
@@ -479,7 +506,7 @@
     right: 0;
     height: 2px;
     background: var(--gradient);
-    opacity: 0.4;
+    opacity: 0.45;
 }
 
 .mob-info {
@@ -492,6 +519,7 @@
 
 .mob-info span:first-child { font-size: 20px; }
 
+/* Green gradient business name */
 .mob-info strong {
     display: block;
     font-weight: 700;
@@ -502,13 +530,13 @@
 }
 
 .mob-info span:last-child {
-    color: rgba(196,181,253,0.6);
+    color: rgba(110,231,183,0.62);
     font-size: 12px;
 }
 
-/* ========== CONTACT FAQ ========== */
+/* ========== CONTACT FAQ — Sage Background ========== */
 .contact-faq {
-    background: var(--lavender);
+    background: var(--sage);
     padding: 70px 24px;
 }
 
@@ -519,47 +547,55 @@
 
 @media (max-width: 1024px) {
     .booking-container { gap: 35px; }
-    .booking-info { max-width: 100%; }
+    .booking-info      { max-width: 100%; }
 }
 
 @media (max-width: 768px) {
-    .quick-contact { padding: 40px 15px; }
-    .quick-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .quick-card { padding: 24px 16px; }
-    .qc-icon-wrap { width: 56px; height: 56px; }
-    .quick-icon { font-size: 24px; }
+    .quick-contact     { padding: 40px 15px; }
+    .quick-cards       { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .quick-card        { padding: 24px 16px; }
+    .qc-icon-wrap      { width: 56px; height: 56px; }
+    .quick-icon        { font-size: 24px; }
 
-    .booking-section { padding: 50px 15px; }
+    .booking-section   { padding: 50px 15px; }
     .booking-container { flex-direction: column; gap: 25px; }
-    .booking-info { max-width: 100%; }
-    .booking-info h2 { font-size: 24px; }
+    .booking-info      { max-width: 100%; }
+    .booking-info h2   { font-size: 24px; }
     .booking-form-wrap { padding: 22px 16px; }
 
-    .wc-grid { grid-template-columns: 1fr; gap: 6px; }
-    .direct-btns { flex-direction: row; gap: 8px; }
+    .wc-grid           { grid-template-columns: 1fr; gap: 6px; }
+    .direct-btns       { flex-direction: row; gap: 8px; }
 
-    .map-overlay-bar { padding: 12px 15px; }
-    .contact-faq { padding: 50px 15px; }
+    .map-overlay-bar   { padding: 12px 15px; }
+    .contact-faq       { padding: 50px 15px; }
+
+    /* Reduce blur on mobile */
+    .quick-card,
+    .booking-form-wrap,
+    .contact-details-box {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
 }
 
 @media (max-width: 576px) {
-    .quick-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .quick-card { padding: 20px 14px; }
-    .quick-card h3 { font-size: 14px; }
-    .quick-card .btn { font-size: 11px; padding: 8px 14px; }
+    .quick-cards       { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .quick-card        { padding: 20px 14px; }
+    .quick-card h3     { font-size: 14px; }
+    .quick-card .btn   { font-size: 11px; padding: 8px 14px; }
 
     .booking-form-wrap { padding: 18px 14px; }
-    .bfw-header h3 { font-size: 17px; }
+    .bfw-header h3     { font-size: 17px; }
 
-    .direct-btns { flex-direction: column; }
-    .direct-btns .btn { width: 100%; justify-content: center; }
+    .direct-btns       { flex-direction: column; }
+    .direct-btns .btn  { width: 100%; justify-content: center; }
 
-    .success-btns { flex-direction: column; align-items: center; }
+    .success-btns      { flex-direction: column; align-items: center; }
     .success-btns .btn { width: 180px; }
 }
 
 @media (max-width: 380px) {
-    .quick-cards { grid-template-columns: 1fr; }
-    .booking-info h2 { font-size: 22px; }
-    .submit-btn { font-size: 14px; padding: 13px; }
+    .quick-cards       { grid-template-columns: 1fr; }
+    .booking-info h2   { font-size: 22px; }
+    .submit-btn        { font-size: 14px; padding: 13px; }
 }

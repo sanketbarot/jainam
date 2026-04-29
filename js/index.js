@@ -1,6 +1,7 @@
 /* ============================================
    JAY AMBE DECORATORS — INDEX PAGE JS
-   Colors handled in CSS — JS stays same
+   Green theme handled entirely in CSS
+   JS logic is color-independent ✅
    ============================================ */
 
 'use strict';
@@ -59,13 +60,12 @@
         if (total > 1) autoTimer = setInterval(() => goTo(current + 1), delay);
     }
 
-    function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
-
+    function stopAuto()  { clearInterval(autoTimer); autoTimer = null; }
     function restartAuto(delay = 5000) { stopAuto(); startAuto(delay); }
 
     heroEl?.addEventListener('mouseenter', stopAuto);
     heroEl?.addEventListener('mouseleave', () => startAuto());
-    heroEl?.addEventListener('focusin', stopAuto);
+    heroEl?.addEventListener('focusin',  stopAuto);
     heroEl?.addEventListener('focusout', () => startAuto());
 
     heroEl?.addEventListener('touchstart', e => {
@@ -137,8 +137,8 @@
         if (tTotal > 1) tTimer = setInterval(() => goToT(tCurrent + 1), d);
     }
 
-    function stopTAuto()     { clearInterval(tTimer); tTimer = null; }
-    function restartTAuto(d) { stopTAuto(); startTAuto(d); }
+    function stopTAuto()      { clearInterval(tTimer); tTimer = null; }
+    function restartTAuto(d)  { stopTAuto(); startTAuto(d); }
 
     const tSlider = document.querySelector('.testimonial-slider');
     tSlider?.addEventListener('touchstart', e => {

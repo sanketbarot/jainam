@@ -1,6 +1,7 @@
 /* ============================================
    JAY AMBE DECORATORS — PACKAGES PAGE JS
-   Lavender + Blue + Violet | Glassmorphism
+   Green Glassmorphism Theme
+   Colors updated for green — logic unchanged
    ============================================ */
 
 'use strict';
@@ -32,24 +33,22 @@
         let count   = 0;
 
         cards.forEach(card => {
-            const cats = card.getAttribute('data-pkg') || '';
-            const show = type === 'all' || cats.includes(type);
+            const cats    = card.getAttribute('data-pkg') || '';
+            const show    = type === 'all' || cats.includes(type);
+            const popular = card.classList.contains('popular');
 
             if (show) {
-                card.style.display   = '';
-                card.style.opacity   = '0';
-                card.style.transform = 'scale(0.95) translateY(12px)';
+                card.style.display    = '';
+                card.style.opacity    = '0';
+                card.style.transform  = 'scale(0.95) translateY(12px)';
 
-                const isPopular = card.classList.contains('popular');
                 const d = count;
-
                 setTimeout(() => {
                     card.style.transition =
                         'opacity 0.4s ease, transform 0.4s ease';
                     card.style.opacity   = '1';
-                    card.style.transform = isPopular
-                        ? 'translateY(-8px)'
-                        : 'translateY(0)';
+                    card.style.transform = popular
+                        ? 'translateY(-8px)' : 'translateY(0)';
                     count++;
                 }, d * 70);
 
@@ -88,15 +87,19 @@
         const pkg = p.get('highlight');
         if (!pkg) return;
 
-        const map = { wedding: 'wedding', birthday: 'birthday', corporate: 'corporate' };
-        const f   = map[pkg.toLowerCase()];
+        const map = {
+            wedding:   'wedding',
+            birthday:  'birthday',
+            corporate: 'corporate'
+        };
+        const f = map[pkg.toLowerCase()];
         if (f) {
             const btn = document.querySelector(`[data-filter="${f}"]`);
             if (btn) filterPackages(f, btn);
         }
     }
 
-    /* ---- Dynamic WhatsApp links ---- */
+    /* ---- Dynamic WhatsApp links — green theme msg ---- */
     function updateWhatsAppLinks() {
         document.querySelectorAll('.pkg-wa-btn').forEach(btn => {
             const card = btn.closest('.package-card');
@@ -104,45 +107,40 @@
             if (!name) return;
 
             const msg = encodeURIComponent(
-                `Hi Jay Ambe Decorators! I'm interested in the ${name} package. Please share details.`
+                `Hi Jay Ambe Decorators! 🌿 ` +
+                `I'm interested in the ${name} package. ` +
+                `Please share details and availability.`
             );
             btn.href = `https://wa.me/916358111321?text=${msg}`;
         });
     }
 
-    /* ---- Card hover effects ---- */
+    /* ---- Card hover effects — green spotlight ---- */
     function initCardHovers() {
         if ('ontouchstart' in window) return;
 
         document.querySelectorAll('.package-card').forEach(card => {
             const isPopular = card.classList.contains('popular');
+            const isElite   = card.classList.contains('elite');
 
-            card.addEventListener('mouseenter', () => {
-                if (!isPopular) {
-                    card.style.borderColor = 'rgba(139,92,246,0.3)';
-                }
-            });
-
-            card.addEventListener('mouseleave', () => {
-                if (!isPopular) {
-                    card.style.borderColor = '';
-                }
-            });
-
-            /* Subtle glass shine effect */
+            /* Green glass shine on non-popular cards */
             if (!isPopular) {
                 card.addEventListener('mousemove', e => {
                     const rect = card.getBoundingClientRect();
                     const x    = e.clientX - rect.left;
                     const y    = e.clientY - rect.top;
 
+                    /* Green spotlight */
+                    const baseAlpha = isElite ? '0.10' : '0.07';
                     card.style.background = `
                         radial-gradient(
                             circle at ${x}px ${y}px,
-                            rgba(139,92,246,0.06) 0%,
+                            rgba(16,185,129,${baseAlpha}) 0%,
                             transparent 60%
                         ),
-                        rgba(255,255,255,0.05)
+                        ${isElite
+                            ? 'rgba(16,185,129,0.08)'
+                            : 'rgba(255,255,255,0.05)'}
                     `;
                 });
 
@@ -179,7 +177,7 @@
         }
     }
 
-    /* ---- Table row hover highlight ---- */
+    /* ---- Table row hover — green highlight ---- */
     function initTableRowHover() {
         document.querySelectorAll('.compare-table tbody tr').forEach(row => {
             row.addEventListener('mouseenter', () => {
@@ -198,21 +196,25 @@
         });
     }
 
-    /* ---- Touch support ---- */
+    /* ---- Touch support — green theme ---- */
     function initTouchSupport() {
         if (!('ontouchstart' in window)) return;
 
         document.querySelectorAll('.package-card').forEach(card => {
+            const isPopular = card.classList.contains('popular');
+
             card.addEventListener('touchstart', () => {
-                if (!card.classList.contains('popular')) {
+                if (!isPopular) {
                     card.style.transform   = 'translateY(-5px)';
-                    card.style.borderColor = 'rgba(139,92,246,0.3)';
-                    card.style.boxShadow   = 'var(--sh-glow)';
+                    card.style.borderColor = 'rgba(16,185,129,0.35)';
+                    card.style.boxShadow   =
+                        '0 12px 36px rgba(5,150,105,0.20), ' +
+                        '0 0 20px rgba(16,185,129,0.10)';
                 }
             }, { passive: true });
 
             card.addEventListener('touchend', () => {
-                if (!card.classList.contains('popular')) {
+                if (!isPopular) {
                     setTimeout(() => {
                         card.style.transform   = '';
                         card.style.borderColor = '';
@@ -248,14 +250,15 @@
 
                 obs.unobserve(entry.target);
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.10 });
 
         document.querySelectorAll('.package-card').forEach(card => {
             card.style.opacity    = '0';
             card.style.transform  = 'translateY(20px)';
             card.style.transition =
                 'opacity 0.5s ease, transform 0.5s ease, ' +
-                'border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease';
+                'border-color 0.3s ease, box-shadow 0.3s ease, ' +
+                'background 0.3s ease';
             obs.observe(card);
         });
     }

@@ -1,6 +1,7 @@
 /* ============================================
    JAY AMBE DECORATORS — SERVICES PAGE JS
-   Lavender + Blue + Violet | Glassmorphism
+   Green Glassmorphism Theme
+   Colors updated for green — logic unchanged
    ============================================ */
 
 'use strict';
@@ -27,9 +28,9 @@
             btn.setAttribute('aria-pressed', 'true');
         }
 
-        const cards   = document.querySelectorAll('.service-detailed-card');
-        let visible   = 0;
-        let delay     = 0;
+        const cards = document.querySelectorAll('.service-detailed-card');
+        let visible = 0;
+        let delay   = 0;
 
         cards.forEach(card => {
             const cats = card.getAttribute('data-cat') || '';
@@ -37,10 +38,11 @@
 
             if (show) {
                 card.classList.remove('hidden');
-                card.style.display   = '';
-                card.style.opacity   = '0';
-                card.style.transform = 'translateY(16px) scale(0.97)';
-                card.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+                card.style.display    = '';
+                card.style.opacity    = '0';
+                card.style.transform  = 'translateY(16px) scale(0.97)';
+                card.style.transition =
+                    'opacity 0.45s ease, transform 0.45s ease';
 
                 const d = delay;
                 setTimeout(() => {
@@ -65,13 +67,16 @@
         /* Scroll to services */
         if (cat !== 'all') {
             const sec     = document.getElementById('services');
-            const filterH = document.querySelector('.services-filter-bar')?.offsetHeight || 0;
-            const navH    = document.getElementById('navbar')?.offsetHeight || 58;
+            const filterH =
+                document.querySelector('.services-filter-bar')?.offsetHeight || 0;
+            const navH    =
+                document.getElementById('navbar')?.offsetHeight || 58;
 
             if (sec) {
                 setTimeout(() => {
-                    const top = sec.getBoundingClientRect().top +
-                                window.scrollY - navH - filterH - 10;
+                    const top =
+                        sec.getBoundingClientRect().top +
+                        window.scrollY - navH - filterH - 10;
                     window.scrollTo({ top, behavior: 'smooth' });
                 }, 50);
             }
@@ -101,7 +106,7 @@
         }
     }
 
-    /* ---- Dynamic WhatsApp links ---- */
+    /* ---- Dynamic WhatsApp links — green theme msg ---- */
     function updateWhatsAppLinks() {
         document.querySelectorAll('.service-detailed-card').forEach(card => {
             const waBtn = card.querySelector('.btn-wa');
@@ -109,7 +114,8 @@
             if (!waBtn || !name) return;
 
             const msg = encodeURIComponent(
-                `Hi Jay Ambe Decorators! I'm interested in ${name}. Please share details and pricing.`
+                `Hi Jay Ambe Decorators! 🌿 I'm interested in ${name}. ` +
+                `Please share details and pricing.`
             );
             waBtn.href = `https://wa.me/916358111321?text=${msg}`;
         });
@@ -123,7 +129,8 @@
         if (!('IntersectionObserver' in window)) {
             steps.forEach(s => {
                 s.classList.add('animated');
-                s.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+                s.style.transition =
+                    'opacity 0.55s ease, transform 0.55s ease';
             });
             return;
         }
@@ -135,7 +142,9 @@
                     if (!entry.isIntersecting) return;
                     const delay = i * 130;
                     const el    = entry.target;
-                    el.style.transition = `opacity 0.55s ease ${delay}ms, transform 0.55s ease ${delay}ms`;
+                    el.style.transition =
+                        `opacity 0.55s ease ${delay}ms, ` +
+                        `transform 0.55s ease ${delay}ms`;
                     el.classList.add('animated');
                     obs.unobserve(el);
                     i++;
@@ -175,7 +184,7 @@
         items.forEach(item => obs.observe(item));
     }
 
-    /* ---- Touch support for cards ---- */
+    /* ---- Touch support for cards — green theme ---- */
     function initCardTouch() {
         if (!('ontouchstart' in window)) return;
 
@@ -184,8 +193,9 @@
 
             card.addEventListener('touchstart', () => {
                 card.style.transform   = 'translateY(-4px) scale(0.99)';
-                card.style.borderColor = 'rgba(139,92,246,0.3)';
-                card.style.boxShadow   = '0 8px 28px rgba(139,92,246,0.15)';
+                card.style.borderColor = 'rgba(16,185,129,0.30)';
+                card.style.boxShadow   =
+                    '0 8px 28px rgba(5,150,105,0.18)';
             }, { passive: true });
 
             card.addEventListener('touchend', () => {
@@ -205,7 +215,7 @@
         });
     }
 
-    /* ---- Mobile feature expand ---- */
+    /* ---- Mobile feature expand — green gradient text ---- */
     function initMobileFeatureExpand() {
         if (window.innerWidth > 768) return;
 
@@ -229,7 +239,7 @@
                 font-family: var(--font);
                 display: block;
                 -webkit-tap-highlight-color: transparent;
-                background: linear-gradient(135deg, #60A5FA, #8B5CF6);
+                background: linear-gradient(135deg, #10B981, #065F46);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -247,7 +257,7 @@
         });
     }
 
-    /* ---- Glass card glow effect (desktop) ---- */
+    /* ---- Glass card green glow effect (desktop) ---- */
     function initCardGlowEffect() {
         if ('ontouchstart' in window) return;
         if (window.innerWidth < 768) return;
@@ -258,14 +268,14 @@
                 const x    = e.clientX - rect.left;
                 const y    = e.clientY - rect.top;
 
-                /* Spotlight effect */
+                /* Green spotlight */
                 card.style.background = `
                     radial-gradient(
                         circle at ${x}px ${y}px,
-                        rgba(139,92,246,0.04) 0%,
+                        rgba(16,185,129,0.05) 0%,
                         transparent 60%
                     ),
-                    #FFFFFF
+                    rgba(255,255,255,0.88)
                 `;
             });
 

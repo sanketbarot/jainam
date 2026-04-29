@@ -1,17 +1,10 @@
 /* ============================================
-   JAY AMBE DECORATORS — ABOUT PAGE
-   Lavender #EDE7F6 + Blue #60A5FA + Violet #8B5CF6
-   Glassmorphism Theme
+   JAY AMBE DECORATORS — ABOUT PAGE CSS
+   Green Glassmorphism Theme
+   Emerald #10B981 + Forest #022C22 + Mint #6EE7B7
    ============================================ */
 
-/* ========== PAGE HERO ========== */
-.page-hero-inner {
-    position: relative;
-    z-index: 1;
-    animation: fadeInUp 0.6s ease both;
-}
-
-/* Gradient text for hero */
+/* ========== HERO GRADIENT TEXT ========== */
 .hero-gradient-text {
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -19,26 +12,9 @@
     background-clip: text;
 }
 
-.page-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(196,181,253,0.12);
-    color: var(--accent);
-    padding: 5px 18px;
-    border-radius: var(--r-full);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    border: 1px solid rgba(196,181,253,0.2);
-    backdrop-filter: blur(8px);
-}
-
 /* ========== STORY SECTION ========== */
 .story-section {
-    background: var(--lavender);
+    background: var(--sage);
 }
 
 .story-grid {
@@ -59,11 +35,11 @@
     overflow: hidden;
     height: 420px;
     position: relative;
-    background: var(--lavender-lt);
-    box-shadow: var(--sh-xl), var(--sh-violet);
+    background: var(--sage-lt);
+    box-shadow: var(--sh-xl), var(--sh-green);
 }
 
-/* Gradient corner decoration */
+/* Green corner decoration */
 .story-corner {
     position: absolute;
     bottom: 0;
@@ -71,26 +47,41 @@
     width: 62%;
     height: 62%;
     border: 2px solid transparent;
-    background: linear-gradient(var(--lavender), var(--lavender)) padding-box,
+    background: linear-gradient(var(--sage), var(--sage)) padding-box,
                 var(--gradient) border-box;
     border-radius: var(--r-lg);
-    opacity: 0.3;
+    opacity: 0.32;
     pointer-events: none;
 }
 
-/* Founded badge */
+/* Founded badge — Forest Green Glass */
 .story-float-badge {
     position: absolute;
     bottom: 0;
     right: 0;
-    background: var(--indigo);
+    /* Forest glass */
+    background: rgba(2,44,34,0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     color: var(--white);
     padding: 18px 22px;
     border-radius: var(--r-lg);
     text-align: center;
-    box-shadow: var(--sh-xl);
+    box-shadow: var(--sh-xl),
+                inset 0 1px 0 rgba(110,231,183,0.10);
     z-index: 2;
-    border: 1px solid rgba(196,181,253,0.15);
+    border: 1px solid rgba(110,231,183,0.12);
+}
+
+/* Gradient border */
+.story-float-badge::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: var(--r-lg);
+    background: var(--gradient);
+    z-index: -1;
+    opacity: 0.5;
 }
 
 .sfb-num {
@@ -108,25 +99,28 @@
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    opacity: 0.6;
+    opacity: 0.65;
     display: block;
     margin-top: 3px;
-    color: var(--accent);
+    color: var(--mint);
 }
 
-/* Floating card */
+/* Floating card — Mint Glass */
 .story-float-card {
     position: absolute;
     top: 18px;
     left: -16px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+    /* Mint glassmorphism */
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.58);
+    box-shadow:
+        0 8px 32px rgba(16,185,129,0.14),
+        inset 0 1px 0 rgba(255,255,255,0.88);
     color: var(--text-dark);
     padding: 12px 16px;
     border-radius: var(--r-lg);
-    box-shadow: var(--sh-lg), var(--sh-violet);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -168,10 +162,10 @@
     font-size: 14px;
 }
 
-/* Timeline */
+/* ===== TIMELINE — Green ===== */
 .story-timeline {
     margin-top: 28px;
-    border-left: 2px solid rgba(139,92,246,0.2);
+    border-left: 2px solid rgba(16,185,129,0.22);
     padding-left: 22px;
     display: flex;
     flex-direction: column;
@@ -193,7 +187,7 @@
     transform: translateX(0);
 }
 
-/* Gradient dot */
+/* Green dot */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -203,7 +197,7 @@
     height: 10px;
     border-radius: 50%;
     background: var(--gradient);
-    box-shadow: 0 0 0 3px rgba(139,92,246,0.15);
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.18);
 }
 
 .ti-year {
@@ -211,12 +205,12 @@
     font-weight: 800;
     background: var(--gradient);
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
     padding: 3px 12px;
     border-radius: var(--r-full);
     white-space: nowrap;
     flex-shrink: 0;
     line-height: 1.8;
-    -webkit-text-fill-color: var(--white);
 }
 
 .ti-content strong {
@@ -243,18 +237,23 @@
     gap: 18px;
 }
 
+/* ===== MV CARD — Green Glass ===== */
 .mv-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(16,185,129,0.12);
     border-radius: var(--r-xl);
     padding: 34px 26px;
     text-align: center;
-    border: 1.5px solid rgba(139,92,246,0.1);
     position: relative;
     overflow: hidden;
     transition: var(--t);
+    box-shadow: 0 4px 20px rgba(5,150,105,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.90);
 }
 
-/* Gradient top bar */
+/* Green top bar */
 .mv-card::before {
     content: '';
     position: absolute;
@@ -272,15 +271,21 @@
 
 .mv-card:hover {
     transform: translateY(-7px);
-    box-shadow: var(--sh-lg), var(--sh-violet);
-    border-color: rgba(139,92,246,0.2);
+    box-shadow: 0 16px 48px rgba(5,150,105,0.14),
+                var(--sh-green),
+                inset 0 1px 0 rgba(255,255,255,1);
+    border-color: rgba(16,185,129,0.22);
 }
 
+/* Icon wrap — Emerald glass circle */
 .mv-icon-wrap {
     width: 72px;
     height: 72px;
-    background: var(--purple-pale);
-    border: 1px solid rgba(139,92,246,0.15);
+    background: rgba(16,185,129,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(16,185,129,0.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.55);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -293,7 +298,7 @@
     background: var(--gradient);
     border-color: transparent;
     transform: scale(1.08) rotate(5deg);
-    box-shadow: var(--sh-violet);
+    box-shadow: 0 6px 20px rgba(5,150,105,0.42);
 }
 
 .mv-icon {
@@ -315,13 +320,14 @@
     font-size: 13px;
 }
 
-/* ========== WHY ABOUT ========== */
+/* ========== WHY ABOUT — Forest Green Glass ========== */
 .why-about-section {
-    background: var(--indigo);
+    background: var(--forest);
     position: relative;
     overflow: hidden;
 }
 
+/* Green ambient orbs */
 .why-about-section::before {
     content: '';
     position: absolute;
@@ -331,20 +337,37 @@
     height: 400px;
     border-radius: 50%;
     background: radial-gradient(circle,
-        rgba(96,165,250,0.06), transparent 70%);
+        rgba(16,185,129,0.08), transparent 70%);
     pointer-events: none;
 }
 
-.why-tag {
-    background: rgba(196,181,253,0.1) !important;
-    color: var(--accent) !important;
+.why-about-section::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: -8%;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(5,150,105,0.06), transparent 70%);
+    pointer-events: none;
 }
 
-.why-tag::before { content: none; }
+/* Mint tag override */
+.why-tag {
+    background: rgba(110,231,183,0.12) !important;
+    color: var(--mint) !important;
+    -webkit-text-fill-color: var(--mint) !important;
+    border: 1px solid rgba(110,231,183,0.18) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
 
-.why-title { color: var(--pure-white) !important; }
-.why-sub { color: rgba(196,181,253,0.55) !important; }
-.divider-accent { background: var(--gradient); height: 2px; }
+.why-tag::before  { content: none; }
+.why-title        { color: var(--pure-white) !important; }
+.why-sub          { color: rgba(110,231,183,0.58) !important; }
+.divider-accent   { background: var(--gradient); height: 2px; }
 
 .why-about-grid {
     display: grid;
@@ -354,11 +377,16 @@
     z-index: 1;
 }
 
+/* ===== WA CARD — Green Glass on Dark ===== */
 .wa-card {
-    background: var(--card-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(196,181,253,0.1);
+    /* Green glassmorphism on forest dark */
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(110,231,183,0.10);
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.05);
     border-radius: var(--r-lg);
     padding: 26px 22px;
     position: relative;
@@ -368,11 +396,15 @@
 
 .wa-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(139,92,246,0.3);
-    background: rgba(255,255,255,0.14);
-    box-shadow: var(--sh-lg), var(--sh-glow);
+    border-color: rgba(16,185,129,0.30);
+    background: rgba(16,185,129,0.08);
+    box-shadow:
+        0 16px 48px rgba(5,150,105,0.18),
+        0 0 20px rgba(16,185,129,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
+/* Big number watermark — green gradient */
 .wa-num {
     position: absolute;
     top: 12px;
@@ -383,13 +415,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    opacity: 0.06;
+    opacity: 0.07;
     line-height: 1;
     transition: var(--t);
+    pointer-events: none;
 }
 
 .wa-card:hover .wa-num {
-    opacity: 0.12;
+    opacity: 0.14;
     transform: scale(1.1);
 }
 
@@ -407,14 +440,14 @@
 }
 
 .wa-card p {
-    color: rgba(196,181,253,0.5);
+    color: rgba(110,231,183,0.52);
     font-size: 13px;
     line-height: 1.6;
 }
 
 /* ========== TEAM SECTION ========== */
 .team-section {
-    background: var(--lavender);
+    background: var(--sage);
 }
 
 .team-grid {
@@ -423,26 +456,32 @@
     gap: 18px;
 }
 
+/* ===== TEAM CARD — White Glass on Sage ===== */
 .team-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--r-xl);
     overflow: hidden;
-    box-shadow: var(--sh-sm);
-    border: 1.5px solid rgba(139,92,246,0.1);
+    box-shadow: 0 4px 20px rgba(5,150,105,0.07),
+                inset 0 1px 0 rgba(255,255,255,0.90);
+    border: 1.5px solid rgba(16,185,129,0.12);
     transition: var(--t);
 }
 
 .team-card:hover {
     transform: translateY(-7px);
-    box-shadow: var(--sh-lg), var(--sh-violet);
-    border-color: rgba(139,92,246,0.25);
+    box-shadow: 0 16px 48px rgba(5,150,105,0.15),
+                var(--sh-green),
+                inset 0 1px 0 rgba(255,255,255,1);
+    border-color: rgba(16,185,129,0.28);
 }
 
 .team-img-wrap {
     position: relative;
     height: 220px;
     overflow: hidden;
-    background: var(--lavender-lt);
+    background: var(--sage-lt);
 }
 
 .team-img-wrap img {
@@ -454,13 +493,13 @@
 
 .team-card:hover .team-img-wrap img { transform: scale(1.07); }
 
-/* Gradient overlay */
+/* Forest green overlay */
 .team-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to top,
-        rgba(30,27,75,0.9) 0%,
+        rgba(2,44,34,0.92) 0%,
         transparent 60%
     );
     display: flex;
@@ -490,6 +529,7 @@
     font-size: 14px;
     text-decoration: none;
     transition: var(--t-fast);
+    box-shadow: 0 2px 8px rgba(5,150,105,0.35);
 }
 
 .team-social a:hover {
@@ -506,6 +546,7 @@
     font-weight: 700;
 }
 
+/* Green gradient role */
 .team-role {
     font-size: 11px;
     font-weight: 800;
@@ -526,25 +567,22 @@
     margin-bottom: 10px;
 }
 
-.team-tags {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-}
+.team-tags { display: flex; gap: 5px; flex-wrap: wrap; }
 
+/* Mint tag pills */
 .team-tags span {
-    background: var(--purple-pale);
-    color: var(--violet);
+    background: rgba(16,185,129,0.08);
+    color: var(--emerald-dk);
     padding: 3px 10px;
     border-radius: var(--r-full);
     font-size: 10px;
     font-weight: 700;
-    border: 1px solid rgba(139,92,246,0.15);
+    border: 1px solid rgba(16,185,129,0.18);
 }
 
-/* ========== ACHIEVEMENTS ========== */
+/* ========== ACHIEVEMENTS — Forest Green Dark ========== */
 .achievements-section {
-    background: var(--indigo-lt);
+    background: var(--forest-lt);
     position: relative;
     overflow: hidden;
 }
@@ -563,7 +601,7 @@
     top: -20%;
     right: -8%;
     background: radial-gradient(circle,
-        rgba(96,165,250,0.07), transparent 70%);
+        rgba(16,185,129,0.10), transparent 70%);
 }
 
 .achievements-section::after {
@@ -572,18 +610,22 @@
     bottom: -15%;
     left: -8%;
     background: radial-gradient(circle,
-        rgba(139,92,246,0.05), transparent 70%);
+        rgba(5,150,105,0.07), transparent 70%);
 }
 
+/* Mint tag */
 .ach-tag {
-    background: rgba(196,181,253,0.1) !important;
-    color: var(--accent) !important;
+    background: rgba(110,231,183,0.12) !important;
+    color: var(--mint) !important;
+    -webkit-text-fill-color: var(--mint) !important;
+    border: 1px solid rgba(110,231,183,0.18) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 }
 
 .ach-tag::before { content: none; }
-
-.ach-title { color: var(--pure-white) !important; }
-.ach-sub { color: rgba(196,181,253,0.55) !important; }
+.ach-title        { color: var(--pure-white) !important; }
+.ach-sub          { color: rgba(110,231,183,0.58) !important; }
 
 .divider-gradient {
     background: var(--gradient);
@@ -601,21 +643,28 @@
     z-index: 1;
 }
 
+/* ===== ACHIEVEMENT CARD — Green Glass ===== */
 .achievement-card {
     text-align: center;
+    /* Green glassmorphism on dark */
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(196,181,253,0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(110,231,183,0.10);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
     padding: 26px 14px;
     border-radius: var(--r-lg);
     transition: var(--t);
-    backdrop-filter: blur(8px);
 }
 
 .achievement-card:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(139,92,246,0.25);
+    background: rgba(16,185,129,0.08);
+    border-color: rgba(16,185,129,0.28);
     transform: translateY(-5px);
-    box-shadow: var(--sh-glow);
+    box-shadow:
+        0 12px 36px rgba(5,150,105,0.18),
+        0 0 20px rgba(16,185,129,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .ach-icon {
@@ -638,14 +687,14 @@
 
 .achievement-card p {
     font-size: 10px;
-    color: rgba(196,181,253,0.55);
+    color: rgba(110,231,183,0.58);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.4;
 }
 
-/* ========== PROCESS ========== */
+/* ========== PROCESS — White on White ========== */
 .process-section {
     background: var(--bg-white);
 }
@@ -658,27 +707,34 @@
     flex-wrap: wrap;
 }
 
+/* ===== PROCESS STEP — Sage Glass ===== */
 .process-step {
     text-align: center;
     flex: 1;
     min-width: 180px;
     max-width: 210px;
     padding: 28px 16px;
-    background: var(--lavender-lt);
+    /* Sage green glass */
+    background: rgba(236,253,245,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(16,185,129,0.12);
+    box-shadow: 0 4px 16px rgba(5,150,105,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.80);
     border-radius: var(--r-lg);
-    border: 1.5px solid rgba(139,92,246,0.1);
     position: relative;
     transition: var(--t);
 }
 
 .process-step:hover {
     transform: translateY(-6px);
-    box-shadow: var(--sh-md), var(--sh-violet);
-    border-color: rgba(139,92,246,0.25);
+    box-shadow: 0 12px 36px rgba(5,150,105,0.14),
+                var(--sh-green);
+    border-color: rgba(16,185,129,0.28);
     background: var(--white);
 }
 
-/* Gradient circle number */
+/* Green gradient number circle */
 .ps-number {
     position: absolute;
     top: -13px;
@@ -686,6 +742,7 @@
     transform: translateX(-50%);
     background: var(--gradient);
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -694,7 +751,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--sh-violet);
+    box-shadow: var(--sh-green);
 }
 
 .ps-icon {
@@ -716,20 +773,21 @@
     line-height: 1.6;
 }
 
+/* Green gradient connector */
 .process-connector {
     font-size: 22px;
     padding: 0 8px;
     flex-shrink: 0;
-    opacity: 0.5;
+    opacity: 0.55;
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* ========== TESTIMONIALS ========== */
+/* ========== TESTIMONIALS — Sage Background ========== */
 .about-testimonials {
-    background: var(--lavender);
+    background: var(--sage);
 }
 
 .reviews-grid {
@@ -738,17 +796,22 @@
     gap: 18px;
 }
 
+/* ===== REVIEW CARD — White Glass ===== */
 .review-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(16,185,129,0.12);
+    box-shadow: 0 4px 20px rgba(5,150,105,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.90);
     border-radius: var(--r-xl);
     padding: 28px 24px;
-    border: 1.5px solid rgba(139,92,246,0.1);
     position: relative;
     overflow: hidden;
     transition: var(--t);
 }
 
-/* Quote mark */
+/* Green quote mark */
 .rc-quote {
     font-size: 40px;
     background: var(--gradient);
@@ -766,13 +829,15 @@
 
 .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--sh-lg), var(--sh-violet);
-    border-color: rgba(139,92,246,0.25);
+    box-shadow: 0 16px 48px rgba(5,150,105,0.14),
+                var(--sh-green),
+                inset 0 1px 0 rgba(255,255,255,1);
+    border-color: rgba(16,185,129,0.26);
 }
 
-.review-card:hover .rc-quote { opacity: 0.35; }
+.review-card:hover .rc-quote { opacity: 0.38; }
 
-/* Gradient left border */
+/* Green left border on hover */
 .review-card::before {
     content: '';
     position: absolute;
@@ -807,22 +872,24 @@
     align-items: center;
     gap: 10px;
     padding-top: 14px;
-    border-top: 1px solid rgba(139,92,246,0.08);
+    border-top: 1px solid rgba(16,185,129,0.10);
 }
 
+/* Green gradient avatar */
 .rc-avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: var(--gradient);
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     font-weight: 900;
     flex-shrink: 0;
-    box-shadow: var(--sh-violet);
+    box-shadow: var(--sh-green);
 }
 
 .rc-author strong {
@@ -841,7 +908,7 @@
     font-weight: 700;
 }
 
-/* ========== ABOUT CTA ========== */
+/* ========== ABOUT CTA — Green Gradient ========== */
 .about-cta {
     background: var(--gradient);
     background-size: 200% 200%;
@@ -851,7 +918,18 @@
     padding: 72px 24px;
 }
 
-/* Decorative orbs */
+/* Glass overlay */
+.about-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Green orbs */
 .about-cta-orb {
     position: absolute;
     border-radius: 50%;
@@ -864,7 +942,7 @@
     top: -120px;
     right: -80px;
     background: radial-gradient(circle,
-        rgba(255,255,255,0.08) 0%, transparent 70%);
+        rgba(255,255,255,0.10) 0%, transparent 70%);
 }
 
 .about-orb-2 {
@@ -873,7 +951,7 @@
     bottom: -80px;
     left: -60px;
     background: radial-gradient(circle,
-        rgba(255,255,255,0.06) 0%, transparent 70%);
+        rgba(255,255,255,0.08) 0%, transparent 70%);
 }
 
 .about-cta-content {
@@ -899,17 +977,25 @@
 
 .about-cta-text > p {
     font-size: 14px;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.78);
     margin-bottom: 12px;
 }
 
+/* Glass info row */
 .about-cta-info {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
     font-size: 13px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.92);
     font-weight: 700;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: var(--r-full);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
 }
 
 .about-cta-btns {
@@ -922,22 +1008,22 @@
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1200px) {
     .achievements-grid { grid-template-columns: repeat(3, 1fr); }
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-grid         { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 1024px) {
-    .story-grid { gap: 42px; }
-    .mv-grid { grid-template-columns: repeat(2, 1fr); }
-    .why-about-grid { grid-template-columns: repeat(2, 1fr); }
-    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-    .story-float-card { display: none; }
+    .story-grid        { gap: 42px; }
+    .mv-grid           { grid-template-columns: repeat(2, 1fr); }
+    .why-about-grid    { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid      { grid-template-columns: repeat(2, 1fr); }
+    .story-float-card  { display: none; }
 }
 
 @media (max-width: 768px) {
-    .story-grid { grid-template-columns: 1fr; gap: 28px; }
-    .story-img-wrap { padding: 0; }
-    .story-img-frame { height: 260px; }
-    .story-corner { display: none; }
+    .story-grid          { grid-template-columns: 1fr; gap: 28px; }
+    .story-img-wrap      { padding: 0; }
+    .story-img-frame     { height: 260px; }
+    .story-corner        { display: none; }
 
     .story-float-badge {
         position: static;
@@ -948,40 +1034,49 @@
         padding: 12px 18px;
     }
 
-    .story-content h2 { font-size: 24px; }
+    .story-content h2    { font-size: 24px; }
+    .mv-grid             { grid-template-columns: 1fr; }
+    .why-about-grid      { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .team-grid           { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .achievements-grid   { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 
-    .mv-grid { grid-template-columns: 1fr; }
-    .why-about-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .achievements-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .process-grid        { flex-direction: column; align-items: stretch; gap: 14px; }
+    .process-step        { max-width: 100%; }
+    .process-connector   { display: none; }
 
-    .process-grid { flex-direction: column; align-items: stretch; gap: 14px; }
-    .process-step { max-width: 100%; }
-    .process-connector { display: none; }
+    .reviews-grid        { grid-template-columns: 1fr; }
 
-    .reviews-grid { grid-template-columns: 1fr; }
+    .about-cta-content   { flex-direction: column; text-align: center; }
+    .about-cta-info      { justify-content: center; }
+    .about-cta-btns      { justify-content: center; }
+    .about-cta-text h2   { font-size: 22px; }
+    .about-cta           { padding: 52px 20px; }
 
-    .about-cta-content { flex-direction: column; text-align: center; }
-    .about-cta-info { justify-content: center; }
-    .about-cta-btns { justify-content: center; }
-    .about-cta-text h2 { font-size: 22px; }
-    .about-cta { padding: 52px 20px; }
+    /* Reduce blur for mobile performance */
+    .mv-card,
+    .team-card,
+    .review-card,
+    .achievement-card,
+    .wa-card {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
 }
 
 @media (max-width: 576px) {
-    .why-about-grid { grid-template-columns: 1fr; }
-    .team-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .achievements-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .achievement-card { padding: 18px 10px; }
+    .why-about-grid      { grid-template-columns: 1fr; }
+    .team-grid           { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .achievements-grid   { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .achievement-card    { padding: 18px 10px; }
     .achievement-card .stat-number { font-size: 28px; }
-    .story-timeline { padding-left: 14px; }
-    .ti-year { font-size: 10px; padding: 2px 10px; }
-    .mv-card { padding: 26px 18px; }
+    .story-timeline      { padding-left: 14px; }
+    .ti-year             { font-size: 10px; padding: 2px 10px; }
+    .mv-card             { padding: 26px 18px; }
 }
 
 @media (max-width: 380px) {
-    .team-grid { grid-template-columns: 1fr; }
-    .story-content h2 { font-size: 22px; }
-    .about-cta-text h2 { font-size: 20px; }
-    .achievements-grid { grid-template-columns: 1fr 1fr; }
+    .team-grid           { grid-template-columns: 1fr; }
+    .story-content h2    { font-size: 22px; }
+    .about-cta-text h2   { font-size: 20px; }
+    .achievements-grid   { grid-template-columns: 1fr 1fr; }
 }

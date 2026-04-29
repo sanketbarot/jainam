@@ -1,7 +1,8 @@
 /* ============================================
    JAY AMBE DECORATORS — COMMON JS
-   Lavender #EDE7F6 + Blue #60A5FA + Violet #8B5CF6
-   Glassmorphism | Performance Optimized | IIFE
+   Green Glassmorphism Theme
+   Emerald #10B981 + Forest #022C22 + Mint #6EE7B7
+   Performance Optimized | IIFE
    ============================================ */
 
 'use strict';
@@ -39,33 +40,35 @@
     });
 
     /* ============================================
-       LOADER — Fast hide
+       LOADER
        ============================================ */
     function initLoader() {
         const loader = document.getElementById('loader');
         if (!loader) return;
-
-        /* Hide fast — 450ms */
         setTimeout(() => loader.classList.add('hidden'), 450);
         setTimeout(() => {
             loader.style.display = 'none';
-            /* Remove from DOM to save memory */
             loader.remove();
         }, 900);
     }
 
     /* ============================================
-       INJECT CLOSE BTN in mobile nav
+       INJECT CLOSE BTN
        ============================================ */
     function injectNavClose() {
         const nav = document.getElementById('navLinks');
-        if (!nav || nav.querySelector('.nav-close-btn')) return;
+        if (!nav) return;
+
+        const existing = nav.querySelector('.nav-close-btn');
+        if (existing) existing.remove();
+
+        if (window.innerWidth > 768) return;
 
         const btn = document.createElement('button');
         btn.className = 'nav-close-btn';
         btn.setAttribute('aria-label', 'Close menu');
         btn.innerHTML = '✕';
-        btn.addEventListener('click', closeMenu);
+        btn.addEventListener('click', window.closeMenu);
         nav.appendChild(btn);
     }
 
@@ -83,7 +86,7 @@
     }
 
     /* ============================================
-       MENU LINKS — close on click
+       MENU LINKS
        ============================================ */
     function initMenuLinks() {
         document.querySelectorAll('.nav-links a').forEach(link => {
@@ -103,15 +106,10 @@
     }, { passive: true });
 
     function onScroll() {
-        const y = state.scrollY;
-
-        /* Navbar glassmorphism intensity on scroll */
+        const y   = state.scrollY;
         const nav = document.getElementById('navbar');
-        if (nav) {
-            nav.classList.toggle('scrolled', y > 40);
-        }
+        if (nav) nav.classList.toggle('scrolled', y > 40);
 
-        /* Scroll-to-top button */
         const btn = document.getElementById('scrollTop');
         if (btn) btn.style.display = y > 400 ? 'flex' : 'none';
 
@@ -147,7 +145,7 @@
     }
 
     /* ============================================
-       COUNTERS — easeOutQuad
+       COUNTERS
        ============================================ */
     function initCounters() {
         if (!('IntersectionObserver' in window)) {
@@ -193,10 +191,9 @@
     }
 
     /* ============================================
-       CURSOR — smooth gradient cursor (desktop)
+       CURSOR — Green (desktop)
        ============================================ */
     function initCursor() {
-        /* Skip on touch devices */
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
             ['cursor', 'cursorDot'].forEach(id => {
                 const el = document.getElementById(id);
@@ -214,51 +211,52 @@
         document.addEventListener('mousemove', e => {
             mX = e.clientX;
             mY = e.clientY;
-
-            /* Dot follows instantly */
             if (dot) {
                 dot.style.transform = `translate(${mX - 2.5}px, ${mY - 2.5}px)`;
             }
         }, { passive: true });
 
-        /* Cursor lags for smooth effect */
         function moveCursor() {
             lagX += (mX - lagX) * 0.16;
             lagY += (mY - lagY) * 0.16;
             if (cursor) {
-                cursor.style.transform = `translate(${lagX - 11}px, ${lagY - 11}px)`;
+                cursor.style.transform =
+                    `translate(${lagX - 11}px, ${lagY - 11}px)`;
             }
             state.cursorRAF = requestAnimationFrame(moveCursor);
         }
 
         moveCursor();
 
-        /* Scale cursor on interactive elements */
+        /* Scale + green tint on hover */
         document.addEventListener('mouseover', e => {
-            if (e.target.matches('a, button, [role="button"], .service-card, .why-card')) {
+            if (e.target.matches(
+                'a, button, [role="button"], .service-card, .why-card'
+            )) {
                 if (cursor) {
                     cursor.style.transform += ' scale(1.5)';
-                    cursor.style.borderColor = 'var(--blue)';
-                    cursor.style.opacity = '0.8';
+                    cursor.style.borderColor = 'var(--green)';
+                    cursor.style.opacity     = '0.85';
                 }
             }
         });
 
         document.addEventListener('mouseout', e => {
-            if (e.target.matches('a, button, [role="button"], .service-card, .why-card')) {
+            if (e.target.matches(
+                'a, button, [role="button"], .service-card, .why-card'
+            )) {
                 if (cursor) {
-                    cursor.style.borderColor = 'var(--violet)';
-                    cursor.style.opacity = '0.5';
+                    cursor.style.borderColor = 'var(--emerald)';
+                    cursor.style.opacity     = '0.5';
                 }
             }
         });
     }
 
     /* ============================================
-       GLOW EFFECT on cards (subtle)
+       GLOW EFFECT — Green spotlight
        ============================================ */
     function initGlowEffect() {
-        /* Only on desktop for performance */
         if ('ontouchstart' in window) return;
         if (window.innerWidth < 768) return;
 
@@ -268,20 +266,21 @@
 
         cards.forEach(card => {
             card.addEventListener('mousemove', e => {
-                const rect   = card.getBoundingClientRect();
-                const x      = e.clientX - rect.left;
-                const y      = e.clientY - rect.top;
-                const xPct   = (x / rect.width  - 0.5) * 20;
-                const yPct   = (y / rect.height - 0.5) * 20;
+                const rect = card.getBoundingClientRect();
+                const x    = e.clientX - rect.left;
+                const y    = e.clientY - rect.top;
+                const xPct = (x / rect.width  - 0.5) * 20;
+                const yPct = (y / rect.height - 0.5) * 20;
 
                 card.style.transform =
-                    `perspective(600px) rotateX(${-yPct * 0.3}deg) rotateY(${xPct * 0.3}deg) translateY(-4px)`;
+                    `perspective(600px) rotateX(${-yPct * 0.3}deg) ` +
+                    `rotateY(${xPct * 0.3}deg) translateY(-4px)`;
 
-                /* Gradient spotlight */
+                /* Green gradient spotlight */
                 card.style.background = `
                     radial-gradient(
                         circle at ${x}px ${y}px,
-                        rgba(139,92,246,0.04) 0%,
+                        rgba(16,185,129,0.05) 0%,
                         transparent 60%
                     ),
                     var(--card, #FFFFFF)
@@ -289,14 +288,14 @@
             });
 
             card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
+                card.style.transform  = '';
                 card.style.background = '';
             });
         });
     }
 
     /* ============================================
-       NAV OVERLAY CLICK
+       NAV OVERLAY
        ============================================ */
     function initNavOverlay() {
         const overlay = document.getElementById('navOverlay');
@@ -304,7 +303,7 @@
     }
 
     /* ============================================
-       KEYBOARD — ESC closes menu
+       KEYBOARD
        ============================================ */
     function initKeyboard() {
         document.addEventListener('keydown', e => {
@@ -313,22 +312,24 @@
     }
 
     /* ============================================
-       RESIZE — close menu on desktop
+       RESIZE
        ============================================ */
     function initResize() {
         window.addEventListener('resize', () => {
             clearTimeout(state.resizeTimer);
             state.resizeTimer = setTimeout(() => {
-                if (window.innerWidth > 768 && state.menuOpen) closeMenu();
+                injectNavClose();
+                if (window.innerWidth > 768 && state.menuOpen) {
+                    window.closeMenu();
+                }
             }, 150);
         }, { passive: true });
     }
 
     /* ============================================
-       GLOBAL EXPOSED FUNCTIONS
+       GLOBAL FUNCTIONS
        ============================================ */
 
-    /* Toggle menu */
     window.toggleMenu = function () {
         state.menuOpen ? closeMenu() : openMenu();
     };
@@ -346,13 +347,8 @@
             ham.setAttribute('aria-expanded', 'true');
         }
 
-        /* Lock body scroll */
         document.body.style.overflow = 'hidden';
-
-        /* Focus first nav link for accessibility */
-        setTimeout(() => {
-            nav?.querySelector('a')?.focus();
-        }, 50);
+        setTimeout(() => nav?.querySelector('a')?.focus(), 50);
     }
 
     window.closeMenu = function () {
@@ -368,16 +364,13 @@
             ham.setAttribute('aria-expanded', 'false');
         }
 
-        /* Restore scroll */
         document.body.style.overflow = '';
     };
 
-    /* Scroll to top */
     window.scrollToTop = function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    /* Close cookie */
     window.closeCookie = function () {
         const b = document.getElementById('cookieBanner');
         if (b) {
@@ -398,8 +391,7 @@
 
         function step(now) {
             const progress = Math.min((now - start) / duration, 1);
-            /* easeOutQuad */
-            const eased = 1 - (1 - progress) * (1 - progress);
+            const eased    = 1 - (1 - progress) * (1 - progress);
             el.textContent =
                 Math.floor(eased * target) + (progress >= 1 ? suffix : '');
             if (progress < 1) requestAnimationFrame(step);
@@ -413,15 +405,11 @@
         const item   = el.parentElement;
         const isOpen = item.classList.contains('active');
 
-        /* Close all */
         document.querySelectorAll('.faq-item')
             .forEach(f => f.classList.remove('active'));
 
-        /* Open if was closed */
         if (!isOpen) {
             item.classList.add('active');
-
-            /* Smooth scroll into view on mobile */
             if (window.innerWidth <= 768) {
                 setTimeout(() => {
                     item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -483,6 +471,7 @@
 
     /* Shake invalid field */
     function shakeField(el) {
+        /* Green border → Red on error */
         el.style.borderColor = '#EF4444';
         el.style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.1)';
         el.style.animation   = 'shake 0.35s ease';
@@ -509,15 +498,15 @@
         }, 2800);
     }
 
-    /* Toast notification — themed for Lavender */
+    /* Toast — Green themed */
     window.showToast = function (message, type = 'info') {
-        /* Remove existing */
-        document.querySelectorAll('.toast-notification').forEach(t => t.remove());
+        document.querySelectorAll('.toast-notification')
+            .forEach(t => t.remove());
 
         const colors = {
-            success: 'linear-gradient(135deg, #60A5FA, #8B5CF6)',
+            success: 'linear-gradient(135deg, #10B981, #065F46)',
             error:   'linear-gradient(135deg, #EF4444, #DC2626)',
-            info:    'linear-gradient(135deg, #8B5CF6, #6D28D9)',
+            info:    'linear-gradient(135deg, #059669, #047857)',
             warning: 'linear-gradient(135deg, #F59E0B, #D97706)'
         };
 
@@ -536,7 +525,7 @@
             font-weight: 600;
             z-index: 10000;
             max-width: min(340px, calc(100vw - 40px));
-            box-shadow: 0 8px 32px rgba(139,92,246,0.25),
+            box-shadow: 0 8px 32px rgba(5,150,105,0.30),
                         0 2px 8px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
@@ -545,11 +534,11 @@
             animation: slideInRight 0.3s ease;
             transition: opacity 0.3s ease, transform 0.3s ease;
             backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
         `;
         toast.textContent = message;
         toast.addEventListener('click', () => dismiss(toast));
         document.body.appendChild(toast);
-
         setTimeout(() => dismiss(toast), 4000);
     };
 
@@ -570,8 +559,8 @@
             input.focus();
             return;
         }
-        showToast('🎉 Thank you for subscribing!', 'success');
+        showToast('🌿 Thank you for subscribing!', 'success');
         input.value = '';
     };
 
-})(); /* End IIFE */
+})();

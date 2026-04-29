@@ -1,6 +1,7 @@
 /* ============================================
    JAY AMBE DECORATORS — GALLERY PAGE JS
-   Lavender + Blue + Violet | Glassmorphism
+   Green Glassmorphism Theme
+   Colors updated for green — logic unchanged
    ============================================ */
 
 'use strict';
@@ -32,7 +33,7 @@
             btn.setAttribute('aria-selected', 'true');
         }
 
-        /* Show / hide items with stagger */
+        /* Show/hide items with stagger */
         const allItems = document.querySelectorAll('.gallery-item');
         let count = 0;
         let delay = 0;
@@ -43,10 +44,11 @@
 
             if (show) {
                 item.classList.remove('gi-hidden');
-                item.style.display   = '';
-                item.style.opacity   = '0';
-                item.style.transform = 'scale(0.94) translateY(8px)';
-                item.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+                item.style.display    = '';
+                item.style.opacity    = '0';
+                item.style.transform  = 'scale(0.94) translateY(8px)';
+                item.style.transition =
+                    'opacity 0.45s ease, transform 0.45s ease';
 
                 const d = delay;
                 setTimeout(() => {
@@ -77,7 +79,8 @@
         const el = document.getElementById('galleryCount');
         if (el) {
             el.innerHTML =
-                `Showing <strong>${count}</strong> photo${count !== 1 ? 's' : ''}`;
+                `Showing <strong>${count}</strong> ` +
+                `photo${count !== 1 ? 's' : ''}`;
         }
     }
 
@@ -139,13 +142,16 @@
         const ph      = document.getElementById('lbPlaceholder');
         const spinner = document.getElementById('lbLoader');
 
-        const title = item.querySelector('.gallery-overlay h4')?.textContent
-                      || 'Jay Ambe Decorators';
-        const sub   = item.querySelector('.gallery-overlay span')?.textContent
-                      || 'Ahmedabad';
+        const title =
+            item.querySelector('.gallery-overlay h4')?.textContent
+            || 'Jay Ambe Decorators';
+        const sub   =
+            item.querySelector('.gallery-overlay span')?.textContent
+            || 'Ahmedabad';
 
         if (caption) caption.textContent = `${title} — ${sub}`;
-        if (counter) counter.textContent = `${idx + 1} / ${visibleItems.length}`;
+        if (counter) counter.textContent =
+            `${idx + 1} / ${visibleItems.length}`;
 
         const realImg = item.querySelector('img');
 
@@ -154,9 +160,9 @@
             if (ph)      ph.style.display     = 'none';
             if (spinner) spinner.style.display = 'none';
             if (img) {
-                img.src           = realImg.src;
-                img.alt           = title;
-                img.style.display = 'block';
+                img.src             = realImg.src;
+                img.alt             = title;
+                img.style.display   = 'block';
                 img.style.animation = 'lb-zoom-in 0.3s ease';
             }
         } else {
@@ -178,11 +184,17 @@
         if (!lb?.classList.contains('active')) return;
 
         switch (e.key) {
-            case 'Escape':    closeLightbox();  break;
+            case 'Escape':
+                closeLightbox();
+                break;
             case 'ArrowLeft':
-            case 'ArrowUp':   lightboxNav(-1);  break;
+            case 'ArrowUp':
+                lightboxNav(-1);
+                break;
             case 'ArrowRight':
-            case 'ArrowDown': lightboxNav(1);   break;
+            case 'ArrowDown':
+                lightboxNav(1);
+                break;
         }
     });
 
@@ -224,7 +236,7 @@
     });
 
     /* ============================================
-       TOUCH HOVER FIX
+       TOUCH HOVER FIX — Green Theme
        ============================================ */
     if ('ontouchstart' in window) {
         const items = document.querySelectorAll('.gallery-item');
@@ -242,14 +254,17 @@
             }
         }, { passive: true });
 
-        /* Violet theme touch CSS */
+        /* Green theme touch CSS */
         const s = document.createElement('style');
         s.textContent = `
-            .gallery-item.touch-hover .gallery-overlay { opacity: 1 !important; }
+            .gallery-item.touch-hover .gallery-overlay {
+                opacity: 1 !important;
+            }
             .gallery-item.touch-hover {
-                border-color: rgba(139,92,246,0.4) !important;
-                box-shadow: 0 8px 24px rgba(139,92,246,0.15),
-                            0 0 20px rgba(96,165,250,0.1) !important;
+                border-color: rgba(16,185,129,0.45) !important;
+                box-shadow:
+                    0 8px 24px rgba(5,150,105,0.20),
+                    0 0 20px rgba(16,185,129,0.12) !important;
                 z-index: 2;
             }
         `;
@@ -301,7 +316,8 @@
                         if (!entry.isIntersecting) return;
                         setTimeout(() => {
                             entry.target.style.opacity   = '1';
-                            entry.target.style.transform = 'scale(1) translateY(0)';
+                            entry.target.style.transform =
+                                'scale(1) translateY(0)';
                         }, i * 45);
                         revObs.unobserve(entry.target);
                     });
@@ -319,7 +335,7 @@
             });
         }
 
-        /* ---- Hover glow effect (desktop) ---- */
+        /* ---- Hover green glow effect (desktop) ---- */
         if (!('ontouchstart' in window) && window.innerWidth > 768) {
             document.querySelectorAll('.gallery-item').forEach(item => {
                 item.addEventListener('mousemove', e => {
@@ -327,16 +343,17 @@
                     const x    = e.clientX - rect.left;
                     const y    = e.clientY - rect.top;
 
-                    /* Subtle gradient spotlight on placeholder */
+                    /* Green spotlight on placeholder */
                     const ph = item.querySelector('.placeholder-img');
                     if (ph) {
                         ph.style.background = `
                             radial-gradient(
                                 circle at ${x}px ${y}px,
-                                rgba(139,92,246,0.06) 0%,
+                                rgba(16,185,129,0.08) 0%,
                                 transparent 60%
                             ),
-                            linear-gradient(145deg, var(--lavender-lt), var(--lavender))
+                            linear-gradient(145deg,
+                                var(--sage-lt), var(--sage))
                         `;
                     }
                 });
